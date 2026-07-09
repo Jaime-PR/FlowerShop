@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FlowerShop
+namespace FlowerShop.Login
 {
-    public partial class Form1 : Form
+    public partial class frmInicio_Sesion : Form
     {
-        public Form1()
+        public frmInicio_Sesion()
         {
             InitializeComponent();
         }
