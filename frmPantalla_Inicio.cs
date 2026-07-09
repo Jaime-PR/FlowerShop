@@ -16,5 +16,54 @@ namespace FlowerShop
         {
             InitializeComponent();
         }
+         
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        {
+            
+            Form formulario = pnlContenedor.Controls.OfType<MiForm>().FirstOrDefault();
+
+            if (formulario == null)
+            {
+                
+                formulario = new MiForm();
+                formulario.TopLevel = false; 
+                formulario.FormBorderStyle = FormBorderStyle.None;  
+                formulario.Dock = DockStyle.Fill; 
+
+                pnlContenedor.Controls.Add(formulario);
+                pnlContenedor.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            else
+            {
+            
+                formulario.BringToFront();
+            }
+        }
+
+
+
+
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Inventario.frmInventario>();
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Ventas.frmVentas>();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Clientes.frmClientes>();
+        }
+
+        private void btnProveedor_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Proveedor.frmProveedores>();
+        }
     }
 }
