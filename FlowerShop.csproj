@@ -95,17 +95,80 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.cs" />
-    <Compile Include="PantallaInicio.cs">
+    <Compile Include="Clientes\frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallaInicio.Designer.cs">
-      <DependentUpon>PantallaInicio.cs</DependentUpon>
+    <Compile Include="Clientes\frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\frmRegistro_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\frmRegistro_Clientes.Designer.cs">
+      <DependentUpon>frmRegistro_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="frmPantalla_Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPantalla_Inicio.Designer.cs">
+      <DependentUpon>frmPantalla_Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\frmAgg_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\frmAgg_Producto.Designer.cs">
+      <DependentUpon>frmAgg_Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\frmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\frmInventario.Designer.cs">
+      <DependentUpon>frmInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmInicio_Sesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmInicio_Sesion.Designer.cs">
+      <DependentUpon>frmInicio_Sesion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PantallaInicio.resx">
-      <DependentUpon>PantallaInicio.cs</DependentUpon>
+    <Compile Include="Proveedor\frmProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor\frmProveedores.Designer.cs">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedor\frmRegistro_Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor\frmRegistro_Proveedor.Designer.cs">
+      <DependentUpon>frmRegistro_Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\frmRegistro_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\frmRegistro_Venta.Designer.cs">
+      <DependentUpon>frmRegistro_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Clientes\frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\frmRegistro_Clientes.resx">
+      <DependentUpon>frmRegistro_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPantalla_Inicio.resx">
+      <DependentUpon>frmPantalla_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmInicio_Sesion.resx">
+      <DependentUpon>frmInicio_Sesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,10 +193,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Clientes\" />
-    <Folder Include="Inventario\" />
-    <Folder Include="Ventas\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
