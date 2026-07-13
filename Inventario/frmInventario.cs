@@ -14,48 +14,85 @@ namespace FlowerShop.Inventario
 {
     public partial class frmInventario : Form
     {
-        private string cadenaConexion = "Server=localhost;Database=lowershop;Uid=root;Pwd=;";
+        // Tu cadena de conexión (pon tu contraseña real)
+        private string cadenaConexion = "Server=localhost;Database=flowershop;Uid=root;Pwd=;";
+
         public frmInventario()
         {
             InitializeComponent();
         }
+
+        // Este es el evento que se dispara al abrir la ventana
+        private void frmInventario_Load(object sender, EventArgs e)
+        {
+            CargarProductos();
+            DarFormatoVisual();
+        }
+
         private void CargarProductos()
         {
-            // Consulta SQL que además trae el nombre de la empresa proveedora usando un INNER JOIN
-            string consulta = @"SELECT p.Id_Producto AS 'ID', 
-                                       p.Nombre AS 'Producto', 
-                                       p.Precio_Compra AS 'P. Compra', 
-                                       p.Precio_Venta AS 'P. Venta', 
-                                       p.Cantidad AS 'Stock', 
-                                       p.Categoria AS 'Categoría', 
-                                       pr.Nombre_Empresa AS 'Proveedor' 
-                                FROM PRODUCTO p
-                                INNER JOIN PROVEEDOR pr ON p.Id_Proveedor = pr.Id_Proveedor";
+            // Hacemos un SELECT sencillo a tu tabla. 
+            // Usamos AS para que los encabezados de la tabla digan exactamente lo que quieres.
+            string consulta = @"SELECT 
+                                Id_Producto AS 'Id_producto',  
+                                Nombre AS 'Nombre_del_producto',
+                                Cantidad AS 'stock',
+                                Precio_Venta AS 'precio_venta', 
+                                Precio_Compra AS 'precio_compra',
+                                Categoria AS 'categoria',
+                                Id_Proveedor AS 'Id_Proveedor'
+                                FROM PRODUCTO";
 
             using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
             {
                 try
                 {
                     conexion.Open();
-
-                    // El Adapter sirve como puente entre la base de datos y nuestro programa
                     MySqlDataAdapter adapter = new MySqlDataAdapter(consulta, conexion);
-
-                    // Creamos una tabla en memoria virtual
                     DataTable dt = new DataTable();
-
-                    // Llenamos la tabla virtual con los datos que trajo el adapter
                     adapter.Fill(dt);
 
-                    // Le asignamos esa tabla directamente al DataGridView
+                    // Asignamos los datos (Cambia dataGridView1 si el tuyo se llama distinto)
                     dgvProductos.DataSource = dt;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al cargar los productos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error de conexión: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
-    }
 
+        private void DarFormatoVisual()
+        {
+            
+            dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            
+            dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            
+            dgvProductos.RowHeadersVisible = false;
+
+            
+            dgvProductos.AllowUserToAddRows = false;
+
+            
+            dgvProductos.ReadOnly = true;
+
+            
+            dgvProductos.BackgroundColor = System.Drawing.Color.DarkGray;
+            dgvProductos.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dgvProductos.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+        }
+
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

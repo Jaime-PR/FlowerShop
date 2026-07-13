@@ -186,6 +186,7 @@
             this.Name = "frmInicio_Sesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInicio_Sesion";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmInicio_Sesion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

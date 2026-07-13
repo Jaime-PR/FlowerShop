@@ -96,7 +96,7 @@
             this.bntCategotia.Name = "bntCategotia";
             this.bntCategotia.Size = new System.Drawing.Size(140, 50);
             this.bntCategotia.TabIndex = 5;
-            this.bntCategotia.Text = "Categorias";
+            this.bntCategotia.Text = "Productos";
             this.bntCategotia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntCategotia.UseVisualStyleBackColor = true;
             this.bntCategotia.Click += new System.EventHandler(this.bntCategotia_Click);
@@ -180,8 +180,9 @@
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.pnlMenu);
             this.Name = "frmPantalla_Inicio";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmPantalla_Inicio";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlMenu.ResumeLayout(false);
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
