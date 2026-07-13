@@ -120,6 +120,12 @@
     <Compile Include="Inventario\frmAgg_Producto.Designer.cs">
       <DependentUpon>frmAgg_Producto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventario\frmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\frmCategorias.Designer.cs">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario\frmInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,12 @@
     <EmbeddedResource Include="frmPantalla_Inicio.resx">
       <DependentUpon>frmPantalla_Inicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\frmCategorias.resx">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\frmInventario.resx">
+      <DependentUpon>frmInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\frmInicio_Sesion.resx">
       <DependentUpon>frmInicio_Sesion.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,7 +190,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Proveedor\frmProveedores.resx">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -193,6 +209,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\house-chimney_9245158.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FlowerShop.Clientes
+namespace FlowerShop.Inventario
 {
-    public partial class frmRegistro_Clientes : Form
+    public partial class frmCategorias : Form
     {
-        public frmRegistro_Clientes()
+        public frmCategorias()
         {
             InitializeComponent();
         }
 
-        private void pnlContenedor_Paint(object sender, PaintEventArgs e)
+        private void frmCategorias_Load(object sender, EventArgs e)
         {
 
         }
