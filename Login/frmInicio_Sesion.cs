@@ -83,5 +83,12 @@ namespace FlowerShop.Login
         {
 
         }
+
+        private void lklblCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            frmCrear_Cuenta crearCuentaForm = new frmCrear_Cuenta();
+            crearCuentaForm.Show();
+        }
     }
 }
