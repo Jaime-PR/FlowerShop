@@ -132,6 +132,18 @@
     <Compile Include="Inventario\frmInventario.Designer.cs">
       <DependentUpon>frmInventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventario\inventario\frmAgg_Producto.cs" />
+    <Compile Include="Inventario\inventario\frmAgg_Producto.Designer.cs">
+      <DependentUpon>frmAgg_Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\inventario\frmCategorias.cs" />
+    <Compile Include="Inventario\inventario\frmCategorias.Designer.cs">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\inventario\frmInventario.cs" />
+    <Compile Include="Inventario\inventario\frmInventario.Designer.cs">
+      <DependentUpon>frmInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\frmInicio_Sesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +189,12 @@
       <DependentUpon>frmCategorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\frmInventario.resx">
+      <DependentUpon>frmInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\inventario\frmCategorias.resx">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\inventario\frmInventario.resx">
       <DependentUpon>frmInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmInicio_Sesion.resx">
