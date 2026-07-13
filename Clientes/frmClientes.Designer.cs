@@ -220,7 +220,7 @@
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox3.Location = new System.Drawing.Point(3, 9);
+            this.textBox3.Location = new System.Drawing.Point(3, 3);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(361, 22);
             this.textBox3.TabIndex = 17;
@@ -276,7 +276,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 9);
+            this.textBox1.Location = new System.Drawing.Point(3, 3);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(361, 22);
             this.textBox1.TabIndex = 11;

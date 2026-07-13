@@ -71,5 +71,10 @@ namespace FlowerShop
         {
             AbrirFormulario<Inventario.frmCategorias>();
         }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
