@@ -21,5 +21,30 @@ namespace FlowerShop.Clientes
         {
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApellidoPC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApellidoMC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
