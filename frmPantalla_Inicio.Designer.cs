@@ -32,29 +32,25 @@
             this.btnProveedor = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.bntCategotia = new System.Windows.Forms.Button();
+            this.btnInicio = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.pnlContenedor = new System.Windows.Forms.Panel();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
-            this.btnInicio = new System.Windows.Forms.Button();
+            this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlMenu.SuspendLayout();
             this.pnlTop.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnlMenu.Controls.Add(this.btnProveedor);
-            this.pnlMenu.Controls.Add(this.btnClientes);
-            this.pnlMenu.Controls.Add(this.bntCategotia);
-            this.pnlMenu.Controls.Add(this.btnInicio);
-            this.pnlMenu.Controls.Add(this.btnInventario);
-            this.pnlMenu.Controls.Add(this.btnVentas);
-            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(197)))), ((int)(((byte)(156)))));
+            this.pnlMenu.Controls.Add(this.tableLayoutPanel1);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 70);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(229, 654);
+            this.pnlMenu.Size = new System.Drawing.Size(229, 584);
             this.pnlMenu.TabIndex = 0;
             // 
             // btnProveedor
@@ -63,9 +59,9 @@
             this.btnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProveedor.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.Location = new System.Drawing.Point(52, 506);
+            this.btnProveedor.Location = new System.Drawing.Point(3, 399);
             this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Size = new System.Drawing.Size(156, 50);
+            this.btnProveedor.Size = new System.Drawing.Size(140, 50);
             this.btnProveedor.TabIndex = 3;
             this.btnProveedor.Text = "Proveedores";
             this.btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -78,7 +74,7 @@
             this.btnClientes.FlatAppearance.BorderSize = 0;
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientes.Location = new System.Drawing.Point(52, 429);
+            this.btnClientes.Location = new System.Drawing.Point(3, 267);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(140, 50);
             this.btnClientes.TabIndex = 4;
@@ -92,7 +88,7 @@
             this.bntCategotia.FlatAppearance.BorderSize = 0;
             this.bntCategotia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntCategotia.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntCategotia.Location = new System.Drawing.Point(52, 280);
+            this.bntCategotia.Location = new System.Drawing.Point(3, 135);
             this.bntCategotia.Name = "bntCategotia";
             this.bntCategotia.Size = new System.Drawing.Size(140, 50);
             this.bntCategotia.TabIndex = 5;
@@ -101,12 +97,28 @@
             this.bntCategotia.UseVisualStyleBackColor = true;
             this.bntCategotia.Click += new System.EventHandler(this.bntCategotia_Click);
             // 
+            // btnInicio
+            // 
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnInicio.Location = new System.Drawing.Point(3, 3);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnInicio.Size = new System.Drawing.Size(140, 50);
+            this.btnInicio.TabIndex = 1;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            // 
             // btnInventario
             // 
             this.btnInventario.FlatAppearance.BorderSize = 0;
             this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventario.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventario.Location = new System.Drawing.Point(52, 354);
+            this.btnInventario.Location = new System.Drawing.Point(3, 333);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(140, 50);
             this.btnInventario.TabIndex = 2;
@@ -120,7 +132,7 @@
             this.btnVentas.FlatAppearance.BorderSize = 0;
             this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentas.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVentas.Location = new System.Drawing.Point(52, 203);
+            this.btnVentas.Location = new System.Drawing.Point(3, 201);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(140, 50);
             this.btnVentas.TabIndex = 1;
@@ -131,45 +143,55 @@
             // 
             // pnlTop
             // 
-            this.pnlTop.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pnlTop.BackColor = System.Drawing.Color.White;
             this.pnlTop.Controls.Add(this.txtBusqueda);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTop.Location = new System.Drawing.Point(229, 0);
+            this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(889, 70);
+            this.pnlTop.Size = new System.Drawing.Size(1118, 70);
             this.pnlTop.TabIndex = 1;
+            // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtBusqueda.Location = new System.Drawing.Point(286, 29);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(482, 22);
+            this.txtBusqueda.TabIndex = 1;
             // 
             // pnlContenedor
             // 
-            this.pnlContenedor.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
+            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlContenedor.Location = new System.Drawing.Point(229, 70);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Padding = new System.Windows.Forms.Padding(10);
             this.pnlContenedor.Size = new System.Drawing.Size(889, 584);
             this.pnlContenedor.TabIndex = 2;
             // 
-            // txtBusqueda
+            // tableLayoutPanel1
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(70, 25);
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(482, 22);
-            this.txtBusqueda.TabIndex = 1;
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.FlatAppearance.BorderSize = 0;
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnInicio.Location = new System.Drawing.Point(52, 125);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnInicio.Size = new System.Drawing.Size(140, 50);
-            this.btnInicio.TabIndex = 1;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.btnInicio, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnProveedor, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btnVentas, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.bntCategotia, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnClientes, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnInventario, 0, 5);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(68, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 8;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(155, 530);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // frmPantalla_Inicio
             // 
@@ -186,6 +208,7 @@
             this.pnlMenu.ResumeLayout(false);
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -202,5 +225,6 @@
         private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button bntCategotia;
         private System.Windows.Forms.TextBox txtBusqueda;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
