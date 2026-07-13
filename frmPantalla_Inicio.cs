@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FlowerShop.Inventario;
 
 namespace FlowerShop
 {
@@ -64,6 +65,11 @@ namespace FlowerShop
         private void btnProveedor_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Proveedor.frmProveedores>();
+        }
+
+        private void bntCategotia_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Inventario.frmCategorias>();
         }
     }
 }

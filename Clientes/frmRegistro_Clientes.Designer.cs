@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.btnGuardarC = new System.Windows.Forms.Button();
+            this.txtRSC = new System.Windows.Forms.TextBox();
+            this.txtTelC = new System.Windows.Forms.TextBox();
+            this.txtApellidoMC = new System.Windows.Forms.TextBox();
+            this.txtApellidoPC = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -36,17 +41,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtApellidoPC = new System.Windows.Forms.TextBox();
-            this.txtApellidoMC = new System.Windows.Forms.TextBox();
-            this.txtTelC = new System.Windows.Forms.TextBox();
-            this.txtRSC = new System.Windows.Forms.TextBox();
-            this.btnGuardarC = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlContenedor
             // 
-            this.pnlContenedor.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlContenedor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlContenedor.Controls.Add(this.button1);
+            this.pnlContenedor.Controls.Add(this.label7);
             this.pnlContenedor.Controls.Add(this.btnGuardarC);
             this.pnlContenedor.Controls.Add(this.txtRSC);
             this.pnlContenedor.Controls.Add(this.txtTelC);
@@ -62,14 +66,53 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(495, 595);
+            this.pnlContenedor.Size = new System.Drawing.Size(495, 560);
             this.pnlContenedor.TabIndex = 3;
+            this.pnlContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContenedor_Paint);
+            // 
+            // btnGuardarC
+            // 
+            this.btnGuardarC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarC.Location = new System.Drawing.Point(58, 471);
+            this.btnGuardarC.Name = "btnGuardarC";
+            this.btnGuardarC.Size = new System.Drawing.Size(146, 41);
+            this.btnGuardarC.TabIndex = 12;
+            this.btnGuardarC.Text = "Cancelar";
+            this.btnGuardarC.UseVisualStyleBackColor = true;
+            // 
+            // txtRSC
+            // 
+            this.txtRSC.Location = new System.Drawing.Point(58, 400);
+            this.txtRSC.Name = "txtRSC";
+            this.txtRSC.Size = new System.Drawing.Size(368, 22);
+            this.txtRSC.TabIndex = 11;
+            // 
+            // txtTelC
+            // 
+            this.txtTelC.Location = new System.Drawing.Point(58, 342);
+            this.txtTelC.Name = "txtTelC";
+            this.txtTelC.Size = new System.Drawing.Size(368, 22);
+            this.txtTelC.TabIndex = 10;
+            // 
+            // txtApellidoMC
+            // 
+            this.txtApellidoMC.Location = new System.Drawing.Point(58, 283);
+            this.txtApellidoMC.Name = "txtApellidoMC";
+            this.txtApellidoMC.Size = new System.Drawing.Size(368, 22);
+            this.txtApellidoMC.TabIndex = 9;
+            // 
+            // txtApellidoPC
+            // 
+            this.txtApellidoPC.Location = new System.Drawing.Point(58, 221);
+            this.txtApellidoPC.Name = "txtApellidoPC";
+            this.txtApellidoPC.Size = new System.Drawing.Size(368, 22);
+            this.txtApellidoPC.TabIndex = 8;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(54, 325);
+            this.label6.Location = new System.Drawing.Point(54, 378);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 19);
             this.label6.TabIndex = 6;
@@ -79,7 +122,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(54, 278);
+            this.label5.Location = new System.Drawing.Point(54, 320);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 19);
             this.label5.TabIndex = 5;
@@ -89,7 +132,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(54, 231);
+            this.label4.Location = new System.Drawing.Point(54, 261);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 19);
             this.label4.TabIndex = 4;
@@ -99,7 +142,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(54, 184);
+            this.label3.Location = new System.Drawing.Point(54, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 19);
             this.label3.TabIndex = 3;
@@ -125,56 +168,38 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(160, 48);
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(184, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 26);
+            this.label1.Size = new System.Drawing.Size(130, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nuevo Cliente";
             // 
-            // txtApellidoPC
+            // label7
             // 
-            this.txtApellidoPC.Location = new System.Drawing.Point(58, 206);
-            this.txtApellidoPC.Name = "txtApellidoPC";
-            this.txtApellidoPC.Size = new System.Drawing.Size(368, 22);
-            this.txtApellidoPC.TabIndex = 8;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(182, 32);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(120, 32);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Registro";
             // 
-            // txtApellidoMC
+            // button1
             // 
-            this.txtApellidoMC.Location = new System.Drawing.Point(58, 253);
-            this.txtApellidoMC.Name = "txtApellidoMC";
-            this.txtApellidoMC.Size = new System.Drawing.Size(368, 22);
-            this.txtApellidoMC.TabIndex = 9;
-            // 
-            // txtTelC
-            // 
-            this.txtTelC.Location = new System.Drawing.Point(58, 300);
-            this.txtTelC.Name = "txtTelC";
-            this.txtTelC.Size = new System.Drawing.Size(368, 22);
-            this.txtTelC.TabIndex = 10;
-            // 
-            // txtRSC
-            // 
-            this.txtRSC.Location = new System.Drawing.Point(58, 347);
-            this.txtRSC.Name = "txtRSC";
-            this.txtRSC.Size = new System.Drawing.Size(368, 22);
-            this.txtRSC.TabIndex = 11;
-            // 
-            // btnGuardarC
-            // 
-            this.btnGuardarC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarC.Location = new System.Drawing.Point(165, 436);
-            this.btnGuardarC.Name = "btnGuardarC";
-            this.btnGuardarC.Size = new System.Drawing.Size(146, 41);
-            this.btnGuardarC.TabIndex = 12;
-            this.btnGuardarC.Text = "Guardar";
-            this.btnGuardarC.UseVisualStyleBackColor = true;
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(219, 471);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(146, 41);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmRegistro_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 595);
+            this.ClientSize = new System.Drawing.Size(495, 560);
             this.Controls.Add(this.pnlContenedor);
             this.Name = "frmRegistro_Clientes";
             this.Text = "frmRegistro_Clientes";
@@ -199,5 +224,7 @@
         private System.Windows.Forms.TextBox txtTelC;
         private System.Windows.Forms.TextBox txtApellidoMC;
         private System.Windows.Forms.TextBox txtApellidoPC;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label7;
     }
 }
