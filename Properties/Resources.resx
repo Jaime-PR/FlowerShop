@@ -121,4 +121,10 @@
   <data name="house-chimney_9245158" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\house-chimney_9245158.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="user_3917688" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_3917688.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lock_3917591" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock_3917591.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
