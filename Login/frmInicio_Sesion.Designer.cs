@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lklblCrearCuenta = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -55,7 +55,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.lklblCrearCuenta);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label2);
@@ -88,16 +88,17 @@
             this.txtPassword.Size = new System.Drawing.Size(223, 23);
             this.txtPassword.TabIndex = 0;
             // 
-            // linkLabel1
+            // lklblCrearCuenta
             // 
-            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(172, 482);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(83, 16);
-            this.linkLabel1.TabIndex = 7;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Crear cuenta";
+            this.lklblCrearCuenta.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lklblCrearCuenta.AutoSize = true;
+            this.lklblCrearCuenta.Location = new System.Drawing.Point(176, 480);
+            this.lklblCrearCuenta.Name = "lklblCrearCuenta";
+            this.lklblCrearCuenta.Size = new System.Drawing.Size(83, 16);
+            this.lklblCrearCuenta.TabIndex = 7;
+            this.lklblCrearCuenta.TabStop = true;
+            this.lklblCrearCuenta.Text = "Crear cuenta";
+            this.lklblCrearCuenta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklblCrearCuenta_LinkClicked);
             // 
             // panel2
             // 
@@ -128,7 +129,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(152, 416);
+            this.btnLogin.Location = new System.Drawing.Point(159, 417);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(127, 50);
             this.btnLogin.TabIndex = 4;
@@ -238,7 +239,7 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lklblCrearCuenta;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtPassword;

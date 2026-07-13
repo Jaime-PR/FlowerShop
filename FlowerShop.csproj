@@ -132,6 +132,12 @@
     <Compile Include="Inventario\frmInventario.Designer.cs">
       <DependentUpon>frmInventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login\frmCrear_Cuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmCrear_Cuenta.Designer.cs">
+      <DependentUpon>frmCrear_Cuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\frmInicio_Sesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\frmInventario.resx">
       <DependentUpon>frmInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmCrear_Cuenta.resx">
+      <DependentUpon>frmCrear_Cuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmInicio_Sesion.resx">
       <DependentUpon>frmInicio_Sesion.cs</DependentUpon>
