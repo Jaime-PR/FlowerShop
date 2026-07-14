@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FlowerShop.Login;
 
+
 namespace FlowerShop
 {
     internal static class Program
@@ -17,7 +18,7 @@ namespace FlowerShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInicio_Sesion());
+            Application.Run(new frmPantalla_Inicio());
         }
     }
 }
