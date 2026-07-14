@@ -73,6 +73,16 @@ namespace FlowerShop.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap category_100dp_000000_FILL0_wght400_GRAD0_opsz481 {
+            get {
+                object obj = ResourceManager.GetObject("category_100dp_000000_FILL0_wght400_GRAD0_opsz481", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_100dp_000000_FILL0_wght400_GRAD0_opsz48 {
             get {
                 object obj = ResourceManager.GetObject("home_100dp_000000_FILL0_wght400_GRAD0_opsz48", resourceCulture);
@@ -106,6 +116,16 @@ namespace FlowerShop.Properties {
         internal static System.Drawing.Bitmap inventory_100dp_000000_FILL0_wght400_GRAD0_opsz48 {
             get {
                 object obj = ResourceManager.GetObject("inventory_100dp_000000_FILL0_wght400_GRAD0_opsz48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inventory_100dp_000000_FILL0_wght400_GRAD0_opsz481 {
+            get {
+                object obj = ResourceManager.GetObject("inventory_100dp_000000_FILL0_wght400_GRAD0_opsz481", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
