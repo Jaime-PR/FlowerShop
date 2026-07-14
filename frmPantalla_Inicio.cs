@@ -101,5 +101,10 @@ namespace FlowerShop
         {
 
         }
+
+        private void pnlContenedor_Paint_2(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
