@@ -33,7 +33,6 @@
             this.btnInicio = new System.Windows.Forms.Button();
             this.btnProveedor = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
-            this.bntCategotia = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
