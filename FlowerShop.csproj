@@ -228,13 +228,34 @@
     <None Include="Resources\lock_3917591.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\badge_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\home_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\id_card_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\home_100dp_000000_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\id_card_100dp_000000_FILL0_wght400_GRAD0_opsz48.png" />
+    <None Include="Resources\category_100dp_000000_FILL0_wght400_GRAD0_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_cart_100dp_000000_FILL0_wght400_GRAD0_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_39176881.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_100dp_000000_FILL0_wght400_GRAD0_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_32dp_000000_FILL0_wght400_GRAD0_opsz40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\local_shipping_100dp_000000_FILL0_wght400_GRAD0_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_100dp_000000_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
