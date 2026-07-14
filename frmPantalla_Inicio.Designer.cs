@@ -36,11 +36,6 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -64,7 +59,6 @@
             this.tableLayoutPanel1.Controls.Add(this.btnInicio, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnProveedor, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.btnVentas, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.bntCategotia, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnClientes, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnInventario, 0, 5);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(68, 3);
@@ -143,55 +137,6 @@
             this.btnInventario.UseVisualStyleBackColor = true;
             this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::FlowerShop.Properties.Resources.category_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.pictureBox3.Location = new System.Drawing.Point(4, 115);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(34, 106);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = global::FlowerShop.Properties.Resources.shopping_cart_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.pictureBox4.Location = new System.Drawing.Point(4, 227);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(34, 106);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.Image = global::FlowerShop.Properties.Resources.user_39176881;
-            this.pictureBox5.Location = new System.Drawing.Point(4, 339);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(34, 106);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 10;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::FlowerShop.Properties.Resources.inventory_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.pictureBox2.Location = new System.Drawing.Point(4, 451);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(34, 106);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnClientes
             // 
             this.btnClientes.FlatAppearance.BorderSize = 0;
@@ -223,70 +168,11 @@
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.Color.White;
-            this.pnlTop.Controls.Add(this.tableLayoutPanel2);
-            this.pnlTop.Controls.Add(this.dateTimePicker1);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(1118, 70);
             this.pnlTop.TabIndex = 1;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 463F));
-            this.tableLayoutPanel2.Controls.Add(this.txtBusqueda, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.pictureBox7, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(229, 12);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(515, 40);
-            this.tableLayoutPanel2.TabIndex = 2;
-            // 
-            // txtBusqueda
-            // 
-            this.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBusqueda.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtBusqueda.Location = new System.Drawing.Point(55, 9);
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(457, 22);
-            this.txtBusqueda.TabIndex = 1;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox7.Image = global::FlowerShop.Properties.Resources.search_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.pictureBox7.Location = new System.Drawing.Point(15, 3);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(34, 34);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 12;
-            this.pictureBox7.TabStop = false;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(897, 24);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 0;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.76316F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.23685F));
-            this.tableLayoutPanel3.Controls.Add(this.pnlContenedor, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pnlMenu, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 70);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1118, 680);
-            this.tableLayoutPanel3.TabIndex = 2;
             // 
             // pnlContenedor
             // 
@@ -303,7 +189,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1118, 750);
-            this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.pnlTop);
             this.Name = "frmPantalla_Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
