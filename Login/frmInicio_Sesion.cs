@@ -90,5 +90,12 @@ namespace FlowerShop.Login
             crearCuentaForm.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmPantalla_Inicio mainForm = new frmPantalla_Inicio();
+            mainForm.Show();
+            this.Hide();
+        }
     }
 }

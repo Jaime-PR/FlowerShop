@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -205,12 +206,23 @@
             this.label4.Text = "Contraseña:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(930, 213);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 45);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "btnEntrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmInicio_Sesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(197)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(1197, 690);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Name = "frmInicio_Sesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -245,5 +257,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
