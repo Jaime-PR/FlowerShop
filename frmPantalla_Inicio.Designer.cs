@@ -275,14 +275,14 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.76316F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.23685F));
             this.tableLayoutPanel3.Controls.Add(this.pnlContenedor, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.pnlMenu, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlMenu, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 70);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel1.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1118, 680);
