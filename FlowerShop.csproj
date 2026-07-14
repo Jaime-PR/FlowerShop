@@ -227,5 +227,14 @@
   <ItemGroup>
     <None Include="Resources\lock_3917591.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\badge_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id_card_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id_card_100dp_000000_FILL0_wght400_GRAD0_opsz48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
