@@ -257,5 +257,11 @@
   <ItemGroup>
     <None Include="Resources\search_100dp_000000_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category_100dp_000000_FILL0_wght400_GRAD0_opsz481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_100dp_000000_FILL0_wght400_GRAD0_opsz481.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

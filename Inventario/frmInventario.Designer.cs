@@ -113,7 +113,7 @@
             this.dgvProductos.RowHeadersVisible = false;
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(981, 706);
+            this.dgvProductos.Size = new System.Drawing.Size(981, 662);
             this.dgvProductos.TabIndex = 3;
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             // 
@@ -197,7 +197,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(990, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(239, 706);
+            this.panel1.Size = new System.Drawing.Size(239, 662);
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -335,7 +335,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(981, 706);
+            this.panel3.Size = new System.Drawing.Size(981, 662);
             this.panel3.TabIndex = 7;
             // 
             // tableLayoutPanel1
@@ -350,14 +350,14 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1232, 712);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1232, 668);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 782);
+            this.ClientSize = new System.Drawing.Size(1232, 738);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pnlTop);
             this.Name = "frmInventario";
