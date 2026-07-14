@@ -86,7 +86,7 @@
             this.btnInicio.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnInicio.Size = new System.Drawing.Size(140, 50);
             this.btnInicio.TabIndex = 1;
-            this.btnInicio.Text = "Inicio";
+            this.btnInicio.Text = "Iniciooooo";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
