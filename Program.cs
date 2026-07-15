@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FlowerShop.Login;
 using FlowerShop.Inventario;
+using FlowerShop.Proveedor;
 
 
 namespace FlowerShop
