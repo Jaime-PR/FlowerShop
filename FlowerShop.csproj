@@ -204,6 +204,9 @@
     <EmbeddedResource Include="Proveedor\frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Proveedor\frmRegistro_Proveedor.resx">
+      <DependentUpon>frmRegistro_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
