@@ -263,5 +263,8 @@
   <ItemGroup>
     <None Include="Resources\inventory_100dp_000000_FILL0_wght400_GRAD0_opsz481.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black and White Modern Bold Y2K Streetwear Brand Logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

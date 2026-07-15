@@ -169,7 +169,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(447, 62);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(440, 533);
+            this.panel2.Size = new System.Drawing.Size(440, 538);
             this.panel2.TabIndex = 10;
             // 
             // panel8
@@ -411,6 +411,7 @@
             this.Controls.Add(this.pnlMenu);
             this.Name = "frmClientes";
             this.Text = "frmClientes";
+            this.Load += new System.EventHandler(this.frmClientes_Load);
             this.pnlMenu.ResumeLayout(false);
             this.pnlContenedor.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

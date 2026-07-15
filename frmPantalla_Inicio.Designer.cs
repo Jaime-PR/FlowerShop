@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPantalla_Inicio));
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -309,7 +310,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox7.Image = global::FlowerShop.Properties.Resources.local_shipping_100dp_000000_FILL0_wght400_GRAD0_opsz48;
+            this.pictureBox7.Image = global::FlowerShop.Properties.Resources.Black_and_White_Modern_Bold_Y2K_Streetwear_Brand_Logo;
             this.pictureBox7.Location = new System.Drawing.Point(69, 8);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(80, 80);
@@ -452,6 +453,7 @@
             this.ClientSize = new System.Drawing.Size(1118, 741);
             this.Controls.Add(this.tableLayoutPanelPrincipal);
             this.Controls.Add(this.pnlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPantalla_Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPantalla_Inicio";
