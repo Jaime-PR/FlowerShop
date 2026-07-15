@@ -66,6 +66,11 @@ namespace FlowerShop.Inventario
         {
 
         }
+
+        private void dgbInventario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 }
