@@ -53,10 +53,7 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanelPrincipal = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.pnlContenedor = new System.Windows.Forms.TableLayoutPanel();
             this.pnlMenu.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -73,8 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.tableLayoutPanelPrincipal.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
+            this.pnlContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -398,52 +394,21 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Martes, 14 de Junio 12:00 a.m.";
             // 
-            // tableLayoutPanelPrincipal
-            // 
-            this.tableLayoutPanelPrincipal.ColumnCount = 2;
-            this.tableLayoutPanelPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
-            this.tableLayoutPanelPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelPrincipal.Controls.Add(this.pnlMenu, 0, 0);
-            this.tableLayoutPanelPrincipal.Controls.Add(this.tableLayoutPanel5, 1, 0);
-            this.tableLayoutPanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelPrincipal.Location = new System.Drawing.Point(0, 97);
-            this.tableLayoutPanelPrincipal.Name = "tableLayoutPanelPrincipal";
-            this.tableLayoutPanelPrincipal.RowCount = 1;
-            this.tableLayoutPanelPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelPrincipal.Size = new System.Drawing.Size(1118, 644);
-            this.tableLayoutPanelPrincipal.TabIndex = 3;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.panel2, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.pnlContenedor, 0, 1);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(222, 3);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.81505F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.18495F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(893, 638);
-            this.tableLayoutPanel5.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(197)))), ((int)(((byte)(156)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(887, 63);
-            this.panel2.TabIndex = 0;
-            // 
             // pnlContenedor
             // 
+            this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
+            this.pnlContenedor.ColumnCount = 2;
+            this.pnlContenedor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
+            this.pnlContenedor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.pnlContenedor.Controls.Add(this.pnlMenu, 0, 0);
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedor.Location = new System.Drawing.Point(3, 72);
+            this.pnlContenedor.Location = new System.Drawing.Point(0, 97);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(887, 563);
-            this.pnlContenedor.TabIndex = 1;
+            this.pnlContenedor.RowCount = 1;
+            this.pnlContenedor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.pnlContenedor.Size = new System.Drawing.Size(1118, 644);
+            this.pnlContenedor.TabIndex = 3;
+            this.pnlContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanelPrincipal_Paint);
             // 
             // frmPantalla_Inicio
             // 
@@ -451,7 +416,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1118, 741);
-            this.Controls.Add(this.tableLayoutPanelPrincipal);
+            this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.pnlTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPantalla_Inicio";
@@ -477,8 +442,7 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.tableLayoutPanelPrincipal.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
+            this.pnlContenedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -494,7 +458,7 @@
         private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button bntCategotia;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelPrincipal;
+        private System.Windows.Forms.TableLayoutPanel pnlContenedor;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -510,8 +474,5 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel pnlContenedor;
     }
 }
