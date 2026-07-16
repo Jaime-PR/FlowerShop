@@ -57,10 +57,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnAñadirCliente = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.pnlMenu.SuspendLayout();
             this.pnlContenedor.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -169,7 +169,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(447, 62);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(440, 533);
+            this.panel2.Size = new System.Drawing.Size(440, 538);
             this.panel2.TabIndex = 10;
             // 
             // panel8
@@ -270,10 +270,10 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(147, 481);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 30);
+            this.button3.Size = new System.Drawing.Size(107, 37);
             this.button3.TabIndex = 22;
             this.button3.Text = "Cancelar";
             this.button3.UseVisualStyleBackColor = false;
@@ -282,10 +282,10 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(33, 481);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 30);
+            this.button2.Size = new System.Drawing.Size(107, 37);
             this.button2.TabIndex = 21;
             this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = false;
@@ -365,6 +365,15 @@
             this.panel1.Size = new System.Drawing.Size(294, 646);
             this.panel1.TabIndex = 7;
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(12, 114);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(265, 516);
+            this.listBox1.TabIndex = 10;
+            // 
             // btnAñadirCliente
             // 
             this.btnAñadirCliente.Location = new System.Drawing.Point(171, 45);
@@ -393,15 +402,6 @@
             this.txtBusqueda.TabIndex = 8;
             this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(12, 114);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(265, 516);
-            this.listBox1.TabIndex = 10;
-            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -411,6 +411,7 @@
             this.Controls.Add(this.pnlMenu);
             this.Name = "frmClientes";
             this.Text = "frmClientes";
+            this.Load += new System.EventHandler(this.frmClientes_Load);
             this.pnlMenu.ResumeLayout(false);
             this.pnlContenedor.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FlowerShop.Login;
 using FlowerShop.Inventario;
+using FlowerShop.Proveedor;
 
 
 namespace FlowerShop
@@ -19,7 +20,7 @@ namespace FlowerShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInventario());
+            Application.Run(new frmPantalla_Inicio());
         }
     }
 }

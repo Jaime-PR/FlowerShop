@@ -204,6 +204,9 @@
     <EmbeddedResource Include="Proveedor\frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Proveedor\frmRegistro_Proveedor.resx">
+      <DependentUpon>frmRegistro_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -256,6 +259,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search_100dp_000000_FILL0_wght400_GRAD0_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category_100dp_000000_FILL0_wght400_GRAD0_opsz481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_100dp_000000_FILL0_wght400_GRAD0_opsz481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black and White Modern Bold Y2K Streetwear Brand Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

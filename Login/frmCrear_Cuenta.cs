@@ -24,9 +24,9 @@ namespace FlowerShop.Login
 
         private void lklblIniciarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
             frmInicio_Sesion inicioSesionForm = new frmInicio_Sesion();
             inicioSesionForm.Show();
+            this.Hide();
         }
     }
 }

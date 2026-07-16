@@ -63,9 +63,29 @@ namespace FlowerShop.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Black_and_White_Modern_Bold_Y2K_Streetwear_Brand_Logo {
+            get {
+                object obj = ResourceManager.GetObject("Black and White Modern Bold Y2K Streetwear Brand Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap category_100dp_000000_FILL0_wght400_GRAD0_opsz48 {
             get {
                 object obj = ResourceManager.GetObject("category_100dp_000000_FILL0_wght400_GRAD0_opsz48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap category_100dp_000000_FILL0_wght400_GRAD0_opsz481 {
+            get {
+                object obj = ResourceManager.GetObject("category_100dp_000000_FILL0_wght400_GRAD0_opsz481", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +126,16 @@ namespace FlowerShop.Properties {
         internal static System.Drawing.Bitmap inventory_100dp_000000_FILL0_wght400_GRAD0_opsz48 {
             get {
                 object obj = ResourceManager.GetObject("inventory_100dp_000000_FILL0_wght400_GRAD0_opsz48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inventory_100dp_000000_FILL0_wght400_GRAD0_opsz481 {
+            get {
+                object obj = ResourceManager.GetObject("inventory_100dp_000000_FILL0_wght400_GRAD0_opsz481", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

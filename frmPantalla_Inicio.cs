@@ -44,9 +44,6 @@ namespace FlowerShop
         }
 
 
-
-
-
         private void btnInventario_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Inventario.frmInventario>();
@@ -77,27 +74,12 @@ namespace FlowerShop
 
         }
 
-        private void pnlContenedor_Paint(object sender, PaintEventArgs e)
+        private void tableLayoutPanelPrincipal_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlContenedor_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBox6_Click(object sender, EventArgs e)
         {
 
         }
