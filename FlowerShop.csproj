@@ -179,6 +179,9 @@
     <EmbeddedResource Include="frmPantalla_Inicio.resx">
       <DependentUpon>frmPantalla_Inicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\frmAgg_Producto.resx">
+      <DependentUpon>frmAgg_Producto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventario\frmCategorias.resx">
       <DependentUpon>frmCategorias.cs</DependentUpon>
     </EmbeddedResource>

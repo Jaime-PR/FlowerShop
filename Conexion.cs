@@ -16,7 +16,7 @@ namespace FlowerShop
         public MySqlConnection ObtenerConexionAbierta()
         {
 
-            string cadenaConexion = "Server=localhost;Database=floreria_flowershop;Uid=root;Pwd=;Port=3307;SslMode=Disabled;";
+            string cadenaConexion = "Server=localhost;Database=floreria_flowershop;Uid=root;Pwd=;Port=3306;SslMode=Disabled;";
             MySqlConnection conexion = new MySqlConnection(cadenaConexion);
 
             try

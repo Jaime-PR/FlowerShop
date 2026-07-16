@@ -15,6 +15,20 @@ namespace FlowerShop.Inventario
         public frmAgg_Producto()
         {
             InitializeComponent();
+
+            
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.ControlBox = false; 
+
+            
+            this.btnCancelar.Click += btnCancelar_Click;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
