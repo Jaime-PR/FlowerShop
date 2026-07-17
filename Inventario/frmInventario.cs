@@ -59,24 +59,7 @@ namespace FlowerShop.Inventario
                 }
             }
         }
-        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow fila = dgvProductos.Rows[e.RowIndex];
-
-                
-                idProductoSeleccionado = Convert.ToInt32(fila.Cells["ID"].Value);
-
-                txtNombre.Text = fila.Cells["Producto"].Value.ToString();
-                txtCategoria.Text = fila.Cells["Categoría"].Value.ToString();
-                txtProveedor.Text = fila.Cells["Proveedor"].Value.ToString();
-                txtCantidad.Text = fila.Cells["Stock"].Value.ToString();
-                txtPrecioCompra.Text = fila.Cells["P. Compra"].Value.ToString();
-                txtPrecioVenta.Text = fila.Cells["P. Venta"].Value.ToString();
-            }
-        }
+        
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 

@@ -99,36 +99,39 @@ namespace FlowerShop.Proveedor
                 txtDireccion.Text = fila.Cells["Direccion"].Value.ToString();
             }
         }
-
-
-        private void label11_Click(object sender, EventArgs e)
+        private void AbrirFormulario<TForm>() where TForm : Form, new()
         {
-
+            using (TForm formulario = new TForm())
+            {
+                formulario.StartPosition = FormStartPosition.CenterScreen;
+                formulario.ShowDialog();
+            }
         }
 
-        private void textBox8_TextChanged(object sender, EventArgs e)
+
+
+        private void label11_Click(object sender, EventArgs e) { }
+
+        private void textBox8_TextChanged(object sender, EventArgs e) { }
+
+        private void textBox9_TextChanged(object sender, EventArgs e) { }
+
+        private void label9_Click(object sender, EventArgs e) { }
+
+        private void label10_Click(object sender, EventArgs e) { }
+
+        private void textBox7_TextChanged(object sender, EventArgs e) { }
+
+        private void textBox12_TextChanged(object sender, EventArgs e) { }
+
+        private void pnlDatosProv_Paint(object sender, PaintEventArgs e) { }
+
+        private void button2_Click(object sender, EventArgs e) { }
+
+        private void btnAñadirCliente_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
+            AbrirFormulario<Proveedor.frmRproveedor>();
+            CargarProveedores();
         }
     }
 }
