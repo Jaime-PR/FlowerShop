@@ -37,21 +37,23 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.bntCategotia = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnInicio = new System.Windows.Forms.Button();
+            this.pnlTop = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pnlContenedor = new System.Windows.Forms.TableLayoutPanel();
-            this.btnInicio = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -59,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel1.SuspendLayout();
@@ -67,7 +70,6 @@
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.pnlContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -85,28 +87,30 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.btnProveedor, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox6, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnInventario, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.btnClientes, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnVentas, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.bntCategotia, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnInicio, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnProveedor, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox6, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnInventario, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnClientes, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnVentas, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.bntCategotia, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnInicio, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowCount = 8;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 342F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(213, 638);
@@ -119,9 +123,9 @@
             this.btnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProveedor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.Location = new System.Drawing.Point(48, 559);
+            this.btnProveedor.Location = new System.Drawing.Point(48, 253);
             this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Size = new System.Drawing.Size(162, 50);
+            this.btnProveedor.Size = new System.Drawing.Size(162, 40);
             this.btnProveedor.TabIndex = 3;
             this.btnProveedor.Text = "Proveedores";
             this.btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -129,12 +133,11 @@
             this.btnProveedor.UseVisualStyleBackColor = true;
             this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox6.Image = global::FlowerShop.Properties.Resources.local_shipping_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.pictureBox6.Location = new System.Drawing.Point(3, 568);
+            this.pictureBox6.Location = new System.Drawing.Point(3, 257);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(32, 32);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -146,7 +149,7 @@
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox5.Image = global::FlowerShop.Properties.Resources.inventory_100dp_000000_FILL0_wght400_GRAD0_opsz481;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 461);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 211);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(32, 32);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -157,7 +160,7 @@
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox4.Image = global::FlowerShop.Properties.Resources.user_3917688;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 355);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 165);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -168,7 +171,7 @@
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox3.Image = global::FlowerShop.Properties.Resources.shopping_cart_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 249);
+            this.pictureBox3.Location = new System.Drawing.Point(3, 119);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -179,51 +182,63 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox2.Image = global::FlowerShop.Properties.Resources.category_100dp_000000_FILL0_wght400_GRAD0_opsz481;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 143);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 73);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBox1.Image = global::FlowerShop.Properties.Resources.home_100dp_000000_FILL0_wght400_GRAD0_opsz48;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnInventario
-            // btnInicio
+            // 
             this.btnInventario.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnInventario.FlatAppearance.BorderSize = 0;
             this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnInventario.Location = new System.Drawing.Point(48, 452);
+            this.btnInventario.Location = new System.Drawing.Point(48, 207);
             this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(162, 50);
+            this.btnInventario.Size = new System.Drawing.Size(162, 40);
             this.btnInventario.TabIndex = 2;
             this.btnInventario.Text = "Inventario";
             this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInventario.UseVisualStyleBackColor = true;
             this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
-            this.btnInicio.Text = "Inicio";
+            // 
             // btnClientes
-            this.btnInicio.UseVisualStyleBackColor = true;
+            // 
             this.btnClientes.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnClientes.FlatAppearance.BorderSize = 0;
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnClientes.Location = new System.Drawing.Point(48, 346);
+            this.btnClientes.Location = new System.Drawing.Point(48, 161);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(162, 50);
+            this.btnClientes.Size = new System.Drawing.Size(162, 40);
             this.btnClientes.TabIndex = 4;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClientes.UseVisualStyleBackColor = true;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
-            this.bntCategotia.TabIndex = 5;
+            // 
             // btnVentas
             // 
             this.btnVentas.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnVentas.FlatAppearance.BorderSize = 0;
             this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnVentas.Location = new System.Drawing.Point(48, 240);
+            this.btnVentas.Location = new System.Drawing.Point(48, 115);
             this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(162, 50);
+            this.btnVentas.Size = new System.Drawing.Size(162, 40);
             this.btnVentas.TabIndex = 1;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,41 +246,45 @@
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // bntCategotia
-            this.btnInventario.UseVisualStyleBackColor = true;
+            // 
             this.bntCategotia.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.bntCategotia.AutoSize = true;
             this.bntCategotia.FlatAppearance.BorderSize = 0;
             this.bntCategotia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntCategotia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.bntCategotia.Location = new System.Drawing.Point(48, 134);
+            this.bntCategotia.Location = new System.Drawing.Point(48, 69);
             this.bntCategotia.Name = "bntCategotia";
-            this.bntCategotia.Size = new System.Drawing.Size(162, 50);
+            this.bntCategotia.Size = new System.Drawing.Size(162, 40);
             this.bntCategotia.TabIndex = 5;
             this.bntCategotia.Text = "Categorias";
             this.bntCategotia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntCategotia.UseVisualStyleBackColor = true;
             this.bntCategotia.Click += new System.EventHandler(this.bntCategotia_Click);
-            this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.Location = new System.Drawing.Point(48, 340);
-            this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Size = new System.Drawing.Size(162, 50);
-            this.btnProveedor.TabIndex = 3;
-            this.btnProveedor.Text = "Proveedores";
-            this.btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProveedor.UseVisualStyleBackColor = true;
-            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
-            // pictureBox1
+            // btnInicio
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox1.Image = global::FlowerShop.Properties.Resources.home_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.btnInicio.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnInicio.AutoSize = true;
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnInicio.Location = new System.Drawing.Point(48, 23);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnInicio.Size = new System.Drawing.Size(162, 40);
+            this.btnInicio.TabIndex = 1;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            // 
+            // pnlTop
+            // 
+            this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(200, 100);
+            this.pnlTop.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
@@ -299,6 +318,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.tableLayoutPanel3);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(222, 3);
             this.panel1.Name = "panel1";
@@ -340,6 +360,16 @@
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(251, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 28);
+            this.label1.TabIndex = 3;
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
@@ -355,11 +385,12 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox9.Image = global::FlowerShop.Properties.Resources.user_3917688;
-            this.pictureBox9.Location = new System.Drawing.Point(273, 29);
+            this.pictureBox9.Location = new System.Drawing.Point(257, 3);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox9.Size = new System.Drawing.Size(52, 85);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 2;
             this.pictureBox9.TabStop = false;
@@ -379,24 +410,6 @@
             this.pnlContenedor.Size = new System.Drawing.Size(1118, 644);
             this.pnlContenedor.TabIndex = 3;
             this.pnlContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanelPrincipal_Paint);
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnInicio.AutoSize = true;
-            this.btnInicio.FlatAppearance.BorderSize = 0;
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnInicio.Location = new System.Drawing.Point(48, 28);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnInicio.Size = new System.Drawing.Size(162, 50);
-            this.btnInicio.TabIndex = 1;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.UseVisualStyleBackColor = true;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // frmPantalla_Inicio
             // 
@@ -419,16 +432,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.pnlContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -459,5 +473,6 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Panel pnlTop;
     }
 }
