@@ -35,19 +35,19 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlDatosClientes = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtRedSocial = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtApMaterno = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtApPaterno = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -57,14 +57,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAñadirCliente = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAñadirCliente = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.pnlContenedor.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlDatosClientes.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -72,7 +74,8 @@
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,7 +90,7 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(1067, 646);
+            this.pnlMenu.Size = new System.Drawing.Size(1270, 683);
             this.pnlMenu.TabIndex = 1;
             // 
             // btnInventario
@@ -143,37 +146,37 @@
             // pnlContenedor
             // 
             this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
-            this.pnlContenedor.Controls.Add(this.panel2);
+            this.pnlContenedor.Controls.Add(this.pnlDatosClientes);
             this.pnlContenedor.Controls.Add(this.panel1);
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1067, 646);
+            this.pnlContenedor.Size = new System.Drawing.Size(1270, 683);
             this.pnlContenedor.TabIndex = 3;
             this.pnlContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContenedor_Paint);
             // 
-            // panel2
+            // pnlDatosClientes
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Controls.Add(this.panel8);
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(447, 62);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(440, 538);
-            this.panel2.TabIndex = 10;
+            this.pnlDatosClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlDatosClientes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlDatosClientes.Controls.Add(this.panel8);
+            this.pnlDatosClientes.Controls.Add(this.panel7);
+            this.pnlDatosClientes.Controls.Add(this.panel6);
+            this.pnlDatosClientes.Controls.Add(this.panel5);
+            this.pnlDatosClientes.Controls.Add(this.panel4);
+            this.pnlDatosClientes.Controls.Add(this.panel3);
+            this.pnlDatosClientes.Controls.Add(this.button3);
+            this.pnlDatosClientes.Controls.Add(this.button2);
+            this.pnlDatosClientes.Controls.Add(this.label7);
+            this.pnlDatosClientes.Controls.Add(this.label6);
+            this.pnlDatosClientes.Controls.Add(this.label5);
+            this.pnlDatosClientes.Controls.Add(this.label4);
+            this.pnlDatosClientes.Controls.Add(this.label3);
+            this.pnlDatosClientes.Controls.Add(this.label2);
+            this.pnlDatosClientes.Location = new System.Drawing.Point(549, 80);
+            this.pnlDatosClientes.Name = "pnlDatosClientes";
+            this.pnlDatosClientes.Size = new System.Drawing.Size(440, 538);
+            this.pnlDatosClientes.TabIndex = 10;
             // 
             // panel8
             // 
@@ -193,82 +196,82 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.textBox5);
+            this.panel7.Controls.Add(this.txtRedSocial);
             this.panel7.Location = new System.Drawing.Point(33, 347);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(379, 34);
             this.panel7.TabIndex = 26;
             // 
-            // textBox5
+            // txtRedSocial
             // 
-            this.textBox5.Location = new System.Drawing.Point(3, 3);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(361, 22);
-            this.textBox5.TabIndex = 19;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.txtRedSocial.Location = new System.Drawing.Point(3, 3);
+            this.txtRedSocial.Name = "txtRedSocial";
+            this.txtRedSocial.Size = new System.Drawing.Size(361, 22);
+            this.txtRedSocial.TabIndex = 19;
+            this.txtRedSocial.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.textBox3);
+            this.panel6.Controls.Add(this.txtTelefono);
             this.panel6.Location = new System.Drawing.Point(32, 275);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(379, 34);
             this.panel6.TabIndex = 25;
             // 
-            // textBox3
+            // txtTelefono
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox3.Location = new System.Drawing.Point(3, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(361, 22);
-            this.textBox3.TabIndex = 17;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtTelefono.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTelefono.Location = new System.Drawing.Point(3, 3);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(361, 22);
+            this.txtTelefono.TabIndex = 17;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.txtApMaterno);
             this.panel5.Location = new System.Drawing.Point(32, 208);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(379, 34);
             this.panel5.TabIndex = 24;
             // 
-            // textBox1
+            // txtApMaterno
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(361, 22);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtApMaterno.Location = new System.Drawing.Point(3, 3);
+            this.txtApMaterno.Name = "txtApMaterno";
+            this.txtApMaterno.Size = new System.Drawing.Size(361, 22);
+            this.txtApMaterno.TabIndex = 11;
+            this.txtApMaterno.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.textBox2);
+            this.panel4.Controls.Add(this.txtApPaterno);
             this.panel4.Location = new System.Drawing.Point(32, 134);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(379, 34);
             this.panel4.TabIndex = 23;
             // 
-            // textBox2
+            // txtApPaterno
             // 
-            this.textBox2.Location = new System.Drawing.Point(3, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(361, 22);
-            this.textBox2.TabIndex = 16;
+            this.txtApPaterno.Location = new System.Drawing.Point(3, 3);
+            this.txtApPaterno.Name = "txtApPaterno";
+            this.txtApPaterno.Size = new System.Drawing.Size(361, 22);
+            this.txtApPaterno.TabIndex = 16;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.txtNombre);
             this.panel3.Location = new System.Drawing.Point(32, 67);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(379, 34);
             this.panel3.TabIndex = 11;
             // 
-            // textBox4
+            // txtNombre
             // 
-            this.textBox4.Location = new System.Drawing.Point(4, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(361, 22);
-            this.textBox4.TabIndex = 18;
+            this.txtNombre.Location = new System.Drawing.Point(4, 3);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(361, 22);
+            this.txtNombre.TabIndex = 18;
             // 
             // button3
             // 
@@ -310,9 +313,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(27, 312);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 22);
+            this.label6.Size = new System.Drawing.Size(107, 22);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Correo";
+            this.label6.Text = "Red Social";
             // 
             // label5
             // 
@@ -358,79 +361,100 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(197)))), ((int)(((byte)(156)))));
+            this.panel1.Controls.Add(this.dgvClientes);
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(294, 646);
+            this.panel1.Size = new System.Drawing.Size(332, 683);
             this.panel1.TabIndex = 7;
             // 
-            // btnAñadirCliente
+            // dgvClientes
             // 
-            this.btnAñadirCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAñadirCliente.Location = new System.Drawing.Point(109, 68);
-            this.btnAñadirCliente.Name = "btnAñadirCliente";
-            this.btnAñadirCliente.Size = new System.Drawing.Size(75, 23);
-            this.btnAñadirCliente.TabIndex = 9;
-            this.btnAñadirCliente.Text = "+Nuevo";
-            this.btnAñadirCliente.UseVisualStyleBackColor = true;
-            this.btnAñadirCliente.Click += new System.EventHandler(this.btnAñadirCliente_Click);
+            this.dgvClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.Location = new System.Drawing.Point(0, 138);
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.RowHeadersVisible = false;
+            this.dgvClientes.RowHeadersWidth = 51;
+            this.dgvClientes.RowTemplate.Height = 24;
+            this.dgvClientes.Size = new System.Drawing.Size(332, 545);
+            this.dgvClientes.TabIndex = 2;
+            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
-            // label1
+            // flowLayoutPanel1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(105, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 25);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Clientes";
+            this.flowLayoutPanel1.Controls.Add(this.label8);
+            this.flowLayoutPanel1.Controls.Add(this.textBox7);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 70);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(329, 70);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // txtBusqueda
+            // label8
             // 
-            this.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBusqueda.Location = new System.Drawing.Point(36, 37);
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(221, 22);
-            this.txtBusqueda.TabIndex = 8;
-            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(3, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(131, 20);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Buscar cliente";
             // 
-            // dataGridView1
+            // textBox7
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 99);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(288, 544);
-            this.dataGridView1.TabIndex = 10;
+            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox7.Location = new System.Drawing.Point(3, 23);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(288, 22);
+            this.textBox7.TabIndex = 19;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnAñadirCliente, 0, 2);
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtBusqueda, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnAñadirCliente, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(294, 646);
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(326, 42);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 42);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Clientes";
+            // 
+            // btnAñadirCliente
+            // 
+            this.btnAñadirCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAñadirCliente.Location = new System.Drawing.Point(239, 9);
+            this.btnAñadirCliente.Name = "btnAñadirCliente";
+            this.btnAñadirCliente.Size = new System.Drawing.Size(84, 30);
+            this.btnAñadirCliente.TabIndex = 11;
+            this.btnAñadirCliente.Text = "+Nuevo";
+            this.btnAñadirCliente.UseVisualStyleBackColor = true;
+            this.btnAñadirCliente.Click += new System.EventHandler(this.btnAñadirCliente_Click_1);
             // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 646);
+            this.ClientSize = new System.Drawing.Size(1270, 683);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.pnlMenu);
             this.Name = "frmClientes";
@@ -438,8 +462,8 @@
             this.Load += new System.EventHandler(this.frmClientes_Load);
             this.pnlMenu.ResumeLayout(false);
             this.pnlContenedor.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlDatosClientes.ResumeLayout(false);
+            this.pnlDatosClientes.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -453,7 +477,9 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -470,21 +496,18 @@
         private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Panel pnlContenedor;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtBusqueda;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlDatosClientes;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnAñadirCliente;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtApMaterno;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtRedSocial;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtApPaterno;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
@@ -494,7 +517,12 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnAñadirCliente;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvClientes;
     }
 }
