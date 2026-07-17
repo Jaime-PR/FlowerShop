@@ -121,7 +121,7 @@
             this.btnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProveedor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.Location = new System.Drawing.Point(48, 559);
+            this.btnProveedor.Location = new System.Drawing.Point(48, 340);
             this.btnProveedor.Name = "btnProveedor";
             this.btnProveedor.Size = new System.Drawing.Size(162, 50);
             this.btnProveedor.TabIndex = 3;
@@ -130,7 +130,6 @@
             this.btnProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProveedor.UseVisualStyleBackColor = true;
             this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
-            // 
             // 
             // pictureBox6
             // 
@@ -192,7 +191,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox1.Image = global::FlowerShop.Properties.Resources.home_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 37);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 34);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -200,12 +199,12 @@
             this.pictureBox1.TabStop = false;
             // 
             // btnInventario
-            // btnInicio
+            // 
             this.btnInventario.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnInventario.FlatAppearance.BorderSize = 0;
             this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnInventario.Location = new System.Drawing.Point(48, 452);
+            this.btnInventario.Location = new System.Drawing.Point(48, 277);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(162, 50);
             this.btnInventario.TabIndex = 2;
@@ -213,14 +212,14 @@
             this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInventario.UseVisualStyleBackColor = true;
             this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
-            this.btnInicio.Text = "Inicio";
+            // 
             // btnClientes
-            this.btnInicio.UseVisualStyleBackColor = true;
+            // 
             this.btnClientes.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnClientes.FlatAppearance.BorderSize = 0;
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnClientes.Location = new System.Drawing.Point(48, 346);
+            this.btnClientes.Location = new System.Drawing.Point(48, 214);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(162, 50);
             this.btnClientes.TabIndex = 4;
@@ -228,14 +227,14 @@
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClientes.UseVisualStyleBackColor = true;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
-            this.bntCategotia.TabIndex = 5;
+            // 
             // btnVentas
             // 
             this.btnVentas.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnVentas.FlatAppearance.BorderSize = 0;
             this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnVentas.Location = new System.Drawing.Point(48, 240);
+            this.btnVentas.Location = new System.Drawing.Point(48, 151);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(162, 50);
             this.btnVentas.TabIndex = 1;
@@ -245,13 +244,13 @@
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // bntCategotia
-            this.btnInventario.UseVisualStyleBackColor = true;
+            // 
             this.bntCategotia.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.bntCategotia.AutoSize = true;
             this.bntCategotia.FlatAppearance.BorderSize = 0;
             this.bntCategotia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntCategotia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.bntCategotia.Location = new System.Drawing.Point(48, 134);
+            this.bntCategotia.Location = new System.Drawing.Point(48, 88);
             this.bntCategotia.Name = "bntCategotia";
             this.bntCategotia.Size = new System.Drawing.Size(162, 50);
             this.bntCategotia.TabIndex = 5;
@@ -259,16 +258,6 @@
             this.bntCategotia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntCategotia.UseVisualStyleBackColor = true;
             this.bntCategotia.Click += new System.EventHandler(this.bntCategotia_Click);
-            this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.Location = new System.Drawing.Point(48, 340);
-            this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Size = new System.Drawing.Size(162, 50);
-            this.btnProveedor.TabIndex = 3;
-            this.btnProveedor.Text = "Proveedores";
-            this.btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProveedor.UseVisualStyleBackColor = true;
-            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
             // btnInicio
             // 
@@ -278,26 +267,15 @@
             this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInicio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnInicio.Location = new System.Drawing.Point(48, 28);
+            this.btnInicio.Location = new System.Drawing.Point(48, 25);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnInicio.Size = new System.Drawing.Size(162, 50);
             this.btnInicio.TabIndex = 1;
-            this.btnInicio.Text = "Inicioo";
+            this.btnInicio.Text = "Inicio";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            // 
-            // pnlTop
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox1.Image = global::FlowerShop.Properties.Resources.home_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel2
             // 
@@ -395,6 +373,16 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 2;
             this.pictureBox9.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(251, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 28);
+            this.label1.TabIndex = 3;
             // 
             // pnlContenedor
             // 
