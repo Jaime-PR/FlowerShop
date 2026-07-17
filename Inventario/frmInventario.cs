@@ -9,19 +9,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-
 namespace FlowerShop.Inventario
 {
     public partial class frmInventario : Form
     {
-        private string cadenaConexion = "Server=localhost;Database=lowershop;Uid=root;Pwd=;";
+        private int idProductoSeleccionado = 0;
+        private string cadenaConexion = "Server=localhost;Database=flowershop;Uid=root;Pwd=;Port=3306;SslMode=Disabled;";
+
         public frmInventario()
         {
             InitializeComponent();
         }
+
+        
+        private void frmInventario_Load(object sender, EventArgs e)
+        {
+            CargarProductos();
+        }
+
         private void CargarProductos()
         {
-            
             string consulta = @"SELECT p.Id_Producto AS 'ID', 
                                        p.Nombre AS 'Producto', 
                                        p.Precio_Compra AS 'P. Compra', 
@@ -37,11 +44,7 @@ namespace FlowerShop.Inventario
                 try
                 {
                     conexion.Open();
-
-                    
                     MySqlDataAdapter adapter = new MySqlDataAdapter(consulta, conexion);
-
-                    
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
                     dgvProductos.DataSource = dt;
@@ -52,9 +55,27 @@ namespace FlowerShop.Inventario
                 }
             }
         }
-        private void AbrirFormulario<TForm>() where TForm : Form, new()
+        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dgvProductos.Rows[e.RowIndex];
+
+                
+                idProductoSeleccionado = Convert.ToInt32(fila.Cells["ID"].Value);
+
+                txtNombre.Text = fila.Cells["Producto"].Value.ToString();
+                txtCategoria.Text = fila.Cells["Categoría"].Value.ToString();
+                txtProveedor.Text = fila.Cells["Proveedor"].Value.ToString();
+                txtCantidad.Text = fila.Cells["Stock"].Value.ToString();
+                txtPrecioCompra.Text = fila.Cells["P. Compra"].Value.ToString();
+                txtPrecioVenta.Text = fila.Cells["P. Venta"].Value.ToString();
+            }
+        }
+
+        private void AbrirFormulario<TForm>() where TForm : Form, new()
+        {
             using (TForm formulario = new TForm())
             {
                 formulario.StartPosition = FormStartPosition.CenterScreen;
@@ -62,35 +83,42 @@ namespace FlowerShop.Inventario
             }
         }
 
-        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void dgbInventario_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void frmInventario_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void bntAñadir_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Inventario.frmAgg_Producto>();
+
         }
 
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Inventario.frmAgg_Producto>();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAñadir_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Inventario.frmAgg_Producto>();
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 
