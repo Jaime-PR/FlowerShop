@@ -23,7 +23,11 @@ namespace FlowerShop.Inventario
 
         
         private void frmInventario_Load(object sender, EventArgs e)
-        {
+        {         
+            dgvProductos.ReadOnly = true;
+            dgvProductos.AllowUserToAddRows = false;
+            dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProductos.MultiSelect = false;
             CargarProductos();
         }
 
@@ -73,7 +77,28 @@ namespace FlowerShop.Inventario
                 txtPrecioVenta.Text = fila.Cells["P. Venta"].Value.ToString();
             }
         }
+        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+            if (e.RowIndex >= 0 && !dgvProductos.Rows[e.RowIndex].IsNewRow)
+            {
+                DataGridViewRow fila = dgvProductos.Rows[e.RowIndex];
+
+                
+                if (fila.Cells["ID"].Value != null && fila.Cells["ID"].Value != DBNull.Value)
+                {
+                    idProductoSeleccionado = Convert.ToInt32(fila.Cells["ID"].Value);
+
+                    
+                    txtNombre.Text = fila.Cells["Producto"].Value?.ToString() ?? "";
+                    txtCategoria.Text = fila.Cells["Categoría"].Value?.ToString() ?? "";
+                    txtProveedor.Text = fila.Cells["Proveedor"].Value?.ToString() ?? "";
+                    txtCantidad.Text = fila.Cells["Stock"].Value?.ToString() ?? "";
+                    txtPrecioCompra.Text = fila.Cells["P. Compra"].Value?.ToString() ?? "";
+                    txtPrecioVenta.Text = fila.Cells["P. Venta"].Value?.ToString() ?? "";
+                }
+            }
+        }
         private void AbrirFormulario<TForm>() where TForm : Form, new()
         {
             using (TForm formulario = new TForm())
@@ -83,43 +108,158 @@ namespace FlowerShop.Inventario
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        //Limpiar datos
+        private void LimpiarCampos()
         {
-
+            txtNombre.Clear();
+            txtCategoria.Clear();
+            txtProveedor.Clear();
+            txtCantidad.Clear();
+            txtPrecioCompra.Clear();
+            txtPrecioVenta.Clear();
+            idProductoSeleccionado = 0; 
         }
+       
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+            
+            if (idProductoSeleccionado == 0)
+            {
+                MessageBox.Show("Por favor, selecciona un producto de la tabla para modificar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
+                string.IsNullOrWhiteSpace(txtCategoria.Text) ||
+                string.IsNullOrWhiteSpace(txtProveedor.Text) ||
+                string.IsNullOrWhiteSpace(txtCantidad.Text) ||
+                string.IsNullOrWhiteSpace(txtPrecioCompra.Text) ||
+                string.IsNullOrWhiteSpace(txtPrecioVenta.Text))
+            {
+                MessageBox.Show("No se puede actualizar el producto si hay registros en blanco. Por favor, llena todos los campos.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            
+            DialogResult confirmacion = MessageBox.Show("¿Desea realizar estos cambios en el producto?", "Confirmar actualización", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            
+            if (confirmacion != DialogResult.OK)
+            {
+                return;
+            }
+
+            
+            using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
+            {
+                try
+                {
+                    conexion.Open();
+                    string query = @"UPDATE PRODUCTO 
+                             SET Nombre = @Nombre, 
+                                 Precio_Compra = @PrecioCompra, 
+                                 Precio_Venta = @PrecioVenta, 
+                                 Cantidad = @Cantidad, 
+                                 Categoria = @Categoria 
+                             WHERE Id_Producto = @IdProducto";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+                        cmd.Parameters.AddWithValue("@PrecioCompra", Convert.ToDecimal(txtPrecioCompra.Text));
+                        cmd.Parameters.AddWithValue("@PrecioVenta", Convert.ToDecimal(txtPrecioVenta.Text));
+                        cmd.Parameters.AddWithValue("@Cantidad", Convert.ToInt32(txtCantidad.Text));
+                        cmd.Parameters.AddWithValue("@Categoria", txtCategoria.Text);
+                        cmd.Parameters.AddWithValue("@IdProducto", idProductoSeleccionado);
+
+                        int filasAfectadas = cmd.ExecuteNonQuery();
+
+                        if (filasAfectadas > 0)
+                        {
+                            MessageBox.Show("Producto actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            CargarProductos();
+                            LimpiarCampos();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo actualizar el producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al modificar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
         
 
-        private void bntAñadir_Click(object sender, EventArgs e)
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
+            
+            if (idProductoSeleccionado == 0)
+            {
+                MessageBox.Show("Por favor, selecciona un producto de la tabla para eliminar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            
+            DialogResult confirmacion = MessageBox.Show("¿Desea eliminar el producto seleccionado?", "Confirmar Eliminación", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            
+            if (confirmacion == DialogResult.OK)
+            {
+                using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
+                {
+                    try
+                    {
+                        conexion.Open();
+                        string query = "DELETE FROM PRODUCTO WHERE Id_Producto = @IdProducto";
+
+                        using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                        {
+                            cmd.Parameters.AddWithValue("@IdProducto", idProductoSeleccionado);
+
+                            int filasAfectadas = cmd.ExecuteNonQuery();
+
+                            if (filasAfectadas > 0)
+                            {
+                                MessageBox.Show("Producto eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                CargarProductos();
+                                LimpiarCampos();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se encontró el producto a eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al eliminar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
 
-
+        private void panel1_Paint(object sender, PaintEventArgs e) { }
+        private void bntAñadir_Click(object sender, EventArgs e) { }
         private void button1_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Inventario.frmAgg_Producto>();
+
+            CargarProductos();
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        private void button4_Click(object sender, EventArgs e) { }
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e) { }
         private void btnAñadir_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Inventario.frmAgg_Producto>();
-        }
 
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
+            CargarProductos();
         }
+        private void panel1_Paint_1(object sender, PaintEventArgs e) { }
     }
 
 }

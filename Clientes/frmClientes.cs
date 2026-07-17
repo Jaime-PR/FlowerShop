@@ -26,7 +26,7 @@ namespace FlowerShop.Clientes
 
         private void CargarClientes()
         {
-            // Traemos TODOS los datos de la base de datos
+            
             string consulta = @"SELECT Id_Cliente AS 'ID', 
                                        Nombre AS 'Nombre', 
                                        Apellido_Paterno AS 'Apellido Paterno', 
@@ -45,13 +45,12 @@ namespace FlowerShop.Clientes
                     adapter.Fill(dt);
                     dgvClientes.DataSource = dt;
 
-                    // --- AQUÍ ESTÁ EL TRUCO DEL RESUMEN ---
-                    // Ocultamos las columnas que no queremos ver en la tabla
+                    
                     dgvClientes.Columns["Apellido Materno"].Visible = false;
                     dgvClientes.Columns["Teléfono"].Visible = false;
                     dgvClientes.Columns["Red Social"].Visible = false;
 
-                    // Opcional: Hacemos que las 3 columnas visibles (ID, Nombre, Ap. Paterno) llenen la tabla
+                    
                     dgvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 }
                 catch (Exception ex)
@@ -67,18 +66,16 @@ namespace FlowerShop.Clientes
                 DataGridViewRow fila = dgvClientes.Rows[e.RowIndex];
                 idClienteSeleccionado = Convert.ToInt32(fila.Cells["ID"].Value);
 
-                // Aunque algunas columnas están invisibles en la tabla, la información existe 
-                // y la podemos pasar a los TextBoxes de tu pnlDatosClientes
+                
                 txtNombre.Text = fila.Cells["Nombre"].Value.ToString();
                 txtApPaterno.Text = fila.Cells["Apellido Paterno"].Value.ToString();
                 txtApMaterno.Text = fila.Cells["Apellido Materno"].Value.ToString();
                 txtTelefono.Text = fila.Cells["Teléfono"].Value.ToString();
 
-                // Asignamos la Red Social a su nueva caja de texto
+                
                 txtRedSocial.Text = fila.Cells["Red Social"].Value.ToString();
 
-                // Si aún tienes la caja de "Dirección", puedes dejarla en blanco por ahora:
-                // txtDireccion.Text = "";
+               
             }
         }
         private void AbrirFormulario<TForm>() where TForm : Form, new()
