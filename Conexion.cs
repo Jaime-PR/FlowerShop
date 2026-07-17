@@ -11,12 +11,12 @@ namespace FlowerShop
 {
     public class Conexion
     {
-        private string cadenaConexion = "Server=localhost;Database=floreria_flowershop;Uid=root;Pwd=;Port=3306;SslMode=Disabled;";
+        private string cadenaConexion = "Server=localhost;Database=flowershop;Uid=root;Pwd=;Port=3306;SslMode=Disabled;";
 
         public MySqlConnection ObtenerConexionAbierta()
         {
 
-            string cadenaConexion = "Server=localhost;Database=floreria_flowershop;Uid=root;Pwd=;Port=3306;SslMode=Disabled;";
+            string cadenaConexion = "Server=localhost;Database=flowershop;Uid=root;Pwd=;Port=3306;SslMode=Disabled;";
             MySqlConnection conexion = new MySqlConnection(cadenaConexion);
 
             try

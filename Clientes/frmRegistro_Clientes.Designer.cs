@@ -300,7 +300,7 @@
             this.pnlContenedor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlContenedor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlContenedor.Controls.Add(this.tableLayoutPanel1);
-            this.pnlContenedor.Location = new System.Drawing.Point(26, 15);
+            this.pnlContenedor.Location = new System.Drawing.Point(5, 15);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(549, 629);
             this.pnlContenedor.TabIndex = 3;
@@ -350,7 +350,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
-            this.ClientSize = new System.Drawing.Size(701, 710);
+            this.ClientSize = new System.Drawing.Size(659, 710);
             this.Controls.Add(this.pnlContenedor);
             this.MaximizeBox = false;
             this.Name = "frmRegistro_Clientes";
