@@ -23,7 +23,11 @@ namespace FlowerShop.Inventario
 
         
         private void frmInventario_Load(object sender, EventArgs e)
-        {
+        {         
+            dgvProductos.ReadOnly = true;
+            dgvProductos.AllowUserToAddRows = false;
+            dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProductos.MultiSelect = false;
             CargarProductos();
         }
 
@@ -57,20 +61,24 @@ namespace FlowerShop.Inventario
         }
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            if (e.RowIndex >= 0)
+
+            if (e.RowIndex >= 0 && !dgvProductos.Rows[e.RowIndex].IsNewRow)
             {
                 DataGridViewRow fila = dgvProductos.Rows[e.RowIndex];
 
                 
-                idProductoSeleccionado = Convert.ToInt32(fila.Cells["ID"].Value);
+                if (fila.Cells["ID"].Value != null && fila.Cells["ID"].Value != DBNull.Value)
+                {
+                    idProductoSeleccionado = Convert.ToInt32(fila.Cells["ID"].Value);
 
-                txtNombre.Text = fila.Cells["Producto"].Value.ToString();
-                txtCategoria.Text = fila.Cells["Categoría"].Value.ToString();
-                txtProveedor.Text = fila.Cells["Proveedor"].Value.ToString();
-                txtCantidad.Text = fila.Cells["Stock"].Value.ToString();
-                txtPrecioCompra.Text = fila.Cells["P. Compra"].Value.ToString();
-                txtPrecioVenta.Text = fila.Cells["P. Venta"].Value.ToString();
+                    
+                    txtNombre.Text = fila.Cells["Producto"].Value?.ToString() ?? "";
+                    txtCategoria.Text = fila.Cells["Categoría"].Value?.ToString() ?? "";
+                    txtProveedor.Text = fila.Cells["Proveedor"].Value?.ToString() ?? "";
+                    txtCantidad.Text = fila.Cells["Stock"].Value?.ToString() ?? "";
+                    txtPrecioCompra.Text = fila.Cells["P. Compra"].Value?.ToString() ?? "";
+                    txtPrecioVenta.Text = fila.Cells["P. Venta"].Value?.ToString() ?? "";
+                }
             }
         }
         private void AbrirFormulario<TForm>() where TForm : Form, new()
@@ -93,18 +101,17 @@ namespace FlowerShop.Inventario
             txtPrecioVenta.Clear();
             idProductoSeleccionado = 0; 
         }
-
-
-        private void btnGuardar_Click(object sender, EventArgs e)
+       
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-            // 1. Validar que se haya seleccionado un producto
+            
             if (idProductoSeleccionado == 0)
             {
                 MessageBox.Show("Por favor, selecciona un producto de la tabla para modificar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // 2. Validar que no haya registros (TextBoxes) en blanco
+            
             if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
                 string.IsNullOrWhiteSpace(txtCategoria.Text) ||
                 string.IsNullOrWhiteSpace(txtProveedor.Text) ||
@@ -116,16 +123,16 @@ namespace FlowerShop.Inventario
                 return;
             }
 
-            // 3. Cuadro de confirmación (Aceptar / Cancelar)
+            
             DialogResult confirmacion = MessageBox.Show("¿Desea realizar estos cambios en el producto?", "Confirmar actualización", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
-            // Si el usuario presiona "Cancelar", detenemos la ejecución
+            
             if (confirmacion != DialogResult.OK)
             {
                 return;
             }
 
-            // 4. Ejecutar la actualización si todo está correcto y confirmado
+            
             using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
             {
                 try
@@ -168,19 +175,21 @@ namespace FlowerShop.Inventario
                 }
             }
         }
-        private void btnEliminar_Click(object sender, EventArgs e)
+        
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            // 1. Validar que se haya seleccionado un producto
+            
             if (idProductoSeleccionado == 0)
             {
                 MessageBox.Show("Por favor, selecciona un producto de la tabla para eliminar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // 2. Cuadro de confirmación (Aceptar / Cancelar)
+            
             DialogResult confirmacion = MessageBox.Show("¿Desea eliminar el producto seleccionado?", "Confirmar Eliminación", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
-            // Si el usuario presiona "Aceptar", procedemos a borrar
+            
             if (confirmacion == DialogResult.OK)
             {
                 using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
@@ -215,19 +224,24 @@ namespace FlowerShop.Inventario
                 }
             }
         }
+
         private void panel1_Paint(object sender, PaintEventArgs e) { }
         private void bntAñadir_Click(object sender, EventArgs e) { }
         private void button1_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Inventario.frmAgg_Producto>();
+
+            CargarProductos();
         }
         private void button4_Click(object sender, EventArgs e) { }
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e) { }
         private void btnAñadir_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Inventario.frmAgg_Producto>();
+
+            CargarProductos();
         }
-        private void panel1_Paint_1(object sender, PaintEventArgs e) { }      
+        private void panel1_Paint_1(object sender, PaintEventArgs e) { }
     }
 
 }
