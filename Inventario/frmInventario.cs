@@ -21,7 +21,7 @@ namespace FlowerShop.Inventario
         }
         private void CargarProductos()
         {
-            // Consulta SQL que además trae el nombre de la empresa proveedora usando un INNER JOIN
+            
             string consulta = @"SELECT p.Id_Producto AS 'ID', 
                                        p.Nombre AS 'Producto', 
                                        p.Precio_Compra AS 'P. Compra', 
@@ -38,22 +38,27 @@ namespace FlowerShop.Inventario
                 {
                     conexion.Open();
 
-                    // El Adapter sirve como puente entre la base de datos y nuestro programa
+                    
                     MySqlDataAdapter adapter = new MySqlDataAdapter(consulta, conexion);
 
-                    // Creamos una tabla en memoria virtual
+                    
                     DataTable dt = new DataTable();
-
-                    // Llenamos la tabla virtual con los datos que trajo el adapter
                     adapter.Fill(dt);
-
-                    // Le asignamos esa tabla directamente al DataGridView
                     dgvProductos.DataSource = dt;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al cargar los productos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+        private void AbrirFormulario<TForm>() where TForm : Form, new()
+        {
+            
+            using (TForm formulario = new TForm())
+            {
+                formulario.StartPosition = FormStartPosition.CenterScreen;
+                formulario.ShowDialog();
             }
         }
 
@@ -70,6 +75,22 @@ namespace FlowerShop.Inventario
         private void dgbInventario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void frmInventario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bntAñadir_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Inventario.frmAgg_Producto>();
+        }
+
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Inventario.frmAgg_Producto>();
         }
     }
 
