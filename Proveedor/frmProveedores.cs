@@ -25,7 +25,7 @@ namespace FlowerShop.Proveedor
         }
         private void CargarProveedores()
         {
-            //Mandamos a llamar la consulta para llenar el DataGridView con los datos de la tabla PROVEEDOR
+            
             string consulta = @"SELECT Id_Proveedor AS 'ID', 
                                        Nombre_Empresa AS 'Empresa', 
                                        Nombre AS 'Nombre', 

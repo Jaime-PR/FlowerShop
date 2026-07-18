@@ -43,7 +43,6 @@
             this.btnVentas = new System.Windows.Forms.Button();
             this.bntCategotia = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
-            this.pnlTop = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -278,13 +277,6 @@
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            // 
-            // pnlTop
-            // 
-            this.pnlTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(200, 100);
-            this.pnlTop.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 

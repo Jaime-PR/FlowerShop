@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnAñadir = new System.Windows.Forms.Button();
+            this.txtProveedor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtRSC = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtTelC = new System.Windows.Forms.TextBox();
-            this.txtNombreCliente = new System.Windows.Forms.TextBox();
-            this.txtApellidoMC = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtPrecioVenta = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtApellidoPC = new System.Windows.Forms.TextBox();
+            this.txtPrecioCompra = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,24 +60,25 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // btnGuardar
+            // btnAñadir
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
-            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(547, 10);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(199, 37);
-            this.btnGuardar.TabIndex = 39;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnAñadir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
+            this.btnAñadir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadir.Location = new System.Drawing.Point(547, 10);
+            this.btnAñadir.Name = "btnAñadir";
+            this.btnAñadir.Size = new System.Drawing.Size(199, 37);
+            this.btnAñadir.TabIndex = 39;
+            this.btnAñadir.Text = "+ Añadir";
+            this.btnAñadir.UseVisualStyleBackColor = false;
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             // 
-            // textBox1
+            // txtProveedor
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textBox1.Location = new System.Drawing.Point(40, 201);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(327, 34);
-            this.textBox1.TabIndex = 38;
+            this.txtProveedor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtProveedor.Location = new System.Drawing.Point(40, 201);
+            this.txtProveedor.Name = "txtProveedor";
+            this.txtProveedor.Size = new System.Drawing.Size(327, 34);
+            this.txtProveedor.TabIndex = 38;
             // 
             // label1
             // 
@@ -89,13 +90,13 @@
             this.label1.TabIndex = 37;
             this.label1.Text = "Proveedor";
             // 
-            // txtRSC
+            // txtCategoria
             // 
-            this.txtRSC.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtRSC.Location = new System.Drawing.Point(410, 113);
-            this.txtRSC.Name = "txtRSC";
-            this.txtRSC.Size = new System.Drawing.Size(327, 34);
-            this.txtRSC.TabIndex = 36;
+            this.txtCategoria.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtCategoria.Location = new System.Drawing.Point(410, 113);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(327, 34);
+            this.txtCategoria.TabIndex = 36;
             // 
             // label2
             // 
@@ -107,29 +108,29 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "Nombre";
             // 
-            // txtTelC
+            // txtCantidad
             // 
-            this.txtTelC.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtTelC.Location = new System.Drawing.Point(410, 201);
-            this.txtTelC.Name = "txtTelC";
-            this.txtTelC.Size = new System.Drawing.Size(327, 34);
-            this.txtTelC.TabIndex = 35;
+            this.txtCantidad.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtCantidad.Location = new System.Drawing.Point(410, 201);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(327, 34);
+            this.txtCantidad.TabIndex = 35;
             // 
-            // txtNombreCliente
+            // txtNombre
             // 
-            this.txtNombreCliente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCliente.Location = new System.Drawing.Point(40, 113);
-            this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(327, 34);
-            this.txtNombreCliente.TabIndex = 27;
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(40, 113);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(327, 34);
+            this.txtNombre.TabIndex = 27;
             // 
-            // txtApellidoMC
+            // txtPrecioVenta
             // 
-            this.txtApellidoMC.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtApellidoMC.Location = new System.Drawing.Point(410, 298);
-            this.txtApellidoMC.Name = "txtApellidoMC";
-            this.txtApellidoMC.Size = new System.Drawing.Size(327, 34);
-            this.txtApellidoMC.TabIndex = 34;
+            this.txtPrecioVenta.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtPrecioVenta.Location = new System.Drawing.Point(410, 298);
+            this.txtPrecioVenta.Name = "txtPrecioVenta";
+            this.txtPrecioVenta.Size = new System.Drawing.Size(327, 34);
+            this.txtPrecioVenta.TabIndex = 34;
             // 
             // label3
             // 
@@ -141,13 +142,13 @@
             this.label3.TabIndex = 29;
             this.label3.Text = "Precio compra (Mxn)";
             // 
-            // txtApellidoPC
+            // txtPrecioCompra
             // 
-            this.txtApellidoPC.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtApellidoPC.Location = new System.Drawing.Point(40, 298);
-            this.txtApellidoPC.Name = "txtApellidoPC";
-            this.txtApellidoPC.Size = new System.Drawing.Size(327, 34);
-            this.txtApellidoPC.TabIndex = 33;
+            this.txtPrecioCompra.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtPrecioCompra.Location = new System.Drawing.Point(40, 298);
+            this.txtPrecioCompra.Name = "txtPrecioCompra";
+            this.txtPrecioCompra.Size = new System.Drawing.Size(327, 34);
+            this.txtPrecioCompra.TabIndex = 33;
             // 
             // label4
             // 
@@ -202,7 +203,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.btnGuardar);
+            this.panel2.Controls.Add(this.btnAñadir);
             this.panel2.Controls.Add(this.btnCancelar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 381);
@@ -218,15 +219,15 @@
             this.ClientSize = new System.Drawing.Size(792, 440);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtProveedor);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtRSC);
+            this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtTelC);
-            this.Controls.Add(this.txtNombreCliente);
-            this.Controls.Add(this.txtApellidoMC);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtPrecioVenta);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtApellidoPC);
+            this.Controls.Add(this.txtPrecioCompra);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -244,16 +245,16 @@
         #endregion
 
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnAñadir;
+        private System.Windows.Forms.TextBox txtProveedor;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtRSC;
+        private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtTelC;
-        private System.Windows.Forms.TextBox txtNombreCliente;
-        private System.Windows.Forms.TextBox txtApellidoMC;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtPrecioVenta;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtApellidoPC;
+        private System.Windows.Forms.TextBox txtPrecioCompra;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

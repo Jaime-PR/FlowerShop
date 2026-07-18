@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlDatosP = new System.Windows.Forms.Panel();
-            this.btneliminar = new System.Windows.Forms.Button();
-            this.btnguadar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.txtPrecioVenta = new System.Windows.Forms.TextBox();
             this.lb6 = new System.Windows.Forms.Label();
             this.txtPrecioCompra = new System.Windows.Forms.TextBox();
@@ -54,8 +54,8 @@
             // pnlDatosP
             // 
             this.pnlDatosP.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnlDatosP.Controls.Add(this.btneliminar);
-            this.pnlDatosP.Controls.Add(this.btnguadar);
+            this.pnlDatosP.Controls.Add(this.btnEliminar);
+            this.pnlDatosP.Controls.Add(this.btnGuardar);
             this.pnlDatosP.Controls.Add(this.txtPrecioVenta);
             this.pnlDatosP.Controls.Add(this.lb6);
             this.pnlDatosP.Controls.Add(this.txtPrecioCompra);
@@ -75,31 +75,33 @@
             this.pnlDatosP.TabIndex = 6;
             this.pnlDatosP.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
-            // btneliminar
+            // btnEliminar
             // 
-            this.btneliminar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btneliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btneliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.Location = new System.Drawing.Point(19, 637);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(225, 34);
-            this.btneliminar.TabIndex = 6;
-            this.btneliminar.Text = "Eliminar";
-            this.btneliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(19, 637);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(225, 34);
+            this.btnEliminar.TabIndex = 6;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
-            // btnguadar
+            // btnGuardar
             // 
-            this.btnguadar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnguadar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
-            this.btnguadar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnguadar.Location = new System.Drawing.Point(19, 594);
-            this.btnguadar.Name = "btnguadar";
-            this.btnguadar.Size = new System.Drawing.Size(225, 37);
-            this.btnguadar.TabIndex = 24;
-            this.btnguadar.Text = "Guardar";
-            this.btnguadar.UseVisualStyleBackColor = false;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(19, 594);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(225, 37);
+            this.btnGuardar.TabIndex = 24;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // txtPrecioVenta
             // 
@@ -278,8 +280,8 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlDatosP;
-        private System.Windows.Forms.Button btneliminar;
-        private System.Windows.Forms.Button btnguadar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtPrecioVenta;
         private System.Windows.Forms.Label lb6;
         private System.Windows.Forms.TextBox txtPrecioCompra;
