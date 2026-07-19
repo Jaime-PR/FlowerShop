@@ -96,5 +96,10 @@ namespace FlowerShop.Inventario
         {
             this.Close();
         }
+
+        private void frmAgg_Producto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

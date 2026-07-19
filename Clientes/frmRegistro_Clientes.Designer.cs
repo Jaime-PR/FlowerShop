@@ -52,8 +52,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -63,8 +61,6 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.pnlContenedor.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -295,31 +291,6 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Registro";
             // 
-            // pnlContenedor
-            // 
-            this.pnlContenedor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlContenedor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnlContenedor.Controls.Add(this.tableLayoutPanel1);
-            this.pnlContenedor.Location = new System.Drawing.Point(5, 15);
-            this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(549, 629);
-            this.pnlContenedor.TabIndex = 3;
-            this.pnlContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContenedor_Paint);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.panel9, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(549, 629);
-            this.tableLayoutPanel1.TabIndex = 25;
-            // 
             // panel9
             // 
             this.panel9.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -340,7 +311,7 @@
             this.panel9.Controls.Add(this.label6);
             this.panel9.Controls.Add(this.panel2);
             this.panel9.Controls.Add(this.panel6);
-            this.panel9.Location = new System.Drawing.Point(3, 3);
+            this.panel9.Location = new System.Drawing.Point(-25, -22);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(543, 623);
             this.panel9.TabIndex = 0;
@@ -350,8 +321,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
-            this.ClientSize = new System.Drawing.Size(659, 710);
-            this.Controls.Add(this.pnlContenedor);
+            this.ClientSize = new System.Drawing.Size(495, 580);
+            this.Controls.Add(this.panel9);
             this.MaximizeBox = false;
             this.Name = "frmRegistro_Clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -370,8 +341,6 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            this.pnlContenedor.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.ResumeLayout(false);
@@ -404,8 +373,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel pnlContenedor;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel9;
     }
 }
