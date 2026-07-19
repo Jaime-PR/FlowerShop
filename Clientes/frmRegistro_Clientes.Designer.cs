@@ -311,7 +311,7 @@
             this.panel9.Controls.Add(this.label6);
             this.panel9.Controls.Add(this.panel2);
             this.panel9.Controls.Add(this.panel6);
-            this.panel9.Location = new System.Drawing.Point(-4, -5);
+            this.panel9.Location = new System.Drawing.Point(-25, -22);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(543, 623);
             this.panel9.TabIndex = 0;
@@ -321,7 +321,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
-            this.ClientSize = new System.Drawing.Size(537, 614);
+            this.ClientSize = new System.Drawing.Size(495, 580);
             this.Controls.Add(this.panel9);
             this.MaximizeBox = false;
             this.Name = "frmRegistro_Clientes";
