@@ -53,7 +53,7 @@
             // 
             // pnlDatosP
             // 
-            this.pnlDatosP.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlDatosP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(197)))), ((int)(((byte)(156)))));
             this.pnlDatosP.Controls.Add(this.btnEliminar);
             this.pnlDatosP.Controls.Add(this.btnGuardar);
             this.pnlDatosP.Controls.Add(this.txtPrecioVenta);
@@ -248,6 +248,7 @@
             // dgvProductos
             // 
             this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProductos.Location = new System.Drawing.Point(0, 59);
