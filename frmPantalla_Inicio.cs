@@ -83,5 +83,30 @@ namespace FlowerShop
         {
 
         }
+
+        private void pictureBoxUsuario_Click(object sender, EventArgs e)
+        {
+            
+            frmMenu menu = new frmMenu();
+
+            
+            menu.StartPosition = FormStartPosition.Manual;
+
+            // (Opcional) Quitarle los bordes al form para que parezca un menú desplegable real
+             menu.FormBorderStyle = FormBorderStyle.None; 
+
+            // 3. Calcular la posición exacta (esquina inferior derecha de la imagen)
+            // PointToScreen convierte la ubicación del control a coordenadas de tu monitor
+            Point esquinaInferiorDerecha = pictureBoxUsuario.PointToScreen(new Point(pictureBoxUsuario.Width, pictureBoxUsuario.Height));
+
+            // 4. Ajustar la ubicación para que encaje en el recuadro azul
+            // Restamos el ancho del menú a la coordenada X para que quede alineado a la derecha
+            int posicionX = esquinaInferiorDerecha.X - menu.Width;
+            int posicionY = esquinaInferiorDerecha.Y; // Y se queda igual para que aparezca justo debajo
+
+            // 5. Asignar la nueva ubicación y mostrar el menú
+            menu.Location = new Point(posicionX, posicionY);
+            menu.Show();
+        }
     }
 }
