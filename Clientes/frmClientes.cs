@@ -142,6 +142,22 @@ namespace FlowerShop.Clientes
         private void btnAñadirCliente_Click_1(object sender, EventArgs e)
         {
             AbrirFormulario<Clientes.frmRegistro_Clientes>();
+            CargarClientes();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApPaterno_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

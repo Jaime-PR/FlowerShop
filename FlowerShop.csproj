@@ -158,11 +158,11 @@
     <Compile Include="Proveedor\frmProveedores.Designer.cs">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Proveedor\frmRegistro_Proveedor.cs">
+    <Compile Include="Proveedor\frmRproveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Proveedor\frmRegistro_Proveedor.Designer.cs">
-      <DependentUpon>frmRegistro_Proveedor.cs</DependentUpon>
+    <Compile Include="Proveedor\frmRproveedor.Designer.cs">
+      <DependentUpon>frmRproveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventas\frmRegistro_Venta.cs">
       <SubType>Form</SubType>
@@ -216,8 +216,8 @@
     <EmbeddedResource Include="Proveedor\frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Proveedor\frmRegistro_Proveedor.resx">
-      <DependentUpon>frmRegistro_Proveedor.cs</DependentUpon>
+    <EmbeddedResource Include="Proveedor\frmRproveedor.resx">
+      <DependentUpon>frmRproveedor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
