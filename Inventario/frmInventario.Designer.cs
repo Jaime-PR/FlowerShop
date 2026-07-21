@@ -73,7 +73,7 @@
             this.pnlDatosP.Name = "pnlDatosP";
             this.pnlDatosP.Size = new System.Drawing.Size(263, 679);
             this.pnlDatosP.TabIndex = 6;
-            this.pnlDatosP.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            
             // 
             // btnEliminar
             // 
@@ -87,7 +87,7 @@
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
+            
             // 
             // btnGuardar
             // 
@@ -101,7 +101,7 @@
             this.btnGuardar.TabIndex = 24;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
+            
             // 
             // txtPrecioVenta
             // 

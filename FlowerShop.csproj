@@ -150,6 +150,8 @@
     <Compile Include="Login\frmInicio_Sesion.Designer.cs">
       <DependentUpon>frmInicio_Sesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\Producto.cs" />
+    <Compile Include="Modelos\ProductoDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedor\frmProveedores.cs">
@@ -164,6 +166,7 @@
     <Compile Include="Proveedor\frmRproveedor.Designer.cs">
       <DependentUpon>frmRproveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilidades\Seguridad.cs" />
     <Compile Include="Ventas\frmRegistro_Venta.cs">
       <SubType>Form</SubType>
     </Compile>

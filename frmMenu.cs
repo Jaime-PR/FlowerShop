@@ -13,28 +13,42 @@ namespace FlowerShop
 {
     public partial class frmMenu : Form
     {
-           
-        
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
-            int nLeftRect,     
-            int nTopRect,      
-            int nRightRect,    
-            int nBottomRect,   
-            int nWidthEllipse,  
-            int nHeightEllipse 
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
         );
-        public frmMenu()
+
+        // Único constructor unificado: Recibe el rol y aplica el diseño
+        public frmMenu(string rolUsuario)
         {
             InitializeComponent();
+
+            // Lógica de diseño: bordes redondeados
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 30, 30));
+
+            // Lógica de permisos: evaluación de roles
+            if (rolUsuario == "Vendedor")
+            {
+                btnAdminEmpleados.Visible = false;
+            }
+            else if (rolUsuario == "Administrador")
+            {
+                // El administrador ve todo el menú intacto
+            }
         }
+
         private void frmMenu_Deactivate(object sender, EventArgs e)
         {
-            this.Close(); 
+            this.Close();
         }
+
         private void btnInicio_Click(object sender, EventArgs e)
         {
 
@@ -47,15 +61,13 @@ namespace FlowerShop
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            
             DialogResult confirmacion = MessageBox.Show(
-                "¿Estás seguro de que deseas cerrar la sesión actual?", 
-                "Cerrar Sesión",                                        
-                MessageBoxButtons.YesNo,                                
-                MessageBoxIcon.Question                                 
+                "¿Estás seguro de que deseas cerrar la sesión actual?",
+                "Cerrar Sesión",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
             );
 
-            
             if (confirmacion == DialogResult.Yes)
             {
                 Application.Restart();

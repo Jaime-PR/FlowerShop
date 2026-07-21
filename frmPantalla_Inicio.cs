@@ -13,23 +13,40 @@ namespace FlowerShop
 {
     public partial class frmPantalla_Inicio : Form
     {
-        public frmPantalla_Inicio()
+        // 1. Variable global privada para guardar el rol
+        private string rolDelUsuarioLogueado;
+
+        // 2. Único constructor unificado que recibe el rol
+        public frmPantalla_Inicio(string rolUsuario)
         {
             InitializeComponent();
+
+            // Guardamos el rol que viene del Login en nuestra variable
+            rolDelUsuarioLogueado = rolUsuario;
+
+            // Restricción de módulos en el panel lateral izquierdo
+            if (rolDelUsuarioLogueado == "Vendedor")
+            {
+                // Ejemplo para ocultar botones del menú lateral verde
+                // btnProveedor.Visible = false;
+                // bntCategotia.Visible = false;
+            }
+            else if (rolDelUsuarioLogueado == "Administrador")
+            {
+                // El administrador ve todo el menú intacto
+            }
         }
-         
+
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
-            
             Form formulario = pnlContenedor.Controls.OfType<MiForm>().FirstOrDefault();
 
             if (formulario == null)
             {
-                
                 formulario = new MiForm();
-                formulario.TopLevel = false; 
-                formulario.FormBorderStyle = FormBorderStyle.None;  
-                formulario.Dock = DockStyle.Fill; 
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
 
                 pnlContenedor.Controls.Add(formulario);
                 pnlContenedor.Tag = formulario;
@@ -38,11 +55,9 @@ namespace FlowerShop
             }
             else
             {
-            
                 formulario.BringToFront();
             }
         }
-
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
@@ -84,27 +99,23 @@ namespace FlowerShop
 
         }
 
+        // 3. Evento del ícono de usuario arreglado con el paso del Rol
         private void pictureBoxUsuario_Click(object sender, EventArgs e)
         {
-            
-            frmMenu menu = new frmMenu();
+            // Instanciamos frmMenu y le PASAMOS EL ROL guardado
+            frmMenu menu = new frmMenu(rolDelUsuarioLogueado);
 
-            
             menu.StartPosition = FormStartPosition.Manual;
+            menu.FormBorderStyle = FormBorderStyle.None;
 
-            // (Opcional) Quitarle los bordes al form para que parezca un menú desplegable real
-             menu.FormBorderStyle = FormBorderStyle.None; 
-
-            // 3. Calcular la posición exacta (esquina inferior derecha de la imagen)
-            // PointToScreen convierte la ubicación del control a coordenadas de tu monitor
+            // Calcular la posición exacta
             Point esquinaInferiorDerecha = pictureBoxUsuario.PointToScreen(new Point(pictureBoxUsuario.Width, pictureBoxUsuario.Height));
 
-            // 4. Ajustar la ubicación para que encaje en el recuadro azul
-            // Restamos el ancho del menú a la coordenada X para que quede alineado a la derecha
+            // Ajustar la ubicación para que encaje
             int posicionX = esquinaInferiorDerecha.X - menu.Width;
-            int posicionY = esquinaInferiorDerecha.Y; // Y se queda igual para que aparezca justo debajo
+            int posicionY = esquinaInferiorDerecha.Y;
 
-            // 5. Asignar la nueva ubicación y mostrar el menú
+            // Asignar la nueva ubicación y mostrar el menú
             menu.Location = new Point(posicionX, posicionY);
             menu.Show();
         }
