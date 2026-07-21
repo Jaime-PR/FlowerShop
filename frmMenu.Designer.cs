@@ -33,9 +33,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnGestionCuenta = new System.Windows.Forms.Button();
+            this.btnAdminEmpleados = new System.Windows.Forms.Button();
+            this.btnAccesibilidad = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -53,9 +53,9 @@
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnCerrarSesion, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnGestionCuenta, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnAdminEmpleados, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnAccesibilidad, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 0, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -119,57 +119,57 @@
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
-            // button1
+            // btnGestionCuenta
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button1.AutoSize = true;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(67, 10);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(204, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Administrar cuenta";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnGestionCuenta.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnGestionCuenta.AutoSize = true;
+            this.btnGestionCuenta.FlatAppearance.BorderSize = 0;
+            this.btnGestionCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionCuenta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionCuenta.ForeColor = System.Drawing.Color.Black;
+            this.btnGestionCuenta.Location = new System.Drawing.Point(67, 10);
+            this.btnGestionCuenta.Name = "btnGestionCuenta";
+            this.btnGestionCuenta.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnGestionCuenta.Size = new System.Drawing.Size(204, 40);
+            this.btnGestionCuenta.TabIndex = 3;
+            this.btnGestionCuenta.Text = "Administrar cuenta";
+            this.btnGestionCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGestionCuenta.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnAdminEmpleados
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button2.AutoSize = true;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(67, 71);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button2.Size = new System.Drawing.Size(225, 40);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Administrar empleados";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAdminEmpleados.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnAdminEmpleados.AutoSize = true;
+            this.btnAdminEmpleados.FlatAppearance.BorderSize = 0;
+            this.btnAdminEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdminEmpleados.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminEmpleados.ForeColor = System.Drawing.Color.Black;
+            this.btnAdminEmpleados.Location = new System.Drawing.Point(67, 71);
+            this.btnAdminEmpleados.Name = "btnAdminEmpleados";
+            this.btnAdminEmpleados.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnAdminEmpleados.Size = new System.Drawing.Size(225, 40);
+            this.btnAdminEmpleados.TabIndex = 4;
+            this.btnAdminEmpleados.Text = "Administrar empleados";
+            this.btnAdminEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdminEmpleados.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnAccesibilidad
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button3.AutoSize = true;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(67, 132);
-            this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button3.Size = new System.Drawing.Size(147, 40);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Accesibilidad";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnAccesibilidad.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnAccesibilidad.AutoSize = true;
+            this.btnAccesibilidad.FlatAppearance.BorderSize = 0;
+            this.btnAccesibilidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccesibilidad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccesibilidad.ForeColor = System.Drawing.Color.Black;
+            this.btnAccesibilidad.Location = new System.Drawing.Point(67, 132);
+            this.btnAccesibilidad.Name = "btnAccesibilidad";
+            this.btnAccesibilidad.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnAccesibilidad.Size = new System.Drawing.Size(147, 40);
+            this.btnAccesibilidad.TabIndex = 5;
+            this.btnAccesibilidad.Text = "Accesibilidad";
+            this.btnAccesibilidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccesibilidad.UseVisualStyleBackColor = true;
+            this.btnAccesibilidad.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox3
             // 
@@ -205,9 +205,9 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnCerrarSesion;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAccesibilidad;
+        private System.Windows.Forms.Button btnAdminEmpleados;
+        private System.Windows.Forms.Button btnGestionCuenta;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;

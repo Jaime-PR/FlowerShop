@@ -133,5 +133,10 @@ namespace FlowerShop.Proveedor
             AbrirFormulario<Proveedor.frmRproveedor>();
             CargarProveedores();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

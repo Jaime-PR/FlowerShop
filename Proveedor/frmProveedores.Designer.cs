@@ -30,6 +30,7 @@
         {
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlDatosProv = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.txtEmpresa = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -61,7 +62,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAñadir = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.pnlDatosProv.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -87,6 +88,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDatosProv.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlDatosProv.Controls.Add(this.btnEliminar);
             this.pnlDatosProv.Controls.Add(this.label14);
             this.pnlDatosProv.Controls.Add(this.txtEmpresa);
             this.pnlDatosProv.Controls.Add(this.txtDireccion);
@@ -116,6 +118,18 @@
             this.pnlDatosProv.Size = new System.Drawing.Size(531, 593);
             this.pnlDatosProv.TabIndex = 11;
             this.pnlDatosProv.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDatosProv_Paint);
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(179, 17);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(173, 25);
+            this.label14.TabIndex = 33;
+            this.label14.Text = "Datos Proveedor";
             // 
             // txtEmpresa
             // 
@@ -451,17 +465,18 @@
             this.btnAñadir.UseVisualStyleBackColor = true;
             this.btnAñadir.Click += new System.EventHandler(this.btnAñadirCliente_Click);
             // 
-            // label14
+            // btnEliminar
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(179, 17);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(173, 25);
-            this.label14.TabIndex = 33;
-            this.label14.Text = "Datos Proveedor";
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(270, 532);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(107, 37);
+            this.btnEliminar.TabIndex = 34;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmProveedores
             // 
@@ -520,5 +535,6 @@
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.DataGridView dgvProveedor;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
