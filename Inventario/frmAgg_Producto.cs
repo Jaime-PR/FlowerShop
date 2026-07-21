@@ -18,7 +18,7 @@ namespace FlowerShop.Inventario
         {
             InitializeComponent();
 
-            
+            this.FormBorderStyle = FormBorderStyle.None;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

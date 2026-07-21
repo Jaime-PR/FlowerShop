@@ -51,7 +51,7 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUsuario = new System.Windows.Forms.PictureBox();
             this.pnlContenedor = new System.Windows.Forms.TableLayoutPanel();
             this.pnlMenu.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -67,7 +67,7 @@
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).BeginInit();
             this.pnlContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -251,9 +251,9 @@
             this.bntCategotia.FlatAppearance.BorderSize = 0;
             this.bntCategotia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntCategotia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.bntCategotia.Location = new System.Drawing.Point(48, 69);
+            this.bntCategotia.Location = new System.Drawing.Point(48, 70);
             this.bntCategotia.Name = "bntCategotia";
-            this.bntCategotia.Size = new System.Drawing.Size(162, 40);
+            this.bntCategotia.Size = new System.Drawing.Size(162, 38);
             this.bntCategotia.TabIndex = 5;
             this.bntCategotia.Text = "Categorias";
             this.bntCategotia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -268,10 +268,10 @@
             this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInicio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnInicio.Location = new System.Drawing.Point(48, 23);
+            this.btnInicio.Location = new System.Drawing.Point(48, 24);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnInicio.Size = new System.Drawing.Size(162, 40);
+            this.btnInicio.Size = new System.Drawing.Size(162, 38);
             this.btnInicio.TabIndex = 1;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -336,18 +336,18 @@
             // 
             this.txtBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBusqueda.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqueda.Location = new System.Drawing.Point(48, 24);
+            this.txtBusqueda.Location = new System.Drawing.Point(48, 27);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(507, 43);
             this.txtBusqueda.TabIndex = 1;
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox8.Image = global::FlowerShop.Properties.Resources.search_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.pictureBox8.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox8.Location = new System.Drawing.Point(3, 26);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(39, 85);
+            this.pictureBox8.Size = new System.Drawing.Size(39, 39);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
@@ -366,8 +366,8 @@
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel4.Controls.Add(this.pictureBox9, 1, 0);
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
+            this.tableLayoutPanel4.Controls.Add(this.pictureBoxUsuario, 1, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(786, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
@@ -375,17 +375,17 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(324, 91);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
-            // pictureBox9
+            // pictureBoxUsuario
             // 
-            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox9.Image = global::FlowerShop.Properties.Resources.user_3917688;
-            this.pictureBox9.Location = new System.Drawing.Point(257, 3);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(52, 85);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 2;
-            this.pictureBox9.TabStop = false;
+            this.pictureBoxUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBoxUsuario.Image = global::FlowerShop.Properties.Resources.user_3917688;
+            this.pictureBoxUsuario.Location = new System.Drawing.Point(264, 38);
+            this.pictureBoxUsuario.Name = "pictureBoxUsuario";
+            this.pictureBoxUsuario.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxUsuario.TabIndex = 2;
+            this.pictureBoxUsuario.TabStop = false;
+            this.pictureBoxUsuario.Click += new System.EventHandler(this.pictureBoxUsuario_Click);
             // 
             // pnlContenedor
             // 
@@ -433,7 +433,7 @@
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).EndInit();
             this.pnlContenedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -462,7 +462,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.TextBox txtBusqueda;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBoxUsuario;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Panel pnlTop;
