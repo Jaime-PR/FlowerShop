@@ -119,5 +119,10 @@ namespace FlowerShop
             menu.Location = new Point(posicionX, posicionY);
             menu.Show();
         }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
