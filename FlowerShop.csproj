@@ -293,5 +293,11 @@
   <ItemGroup>
     <None Include="Resources\exit_to_app_100dp_000000_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignment_100dp_000000_FILL0_wght400_GRAD0_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_prints_100dp_000000_FILL0_wght400_GRAD0_opsz48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
