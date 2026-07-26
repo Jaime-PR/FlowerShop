@@ -15,20 +15,25 @@ namespace FlowerShop.Inventario
 {
     public partial class frmInventario : Form
     {
-        
+
         private int idProductoSeleccionado = 0;
 
         public frmInventario()
         {
             InitializeComponent();
         }
+        // Variable para controlar que no se reduzca más allá del tamaño original
+        private float nivelZoomActual = 1.0f;
+
+        // Factor de aumento: 1.1f significa que crecerá un 10% por cada clic
+        private const float factorZoom = 1.1f;
 
         private void frmInventario_Load(object sender, EventArgs e)
         {
             CargarDatosInventario();
         }
 
-        
+
         private void CargarDatosInventario()
         {
             try
@@ -42,18 +47,18 @@ namespace FlowerShop.Inventario
             }
         }
 
-        
+
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow fila = dgvProductos.Rows[e.RowIndex];
 
-                
+
                 idProductoSeleccionado = Convert.ToInt32(fila.Cells["Id_Producto"].Value);
 
-               
+
                 txtNombre.Text = fila.Cells["Nombre"].Value.ToString();
                 txtCategoria.Text = fila.Cells["Categoria"].Value.ToString();
                 txtProveedor.Text = fila.Cells["Id_Proveedor"].Value.ToString();
@@ -63,7 +68,7 @@ namespace FlowerShop.Inventario
             }
         }
 
-        
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (idProductoSeleccionado == 0)
@@ -78,7 +83,7 @@ namespace FlowerShop.Inventario
             {
                 try
                 {
-                    
+
                     Producto prod = new Producto();
                     prod.Id_Producto = idProductoSeleccionado; // Le damos el ID que teníamos guardado
                     prod.Nombre = txtNombre.Text;
@@ -88,12 +93,12 @@ namespace FlowerShop.Inventario
                     prod.Precio_Compra = Convert.ToDecimal(txtPrecioCompra.Text);
                     prod.Precio_Venta = Convert.ToDecimal(txtPrecioVenta.Text);
 
-                    
+
                     ProductoDAO dao = new ProductoDAO();
                     if (dao.ActualizarProducto(prod))
                     {
                         MessageBox.Show("Producto actualizado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        CargarDatosInventario(); 
+                        CargarDatosInventario();
                         LimpiarCajas();
                     }
                 }
@@ -104,7 +109,7 @@ namespace FlowerShop.Inventario
             }
         }
 
-        
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (idProductoSeleccionado == 0)
@@ -120,7 +125,7 @@ namespace FlowerShop.Inventario
                 try
                 {
                     ProductoDAO dao = new ProductoDAO();
-                    
+
                     if (dao.EliminarProducto(idProductoSeleccionado))
                     {
                         MessageBox.Show("Producto eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -135,20 +140,20 @@ namespace FlowerShop.Inventario
             }
         }
 
-        
+
         private void btnAñadir_Click(object sender, EventArgs e)
         {
             frmAgg_Producto ventanaAgregar = new frmAgg_Producto();
 
-            
+
             if (ventanaAgregar.ShowDialog() == DialogResult.OK)
             {
-                
+
                 CargarDatosInventario();
             }
         }
 
-        
+
         private void LimpiarCajas()
         {
             idProductoSeleccionado = 0;
@@ -159,6 +164,40 @@ namespace FlowerShop.Inventario
             txtPrecioCompra.Clear();
             txtPrecioVenta.Clear();
         }
-    }
 
+        private void btnAcercar_Click(object sender, EventArgs e)
+        {
+            // Limitar el zoom máximo (opcional, aquí lo limitamos a 2 veces su tamaño)
+            if (nivelZoomActual < 2.0f)
+            {
+                // Scale(SizeF) redimensiona el ancho y el alto
+                this.Scale(new SizeF(factorZoom, factorZoom));
+
+                // Actualizamos nuestro registro
+                nivelZoomActual *= factorZoom;
+            }
+        }
+
+        private void btnAlejar_Click(object sender, EventArgs e)
+        {
+            // Evitamos que el usuario haga la ventana más pequeña que el diseño original
+            if (nivelZoomActual > 1.05f)
+            {
+                // Calculamos la reducción (la inversa del factor de zoom)
+                float reduccion = 1.0f / factorZoom;
+
+                this.Scale(new SizeF(reduccion, reduccion));
+
+                // Actualizamos nuestro registro
+                nivelZoomActual *= reduccion;
+            }
+            else if (nivelZoomActual > 1.0f)
+            {
+                // Si está muy cerca del original, lo forzamos a regresar exactamente a 1.0
+                float ajusteFinal = 1.0f / nivelZoomActual;
+                this.Scale(new SizeF(ajusteFinal, ajusteFinal));
+                nivelZoomActual = 1.0f;
+            }
+        }
+    }
 }
