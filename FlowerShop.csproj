@@ -144,8 +144,6 @@
     <Compile Include="Login\frmInicio_Sesion.Designer.cs">
       <DependentUpon>frmInicio_Sesion.cs</DependentUpon>
     </Compile>
-<<<<<<< Updated upstream
-=======
     <Compile Include="Modelos\Producto.cs" />
     <Compile Include="Modelos\ProductoDAO.cs" />
     <Compile Include="Modelos\DashboardDAO.cs" />
@@ -153,7 +151,18 @@
     <Compile Include="Modelos\DetalleVentaDAO.cs" />
     <Compile Include="Modelos\VentaDAO.cs" />
     <Compile Include="Modelos\ReporteDAO.cs" />
->>>>>>> Stashed changes
+        <Compile Include="Proveedor\frmRproveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor\frmRproveedor.Designer.cs">
+      <DependentUpon>frmRproveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedor\frmProveedores.cs">
@@ -162,14 +171,6 @@
     <Compile Include="Proveedor\frmProveedores.Designer.cs">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Proveedor\frmRegistro_Proveedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Proveedor\frmRegistro_Proveedor.Designer.cs">
-      <DependentUpon>frmRegistro_Proveedor.cs</DependentUpon>
-    </Compile>
-<<<<<<< Updated upstream
-=======
     <Compile Include="Utilidades\Seguridad.cs" />
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -185,7 +186,6 @@
     <Compile Include="Reportes\frmReportes.Designer.cs">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
->>>>>>> Stashed changes
     <Compile Include="Ventas\frmRegistro_Venta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,8 +204,6 @@
     <EmbeddedResource Include="Clientes\frmRegistro_Clientes.resx">
       <DependentUpon>frmRegistro_Clientes.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< Updated upstream
-=======
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,10 +213,6 @@
     <EmbeddedResource Include="Ventas\frmRegistro_Venta.resx">
       <DependentUpon>frmRegistro_Venta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMenu.resx">
-      <DependentUpon>frmMenu.cs</DependentUpon>
-    </EmbeddedResource>
->>>>>>> Stashed changes
     <EmbeddedResource Include="frmPantalla_Inicio.resx">
       <DependentUpon>frmPantalla_Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,8 +241,11 @@
     <EmbeddedResource Include="Proveedor\frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Proveedor\frmRegistro_Proveedor.resx">
-      <DependentUpon>frmRegistro_Proveedor.cs</DependentUpon>
+        <EmbeddedResource Include="Proveedor\frmRproveedor.resx">
+      <DependentUpon>frmRproveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -312,8 +309,6 @@
   <ItemGroup>
     <None Include="Resources\Black and White Modern Bold Y2K Streetwear Brand Logo.png" />
   </ItemGroup>
-<<<<<<< Updated upstream
-=======
   <ItemGroup>
     <None Include="Resources\group_100dp_000000_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
@@ -341,6 +336,7 @@
   <ItemGroup>
     <None Include="Resources\home_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24 %281%29.png" />
   </ItemGroup>
->>>>>>> Stashed changes
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
+
+
