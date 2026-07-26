@@ -46,6 +46,8 @@
             this.btnAñadir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.btnAcercar = new System.Windows.Forms.Button();
+            this.btnAlejar = new System.Windows.Forms.Button();
             this.pnlDatosP.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
@@ -73,7 +75,6 @@
             this.pnlDatosP.Name = "pnlDatosP";
             this.pnlDatosP.Size = new System.Drawing.Size(263, 679);
             this.pnlDatosP.TabIndex = 6;
-            
             // 
             // btnEliminar
             // 
@@ -87,7 +88,6 @@
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
-            
             // 
             // btnGuardar
             // 
@@ -101,7 +101,6 @@
             this.btnGuardar.TabIndex = 24;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
-            
             // 
             // txtPrecioVenta
             // 
@@ -227,7 +226,7 @@
             // 
             this.btnAñadir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAñadir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadir.Location = new System.Drawing.Point(1000, 12);
+            this.btnAñadir.Location = new System.Drawing.Point(12, 12);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(199, 34);
             this.btnAñadir.TabIndex = 4;
@@ -238,6 +237,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(197)))), ((int)(((byte)(156)))));
+            this.panel2.Controls.Add(this.btnAlejar);
+            this.panel2.Controls.Add(this.btnAcercar);
             this.panel2.Controls.Add(this.btnAñadir);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -258,6 +259,26 @@
             this.dgvProductos.Size = new System.Drawing.Size(955, 679);
             this.dgvProductos.TabIndex = 8;
             this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
+            // 
+            // btnAcercar
+            // 
+            this.btnAcercar.Location = new System.Drawing.Point(994, 12);
+            this.btnAcercar.Name = "btnAcercar";
+            this.btnAcercar.Size = new System.Drawing.Size(99, 34);
+            this.btnAcercar.TabIndex = 5;
+            this.btnAcercar.Text = "+ Zoom";
+            this.btnAcercar.UseVisualStyleBackColor = true;
+            this.btnAcercar.Click += new System.EventHandler(this.btnAcercar_Click);
+            // 
+            // btnAlejar
+            // 
+            this.btnAlejar.Location = new System.Drawing.Point(1108, 12);
+            this.btnAlejar.Name = "btnAlejar";
+            this.btnAlejar.Size = new System.Drawing.Size(98, 34);
+            this.btnAlejar.TabIndex = 6;
+            this.btnAlejar.Text = "- Zoom";
+            this.btnAlejar.UseVisualStyleBackColor = true;
+            this.btnAlejar.Click += new System.EventHandler(this.btnAlejar_Click);
             // 
             // frmInventario
             // 
@@ -298,5 +319,7 @@
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.Button btnAlejar;
+        private System.Windows.Forms.Button btnAcercar;
     }
 }
