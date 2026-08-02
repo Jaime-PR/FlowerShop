@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,11 +21,52 @@ namespace FlowerShop.Inventario
         public frmInventario()
         {
             InitializeComponent();
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            
+            AplicarBordesRedondeados(pnlKpi1, 15);
+            AplicarBordesRedondeados(pnlKpi2, 15);
+            AplicarBordesRedondeados(pnlKpi3, 15);
+            AplicarBordesRedondeados(pnlKpi4, 15);
+            AplicarBordesRedondeados(pnlContenedorPrincipal, 15);
+            AplicarBordesRedondeados(pnlDatosP, 15);
         }
 
         private void frmInventario_Load(object sender, EventArgs e)
         {
             CargarDatosInventario();
+        }
+
+        private void AplicarBordesRedondeados(Panel panel, int radio)
+        {
+            if (panel == null) return;
+            System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
+            Rectangle rect = new Rectangle(0, 0, panel.Width, panel.Height);
+            int d = radio * 2;
+
+            if (panel.Width > 0 && panel.Height > 0)
+            {
+                path.AddArc(rect.X, rect.Y, d, d, 180, 90);
+                path.AddArc(rect.Right - d, rect.Y, d, d, 270, 90);
+                path.AddArc(rect.Right - d, rect.Bottom - d, d, d, 0, 90);
+                path.AddArc(rect.X, rect.Bottom - d, d, d, 90, 90);
+                path.CloseFigure();
+                panel.Region = new Region(path);
+            }
+
+            panel.Resize += (s, ev) =>
+            {
+                if (panel.Width <= 0 || panel.Height <= 0) return;
+                System.Drawing.Drawing2D.GraphicsPath p = new System.Drawing.Drawing2D.GraphicsPath();
+                Rectangle r = new Rectangle(0, 0, panel.Width, panel.Height);
+                int dd = radio * 2;
+                p.AddArc(r.X, r.Y, dd, dd, 180, 90);
+                p.AddArc(r.Right - dd, r.Y, dd, dd, 270, 90);
+                p.AddArc(r.Right - dd, r.Bottom - dd, dd, dd, 0, 90);
+                p.AddArc(r.X, r.Bottom - dd, dd, dd, 90, 90);
+                p.CloseFigure();
+                panel.Region = new Region(p);
+            };
         }
 
         
@@ -35,6 +76,16 @@ namespace FlowerShop.Inventario
             {
                 ProductoDAO dao = new ProductoDAO();
                 dgvProductos.DataSource = dao.ObtenerTodosLosProductos();
+                FlowerShop.Utilidades.UIHelper.FormatoDataGrid(dgvProductos);
+
+                // Cargar KPIs
+                lblKpi1Valor.Text = dao.ObtenerTotalProductosEnInventario().ToString();
+                lblKpi2Valor.Text = dao.ObtenerProductosBajoStock(10).ToString();
+                
+                lblKpi3Titulo.Text = "Sin Stock";
+                lblKpi3Valor.Text = dao.ObtenerProductosSinStock().ToString();
+                
+                lblKpi4Valor.Text = dao.ObtenerValorTotalInventario().ToString("C2");
             }
             catch (Exception ex)
             {

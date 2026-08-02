@@ -1,16 +1,9 @@
-﻿namespace FlowerShop.Clientes
+namespace FlowerShop.Clientes
 {
     partial class frmClientes
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,430 +15,372 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnInventario = new System.Windows.Forms.Button();
-            this.btnProveedor = new System.Windows.Forms.Button();
-            this.btnVentas = new System.Windows.Forms.Button();
-            this.btnClientes = new System.Windows.Forms.Button();
-            this.btnInicio = new System.Windows.Forms.Button();
-            this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.txtRedSocial = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtApMaterno = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.txtApPaterno = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlTop = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnAñadirCliente = new System.Windows.Forms.Button();
+            
+            this.pnlPaddingCentral = new System.Windows.Forms.Panel();
+            this.pnlContenedorPrincipal = new System.Windows.Forms.Panel();
+            
+            this.pnlListaClientes = new System.Windows.Forms.Panel();
+            this.pnlBuscador = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnAñadirCliente = new System.Windows.Forms.Button();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            
+            this.pnlDatosP = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.pnlMenu.SuspendLayout();
-            this.pnlContenedor.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblApPaterno = new System.Windows.Forms.Label();
+            this.txtApPaterno = new System.Windows.Forms.TextBox();
+            this.lblApMaterno = new System.Windows.Forms.Label();
+            this.txtApMaterno = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtRedSocial = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+
+            this.pnlTop.SuspendLayout();
+            this.pnlPaddingCentral.SuspendLayout();
+            this.pnlContenedorPrincipal.SuspendLayout();
+            this.pnlListaClientes.SuspendLayout();
+            this.pnlBuscador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.pnlDatosP.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlMenu
-            // 
-            this.pnlMenu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnlMenu.Controls.Add(this.btnInventario);
-            this.pnlMenu.Controls.Add(this.btnProveedor);
-            this.pnlMenu.Controls.Add(this.btnVentas);
-            this.pnlMenu.Controls.Add(this.btnClientes);
-            this.pnlMenu.Controls.Add(this.btnInicio);
-            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 0);
-            this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(1286, 676);
-            this.pnlMenu.TabIndex = 1;
-            // 
-            // btnInventario
-            // 
-            this.btnInventario.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventario.Location = new System.Drawing.Point(12, 294);
-            this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(128, 28);
-            this.btnInventario.TabIndex = 2;
-            this.btnInventario.Text = "Inventario";
-            this.btnInventario.UseVisualStyleBackColor = true;
-            // 
-            // btnProveedor
-            // 
-            this.btnProveedor.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProveedor.Location = new System.Drawing.Point(12, 373);
-            this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Size = new System.Drawing.Size(128, 28);
-            this.btnProveedor.TabIndex = 3;
-            this.btnProveedor.Text = "Proveedores";
-            this.btnProveedor.UseVisualStyleBackColor = true;
-            // 
-            // btnVentas
-            // 
-            this.btnVentas.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVentas.Location = new System.Drawing.Point(12, 220);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(128, 28);
-            this.btnVentas.TabIndex = 1;
-            this.btnVentas.Text = "Ventas";
-            this.btnVentas.UseVisualStyleBackColor = true;
-            // 
-            // btnClientes
-            // 
-            this.btnClientes.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientes.Location = new System.Drawing.Point(12, 457);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(128, 28);
-            this.btnClientes.TabIndex = 4;
-            this.btnClientes.Text = "Clientes";
-            this.btnClientes.UseVisualStyleBackColor = true;
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.Location = new System.Drawing.Point(12, 146);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(128, 30);
-            this.btnInicio.TabIndex = 0;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.UseVisualStyleBackColor = true;
-            // 
-            // pnlContenedor
-            // 
-            this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
-            this.pnlContenedor.Controls.Add(this.label6);
-            this.pnlContenedor.Controls.Add(this.label5);
-            this.pnlContenedor.Controls.Add(this.label4);
-            this.pnlContenedor.Controls.Add(this.label3);
-            this.pnlContenedor.Controls.Add(this.textBox6);
-            this.pnlContenedor.Controls.Add(this.txtRedSocial);
-            this.pnlContenedor.Controls.Add(this.txtTelefono);
-            this.pnlContenedor.Controls.Add(this.txtApMaterno);
-            this.pnlContenedor.Controls.Add(this.button2);
-            this.pnlContenedor.Controls.Add(this.button3);
-            this.pnlContenedor.Controls.Add(this.txtApPaterno);
-            this.pnlContenedor.Controls.Add(this.txtNombre);
-            this.pnlContenedor.Controls.Add(this.panel1);
-            this.pnlContenedor.Controls.Add(this.label2);
-            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
-            this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1286, 676);
-            this.pnlContenedor.TabIndex = 3;
-            this.pnlContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContenedor_Paint);
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(623, 406);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 22);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Direccion";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(623, 314);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 22);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Red Social";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(623, 226);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 22);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Telefono";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(622, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 22);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Nombre";
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(626, 431);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(361, 32);
-            this.textBox6.TabIndex = 20;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
-            // 
-            // txtRedSocial
-            // 
-            this.txtRedSocial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
-            this.txtRedSocial.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRedSocial.Location = new System.Drawing.Point(626, 339);
-            this.txtRedSocial.Name = "txtRedSocial";
-            this.txtRedSocial.Size = new System.Drawing.Size(361, 32);
-            this.txtRedSocial.TabIndex = 19;
-            this.txtRedSocial.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
-            this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(626, 251);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(361, 32);
-            this.txtTelefono.TabIndex = 17;
-            this.txtTelefono.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // txtApMaterno
-            // 
-            this.txtApMaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
-            this.txtApMaterno.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApMaterno.Location = new System.Drawing.Point(836, 137);
-            this.txtApMaterno.Name = "txtApMaterno";
-            this.txtApMaterno.Size = new System.Drawing.Size(99, 39);
-            this.txtApMaterno.TabIndex = 11;
-            this.txtApMaterno.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(653, 610);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 37);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(797, 610);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 37);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // txtApPaterno
-            // 
-            this.txtApPaterno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtApPaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
-            this.txtApPaterno.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApPaterno.Location = new System.Drawing.Point(731, 137);
-            this.txtApPaterno.Name = "txtApPaterno";
-            this.txtApPaterno.Size = new System.Drawing.Size(99, 39);
-            this.txtApPaterno.TabIndex = 16;
-            this.txtApPaterno.TextChanged += new System.EventHandler(this.txtApPaterno_TextChanged);
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
-            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(626, 137);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(99, 39);
-            this.txtNombre.TabIndex = 18;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.dgvClientes);
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Controls.Add(this.tableLayoutPanel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(413, 676);
-            this.panel1.TabIndex = 7;
-            // 
+
+            // pnlTop
+            this.pnlTop.Controls.Add(this.lblTitulo);
+            this.pnlTop.Controls.Add(this.btnAñadirCliente);
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(1200, 100);
+            this.pnlTop.TabIndex = 0;
+
+            // lblTitulo
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
+            this.lblTitulo.Location = new System.Drawing.Point(35, 25);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(167, 46);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "CLIENTES";
+
+            // btnAñadirCliente
+            this.btnAñadirCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAñadirCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
+            this.btnAñadirCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAñadirCliente.FlatAppearance.BorderSize = 0;
+            this.btnAñadirCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAñadirCliente.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnAñadirCliente.ForeColor = System.Drawing.Color.White;
+            this.btnAñadirCliente.Location = new System.Drawing.Point(980, 25);
+            this.btnAñadirCliente.Name = "btnAñadirCliente";
+            this.btnAñadirCliente.Size = new System.Drawing.Size(180, 40);
+            this.btnAñadirCliente.TabIndex = 1;
+            this.btnAñadirCliente.Text = "+ Nuevo Cliente";
+            this.btnAñadirCliente.UseVisualStyleBackColor = false;
+            this.btnAñadirCliente.Click += new System.EventHandler(this.btnAñadirCliente_Click_1);
+
+            // pnlPaddingCentral
+            this.pnlPaddingCentral.Controls.Add(this.pnlContenedorPrincipal);
+            this.pnlPaddingCentral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPaddingCentral.Location = new System.Drawing.Point(0, 100);
+            this.pnlPaddingCentral.Name = "pnlPaddingCentral";
+            this.pnlPaddingCentral.Padding = new System.Windows.Forms.Padding(45, 10, 45, 30);
+            this.pnlPaddingCentral.Size = new System.Drawing.Size(1200, 600);
+            this.pnlPaddingCentral.TabIndex = 1;
+
+            // pnlContenedorPrincipal
+            this.pnlContenedorPrincipal.BackColor = System.Drawing.Color.Transparent;
+            this.pnlContenedorPrincipal.Controls.Add(this.pnlListaClientes);
+            this.pnlContenedorPrincipal.Controls.Add(this.pnlDatosP);
+            this.pnlContenedorPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenedorPrincipal.Location = new System.Drawing.Point(45, 10);
+            this.pnlContenedorPrincipal.Name = "pnlContenedorPrincipal";
+            this.pnlContenedorPrincipal.Size = new System.Drawing.Size(1110, 560);
+            this.pnlContenedorPrincipal.TabIndex = 0;
+
+            // pnlListaClientes
+            this.pnlListaClientes.BackColor = System.Drawing.Color.White;
+            this.pnlListaClientes.Controls.Add(this.dgvClientes);
+            this.pnlListaClientes.Controls.Add(this.pnlBuscador);
+            this.pnlListaClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlListaClientes.Location = new System.Drawing.Point(0, 0);
+            this.pnlListaClientes.Name = "pnlListaClientes";
+            this.pnlListaClientes.Padding = new System.Windows.Forms.Padding(15);
+            this.pnlListaClientes.Size = new System.Drawing.Size(760, 560);
+            this.pnlListaClientes.TabIndex = 0;
+
+            // pnlBuscador
+            this.pnlBuscador.Controls.Add(this.label8);
+            this.pnlBuscador.Controls.Add(this.textBox7);
+            this.pnlBuscador.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlBuscador.Location = new System.Drawing.Point(15, 15);
+            this.pnlBuscador.Name = "pnlBuscador";
+            this.pnlBuscador.Size = new System.Drawing.Size(730, 60);
+            this.pnlBuscador.TabIndex = 0;
+
+            // label8
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
+            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(123, 23);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Buscar cliente";
+
+            // textBox7
+            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.textBox7.Location = new System.Drawing.Point(0, 25);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(300, 30);
+            this.textBox7.TabIndex = 1;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+
             // dgvClientes
-            // 
-            this.dgvClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(197)))), ((int)(((byte)(156)))));
+            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvClientes.BackgroundColor = System.Drawing.Color.White;
+            this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(0, 138);
+            this.dgvClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvClientes.Location = new System.Drawing.Point(15, 75);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersVisible = false;
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowTemplate.Height = 24;
-            this.dgvClientes.Size = new System.Drawing.Size(407, 538);
-            this.dgvClientes.TabIndex = 2;
+            this.dgvClientes.Size = new System.Drawing.Size(730, 470);
+            this.dgvClientes.TabIndex = 1;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Controls.Add(this.label8);
-            this.flowLayoutPanel1.Controls.Add(this.textBox7);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 70);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(407, 70);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(3, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 20);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Buscar cliente";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(3, 23);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(288, 22);
-            this.textBox7.TabIndex = 19;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnAñadirCliente, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(407, 42);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 42);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Clientes";
-            // 
-            // btnAñadirCliente
-            // 
-            this.btnAñadirCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAñadirCliente.Location = new System.Drawing.Point(320, 9);
-            this.btnAñadirCliente.Name = "btnAñadirCliente";
-            this.btnAñadirCliente.Size = new System.Drawing.Size(84, 30);
-            this.btnAñadirCliente.TabIndex = 11;
-            this.btnAñadirCliente.Text = "Nuevo";
-            this.btnAñadirCliente.UseVisualStyleBackColor = true;
-            this.btnAñadirCliente.Click += new System.EventHandler(this.btnAñadirCliente_Click_1);
-            // 
+
+            // pnlDatosP
+            this.pnlDatosP.BackColor = System.Drawing.Color.White;
+            this.pnlDatosP.Controls.Add(this.label2);
+            this.pnlDatosP.Controls.Add(this.label3);
+            this.pnlDatosP.Controls.Add(this.txtNombre);
+            this.pnlDatosP.Controls.Add(this.lblApPaterno);
+            this.pnlDatosP.Controls.Add(this.txtApPaterno);
+            this.pnlDatosP.Controls.Add(this.lblApMaterno);
+            this.pnlDatosP.Controls.Add(this.txtApMaterno);
+            this.pnlDatosP.Controls.Add(this.label4);
+            this.pnlDatosP.Controls.Add(this.txtTelefono);
+            this.pnlDatosP.Controls.Add(this.label5);
+            this.pnlDatosP.Controls.Add(this.txtRedSocial);
+            this.pnlDatosP.Controls.Add(this.label6);
+            this.pnlDatosP.Controls.Add(this.textBox6);
+            this.pnlDatosP.Controls.Add(this.button2);
+            this.pnlDatosP.Controls.Add(this.button3);
+            this.pnlDatosP.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlDatosP.Location = new System.Drawing.Point(780, 0); // 20px space
+            this.pnlDatosP.Name = "pnlDatosP";
+            this.pnlDatosP.Size = new System.Drawing.Size(330, 560);
+            this.pnlDatosP.TabIndex = 2;
+
             // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(622, 50);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
+            this.label2.Location = new System.Drawing.Point(20, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 29);
-            this.label2.TabIndex = 9;
+            this.label2.Size = new System.Drawing.Size(206, 32);
+            this.label2.TabIndex = 0;
             this.label2.Text = "Datos del cliente";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
+
+            // label3
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label3.Location = new System.Drawing.Point(20, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 23);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Nombre";
+
+            // txtNombre
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtNombre.Location = new System.Drawing.Point(20, 95);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(290, 30);
+            this.txtNombre.TabIndex = 2;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+
+            // lblApPaterno
+            this.lblApPaterno.AutoSize = true;
+            this.lblApPaterno.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblApPaterno.Location = new System.Drawing.Point(20, 130);
+            this.lblApPaterno.Name = "lblApPaterno";
+            this.lblApPaterno.Size = new System.Drawing.Size(135, 23);
+            this.lblApPaterno.TabIndex = 3;
+            this.lblApPaterno.Text = "Apellido Paterno";
+
+            // txtApPaterno
+            this.txtApPaterno.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtApPaterno.Location = new System.Drawing.Point(20, 155);
+            this.txtApPaterno.Name = "txtApPaterno";
+            this.txtApPaterno.Size = new System.Drawing.Size(290, 30);
+            this.txtApPaterno.TabIndex = 4;
+            this.txtApPaterno.TextChanged += new System.EventHandler(this.txtApPaterno_TextChanged);
+
+            // lblApMaterno
+            this.lblApMaterno.AutoSize = true;
+            this.lblApMaterno.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblApMaterno.Location = new System.Drawing.Point(20, 190);
+            this.lblApMaterno.Name = "lblApMaterno";
+            this.lblApMaterno.Size = new System.Drawing.Size(140, 23);
+            this.lblApMaterno.TabIndex = 5;
+            this.lblApMaterno.Text = "Apellido Materno";
+
+            // txtApMaterno
+            this.txtApMaterno.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtApMaterno.Location = new System.Drawing.Point(20, 215);
+            this.txtApMaterno.Name = "txtApMaterno";
+            this.txtApMaterno.Size = new System.Drawing.Size(290, 30);
+            this.txtApMaterno.TabIndex = 6;
+            this.txtApMaterno.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+
+            // label4
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label4.Location = new System.Drawing.Point(20, 250);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 23);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Teléfono";
+
+            // txtTelefono
+            this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtTelefono.Location = new System.Drawing.Point(20, 275);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(290, 30);
+            this.txtTelefono.TabIndex = 8;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+
+            // label5
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label5.Location = new System.Drawing.Point(20, 310);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 23);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Red Social";
+
+            // txtRedSocial
+            this.txtRedSocial.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtRedSocial.Location = new System.Drawing.Point(20, 335);
+            this.txtRedSocial.Name = "txtRedSocial";
+            this.txtRedSocial.Size = new System.Drawing.Size(290, 30);
+            this.txtRedSocial.TabIndex = 10;
+            this.txtRedSocial.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+
+            // label6
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label6.Location = new System.Drawing.Point(20, 370);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 23);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Dirección";
+
+            // textBox6
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.textBox6.Location = new System.Drawing.Point(20, 395);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(290, 30);
+            this.textBox6.TabIndex = 12;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+
+            // button2
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(175, 490);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(135, 30);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Guardar";
+            this.button2.UseVisualStyleBackColor = false;
+
+            // button3
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(20, 490);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(135, 30);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Eliminar";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+
             // frmClientes
-            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1286, 676);
-            this.Controls.Add(this.pnlContenedor);
-            this.Controls.Add(this.pnlMenu);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
+            this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.Controls.Add(this.pnlPaddingCentral);
+            this.Controls.Add(this.pnlTop);
             this.Name = "frmClientes";
-            this.Text = "frmClientes";
+            this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmClientes_Load);
-            this.pnlMenu.ResumeLayout(false);
-            this.pnlContenedor.ResumeLayout(false);
-            this.pnlContenedor.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            
+            this.pnlTop.ResumeLayout(false);
+            this.pnlTop.PerformLayout();
+            this.pnlPaddingCentral.ResumeLayout(false);
+            this.pnlContenedorPrincipal.ResumeLayout(false);
+            this.pnlListaClientes.ResumeLayout(false);
+            this.pnlBuscador.ResumeLayout(false);
+            this.pnlBuscador.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.pnlDatosP.ResumeLayout(false);
+            this.pnlDatosP.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlMenu;
-        private System.Windows.Forms.Button btnInventario;
-        private System.Windows.Forms.Button btnProveedor;
-        private System.Windows.Forms.Button btnVentas;
-        private System.Windows.Forms.Button btnClientes;
-        private System.Windows.Forms.Button btnInicio;
-        private System.Windows.Forms.Panel pnlContenedor;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtApMaterno;
-        private System.Windows.Forms.TextBox txtRedSocial;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtApPaterno;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel pnlTop;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnAñadirCliente;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel pnlPaddingCentral;
+        private System.Windows.Forms.Panel pnlContenedorPrincipal;
+        private System.Windows.Forms.Panel pnlListaClientes;
+        private System.Windows.Forms.Panel pnlBuscador;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvClientes;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel pnlDatosP;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label lblApPaterno;
+        private System.Windows.Forms.TextBox txtApPaterno;
+        private System.Windows.Forms.Label lblApMaterno;
+        private System.Windows.Forms.TextBox txtApMaterno;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtRedSocial;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

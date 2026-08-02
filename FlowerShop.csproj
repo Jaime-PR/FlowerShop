@@ -146,12 +146,19 @@
     </Compile>
     <Compile Include="Modelos\Producto.cs" />
     <Compile Include="Modelos\ProductoDAO.cs" />
+    <Compile Include="Modelos\UsuarioDAO.cs" />
     <Compile Include="Modelos\DashboardDAO.cs" />
+    <Compile Include="Usuarios\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modelos\DetalleVenta.cs" />
     <Compile Include="Modelos\DetalleVentaDAO.cs" />
     <Compile Include="Modelos\VentaDAO.cs" />
     <Compile Include="Modelos\ReporteDAO.cs" />
-        <Compile Include="Proveedor\frmRproveedor.cs">
+    <Compile Include="Proveedor\frmRproveedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Proveedor\frmRproveedor.Designer.cs">
@@ -163,7 +170,7 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-<Compile Include="Program.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedor\frmProveedores.cs">
       <SubType>Form</SubType>
@@ -225,6 +232,9 @@
     <EmbeddedResource Include="Inventario\frmInventario.resx">
       <DependentUpon>frmInventario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\frmCrear_Cuenta.resx">
       <DependentUpon>frmCrear_Cuenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,10 +254,13 @@
     <EmbeddedResource Include="Proveedor\frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
-        <EmbeddedResource Include="Proveedor\frmRproveedor.resx">
+    <EmbeddedResource Include="Proveedor\frmRproveedor.resx">
       <DependentUpon>frmRproveedor.cs</DependentUpon>
     </EmbeddedResource>
-<None Include="packages.config" />
+    <EmbeddedResource Include="Ventas\frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -338,5 +351,3 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
-
-

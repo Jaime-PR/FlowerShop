@@ -110,5 +110,32 @@ namespace FlowerShop.Modelos
             }
             return dt;
         }
+        public DataTable ObtenerUltimasVentas()
+        {
+            DataTable dt = new DataTable();
+            Conexion db = new Conexion();
+            using (MySqlConnection con = db.ObtenerConexionAbierta())
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    try
+                    {
+                        string query = "SELECT CONCAT(C.Nombre, ' ', C.Apellido_Paterno) AS 'Cliente', V.Fecha_Hora AS 'Fecha', V.Estado_Venta AS 'Estado' FROM VENTA V LEFT JOIN CLIENTE C ON V.Id_Cliente = C.Id_Cliente ORDER BY V.Id_Venta DESC LIMIT 5";
+                        using (MySqlCommand cmd = new MySqlCommand(query, con))
+                        {
+                            using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                            {
+                                da.Fill(dt);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error al obtener últimas ventas: " + ex.Message);
+                    }
+                }
+            }
+            return dt;
+        }
     }
 }

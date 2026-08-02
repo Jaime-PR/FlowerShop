@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,10 +18,45 @@ namespace FlowerShop.Clientes
         public frmClientes()
         {
             InitializeComponent();
+            AplicarBordesRedondeados(pnlListaClientes, 15);
+            AplicarBordesRedondeados(pnlDatosP, 15);
+            FlowerShop.Utilidades.UIHelper.FormatoDataGrid(dgvClientes);
         }
         private void frmClientes_Load(object sender, EventArgs e)
         {
             CargarClientes();
+        }
+
+        private void AplicarBordesRedondeados(Panel panel, int radio)
+        {
+            if (panel == null) return;
+            System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
+            Rectangle rect = new Rectangle(0, 0, panel.Width, panel.Height);
+            int d = radio * 2;
+
+            if (panel.Width > 0 && panel.Height > 0)
+            {
+                path.AddArc(rect.X, rect.Y, d, d, 180, 90);
+                path.AddArc(rect.Right - d, rect.Y, d, d, 270, 90);
+                path.AddArc(rect.Right - d, rect.Bottom - d, d, d, 0, 90);
+                path.AddArc(rect.X, rect.Bottom - d, d, d, 90, 90);
+                path.CloseFigure();
+                panel.Region = new Region(path);
+            }
+
+            panel.Resize += (s, ev) =>
+            {
+                if (panel.Width <= 0 || panel.Height <= 0) return;
+                System.Drawing.Drawing2D.GraphicsPath p = new System.Drawing.Drawing2D.GraphicsPath();
+                Rectangle r = new Rectangle(0, 0, panel.Width, panel.Height);
+                int dd = radio * 2;
+                p.AddArc(r.X, r.Y, dd, dd, 180, 90);
+                p.AddArc(r.Right - dd, r.Y, dd, dd, 270, 90);
+                p.AddArc(r.Right - dd, r.Bottom - dd, dd, dd, 0, 90);
+                p.AddArc(r.X, r.Bottom - dd, dd, dd, 90, 90);
+                p.CloseFigure();
+                panel.Region = new Region(p);
+            };
         }
 
         private void CargarClientes()

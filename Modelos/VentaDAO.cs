@@ -121,5 +121,34 @@ namespace FlowerShop.Modelos
             }
             return dt;
         }
+        public DataTable ObtenerHistorialVentas()
+        {
+            DataTable dt = new DataTable();
+            Conexion db = new Conexion();
+            using (MySqlConnection con = db.ObtenerConexionAbierta())
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    // If Metodo_Pago doesn't exist, we fallback to Estado_Venta or omit it depending on the actual schema, but schema showed Metodo_Pago in a previous checkpoint... wait, earlier schema checkpoint showed Fecha_Venta and Metodo_Pago. Let's use Fecha_Hora, Estado_Venta as they are used in RegistrarVenta.
+                    string query = @"SELECT V.Id_Venta AS 'ID Venta', 
+                                            CONCAT(C.Nombre, ' ', C.Apellido_Paterno) AS 'Cliente', 
+                                            V.Fecha_Hora AS 'Fecha', 
+                                            V.Estado_Venta AS 'Estado',
+                                            V.Origen_Pedido AS 'Origen',
+                                            IFNULL((SELECT SUM(Cantidad * Precio_Unitario) FROM DETALLE_VENTA DV WHERE DV.Id_Venta = V.Id_Venta), 0) AS 'Total'
+                                     FROM VENTA V 
+                                     LEFT JOIN CLIENTE C ON V.Id_Cliente = C.Id_Cliente 
+                                     ORDER BY V.Fecha_Hora DESC";
+                    using (MySqlCommand cmd = new MySqlCommand(query, con))
+                    {
+                        using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                        {
+                            da.Fill(dt);
+                        }
+                    }
+                }
+            }
+            return dt;
+        }
     }
 }
