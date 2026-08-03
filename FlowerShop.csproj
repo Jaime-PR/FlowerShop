@@ -108,12 +108,6 @@
       <DependentUpon>frmRegistro_Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
-    <Compile Include="frmMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMenu.Designer.cs">
-      <DependentUpon>frmMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmPantalla_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +146,36 @@
     </Compile>
     <Compile Include="Modelos\Producto.cs" />
     <Compile Include="Modelos\ProductoDAO.cs" />
+    <Compile Include="Modelos\UsuarioDAO.cs" />
+    <Compile Include="Modelos\DashboardDAO.cs" />
+    <Compile Include="Usuarios\frmAñadir_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmAñadir_Usuario.Designer.cs">
+      <DependentUpon>frmAñadir_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\DetalleVenta.cs" />
+    <Compile Include="Modelos\DetalleVentaDAO.cs" />
+    <Compile Include="Modelos\VentaDAO.cs" />
+    <Compile Include="Modelos\ReporteDAO.cs" />
+    <Compile Include="Proveedor\frmRproveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor\frmRproveedor.Designer.cs">
+      <DependentUpon>frmRproveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedor\frmProveedores.cs">
@@ -160,13 +184,21 @@
     <Compile Include="Proveedor\frmProveedores.Designer.cs">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Proveedor\frmRproveedor.cs">
+    <Compile Include="Utilidades\Seguridad.cs" />
+    <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Proveedor\frmRproveedor.Designer.cs">
-      <DependentUpon>frmRproveedor.cs</DependentUpon>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utilidades\Seguridad.cs" />
+    <Compile Include="Utilidades\Validaciones.cs" />
+    <Compile Include="Utilidades\UIHelper.cs" />
+    <Compile Include="Reportes\frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\frmRegistro_Venta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,20 +217,32 @@
     <EmbeddedResource Include="Clientes\frmRegistro_Clientes.resx">
       <DependentUpon>frmRegistro_Clientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\frmRegistro_Venta.resx">
+      <DependentUpon>frmRegistro_Venta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPantalla_Inicio.resx">
       <DependentUpon>frmPantalla_Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventario\frmAgg_Producto.resx">
-      <DependentUpon>frmAgg_Producto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Inventario\frmCategorias.resx">
       <DependentUpon>frmCategorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\frmInventario.resx">
       <DependentUpon>frmInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmAñadir_Usuario.resx">
+      <DependentUpon>frmAñadir_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmCrear_Cuenta.resx">
       <DependentUpon>frmCrear_Cuenta.cs</DependentUpon>
@@ -221,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedor\frmRproveedor.resx">
       <DependentUpon>frmRproveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -298,6 +345,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\photo_prints_100dp_000000_FILL0_wght400_GRAD0_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz242.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_prints_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_cart_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignment_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignment_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\local_shipping_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

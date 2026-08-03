@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,10 +16,20 @@ namespace FlowerShop
         // 1. Variable global privada para guardar el rol
         private string rolDelUsuarioLogueado;
 
+        // Constructor sin parámetros requerido por el Diseñador de Visual Studio
+        public frmPantalla_Inicio()
+        {
+            InitializeComponent();
+            RedimensionarIconos();
+            this.Load += FrmPantalla_Inicio_Load;
+        }
+
         // 2. Único constructor unificado que recibe el rol
         public frmPantalla_Inicio(string rolUsuario)
         {
             InitializeComponent();
+            RedimensionarIconos();
+            this.Load += FrmPantalla_Inicio_Load;
 
             // Guardamos el rol que viene del Login en nuestra variable
             rolDelUsuarioLogueado = rolUsuario;
@@ -34,6 +44,32 @@ namespace FlowerShop
             else if (rolDelUsuarioLogueado == "Administrador")
             {
                 // El administrador ve todo el menú intacto
+            }
+        }
+
+        private void FrmPantalla_Inicio_Load(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmPrincipal>();
+        }
+
+        private void RedimensionarIconos()
+        {
+            Button[] botones = { btnInicio, bntProductos, btnVentas, btnPedidos, btnClientes, btnUsuarios, btnInventario, btnProveedor, btnCerrarSesion };
+            int nuevoTamano = 24;
+
+            foreach (Button btn in botones)
+            {
+                if (btn.Image != null)
+                {
+                    Bitmap original = new Bitmap(btn.Image);
+                    Bitmap resized = new Bitmap(nuevoTamano, nuevoTamano);
+                    using (Graphics g = Graphics.FromImage(resized))
+                    {
+                        g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                        g.DrawImage(original, 0, 0, nuevoTamano, nuevoTamano);
+                    }
+                    btn.Image = resized;
+                }
             }
         }
 
@@ -74,6 +110,11 @@ namespace FlowerShop
             AbrirFormulario<Clientes.frmClientes>();
         }
 
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Usuarios.frmUsuarios>();
+        }
+
         private void btnProveedor_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Proveedor.frmProveedores>();
@@ -86,43 +127,13 @@ namespace FlowerShop
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-
+            AbrirFormulario<frmPrincipal>();
         }
 
-        private void tableLayoutPanelPrincipal_Paint(object sender, PaintEventArgs e)
+        // Manejador para Cerrar Sesión (agregado para el botón inferior)
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // 3. Evento del ícono de usuario arreglado con el paso del Rol
-        private void pictureBoxUsuario_Click(object sender, EventArgs e)
-        {
-            // Instanciamos frmMenu y le PASAMOS EL ROL guardado
-            frmMenu menu = new frmMenu(rolDelUsuarioLogueado);
-
-            menu.StartPosition = FormStartPosition.Manual;
-            menu.FormBorderStyle = FormBorderStyle.None;
-
-            // Calcular la posición exacta
-            Point esquinaInferiorDerecha = pictureBoxUsuario.PointToScreen(new Point(pictureBoxUsuario.Width, pictureBoxUsuario.Height));
-
-            // Ajustar la ubicación para que encaje
-            int posicionX = esquinaInferiorDerecha.X - menu.Width;
-            int posicionY = esquinaInferiorDerecha.Y;
-
-            // Asignar la nueva ubicación y mostrar el menú
-            menu.Location = new Point(posicionX, posicionY);
-            menu.Show();
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-
+            this.Close(); // O lógica de cerrar sesión específica
         }
     }
 }

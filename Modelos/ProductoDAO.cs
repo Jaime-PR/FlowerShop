@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -159,6 +159,87 @@ namespace FlowerShop.Datos
                 finally { con.Close(); }
             }
             return exito;
+        }
+
+        public int ObtenerTotalProductosEnInventario()
+        {
+            int total = 0;
+            Conexion db = new Conexion();
+            using (MySqlConnection con = db.ObtenerConexionAbierta())
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string query = "SELECT SUM(Cantidad) FROM PRODUCTO";
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    object result = cmd.ExecuteScalar();
+                    if (result != DBNull.Value && result != null)
+                    {
+                        total = Convert.ToInt32(result);
+                    }
+                }
+            }
+            return total;
+        }
+
+        public int ObtenerProductosBajoStock(int umbral = 10)
+        {
+            int total = 0;
+            Conexion db = new Conexion();
+            using (MySqlConnection con = db.ObtenerConexionAbierta())
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string query = "SELECT COUNT(*) FROM PRODUCTO WHERE Cantidad > 0 AND Cantidad <= @umbral";
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@umbral", umbral);
+                    object result = cmd.ExecuteScalar();
+                    if (result != DBNull.Value && result != null)
+                    {
+                        total = Convert.ToInt32(result);
+                    }
+                }
+            }
+            return total;
+        }
+
+        public int ObtenerProductosSinStock()
+        {
+            int total = 0;
+            Conexion db = new Conexion();
+            using (MySqlConnection con = db.ObtenerConexionAbierta())
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string query = "SELECT COUNT(*) FROM PRODUCTO WHERE Cantidad = 0";
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    object result = cmd.ExecuteScalar();
+                    if (result != DBNull.Value && result != null)
+                    {
+                        total = Convert.ToInt32(result);
+                    }
+                }
+            }
+            return total;
+        }
+
+        public decimal ObtenerValorTotalInventario()
+        {
+            decimal total = 0;
+            Conexion db = new Conexion();
+            using (MySqlConnection con = db.ObtenerConexionAbierta())
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string query = "SELECT SUM(Cantidad * Precio_Compra) FROM PRODUCTO";
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    object result = cmd.ExecuteScalar();
+                    if (result != DBNull.Value && result != null)
+                    {
+                        total = Convert.ToDecimal(result);
+                    }
+                }
+            }
+            return total;
         }
     }
 }

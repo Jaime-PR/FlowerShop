@@ -1,4 +1,4 @@
-﻿namespace FlowerShop
+namespace FlowerShop
 {
     partial class frmMenu
     {
@@ -186,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(197)))), ((int)(((byte)(156)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(332, 337);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmMenu";
