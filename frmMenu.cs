@@ -28,6 +28,7 @@ namespace FlowerShop
         public frmMenu(string rolUsuario)
         {
             InitializeComponent();
+            this.Load += (s, e) => { btnInicio_Click(this, EventArgs.Empty); };
 
             // Lógica de diseño: bordes redondeados
             this.FormBorderStyle = FormBorderStyle.None;

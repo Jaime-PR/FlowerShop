@@ -1,4 +1,4 @@
-﻿namespace FlowerShop.Proveedor
+namespace FlowerShop.Proveedor
 {
     
      partial class frmRegistro_Proveedor
@@ -129,7 +129,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(102, 28);
             this.label13.TabIndex = 30;
-            this.label13.Text = "Dirección";
+            this.label13.Text = "Direcci�n";
             // 
             // label12
             // 
@@ -458,6 +458,7 @@
             // 
             // frmRegistro_Proveedor
             // 
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(922, 605);
@@ -539,3 +540,4 @@
         private System.Windows.Forms.TextBox textBox4;
     }
 }
+

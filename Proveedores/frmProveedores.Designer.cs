@@ -1,4 +1,4 @@
-﻿namespace FlowerShop.Proveedores
+namespace FlowerShop.Proveedores
 {
     partial class frmProveedores
     {
@@ -37,3 +37,4 @@
         #endregion
     }
 }
+

@@ -31,11 +31,28 @@ namespace FlowerShop.Ventas
                 FlowerShop.Modelos.VentaDAO dao = new FlowerShop.Modelos.VentaDAO();
                 dgvVentas.DataSource = dao.ObtenerHistorialVentas();
                 FlowerShop.Utilidades.UIHelper.FormatoDataGrid(dgvVentas);
+                if (dgvVentas.Columns.Contains("ID Venta"))
+                {
+                    dgvVentas.Columns["ID Venta"].Visible = false;
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar ventas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnNuevaVenta_Click(object sender, EventArgs e)
+        {
+            frmRegistro_Venta frm = new frmRegistro_Venta();
+            // Since frmVentas is probably a top level or inside a container, 
+            // usually adding new forms like this might pop them up as Dialogs or we swap panels.
+            // In frmAñadir_Producto it was shown as Dialog. Let's do ShowDialog.
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog();
+            
+            // Reload sales after registering
+            CargarVentas();
         }
 
         private void AplicarBordesRedondeados(Panel panel, int radio)

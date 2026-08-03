@@ -35,6 +35,12 @@ namespace FlowerShop.Login
             Conexion db = new Conexion();
             MySqlConnection con = db.ObtenerConexionAbierta();
 
+            if (con == null)
+            {
+                MessageBox.Show("No se pudo establecer conexión con la base de datos. Comprueba la configuración.", "Error de conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (con.State == System.Data.ConnectionState.Open)
             {
                 try
@@ -73,7 +79,14 @@ namespace FlowerShop.Login
                 }
                 finally
                 {
-                    con.Close();
+                    if (con != null)
+                    {
+                        try
+                        {
+                            con.Close();
+                        }
+                        catch { }
+                    }
                 }
             }
         }
@@ -119,6 +132,35 @@ namespace FlowerShop.Login
             frmCrear_Cuenta crearCuentaForm = new frmCrear_Cuenta();
             crearCuentaForm.Show();
             this.Hide();
+        }
+
+        private void btnZoomIn_Click(object sender, EventArgs e)
+        {
+            this.Scale(new SizeF(1.1f, 1.1f));
+            ScaleControlsFont(this, 1.1f);
+            
+            // Recenter elements after scale
+            pnlLeft_Resize(this, EventArgs.Empty);
+            pnlRight_Resize(this, EventArgs.Empty);
+        }
+
+        private void btnZoomOut_Click(object sender, EventArgs e)
+        {
+            this.Scale(new SizeF(0.9090909f, 0.9090909f));
+            ScaleControlsFont(this, 0.9090909f);
+            
+            // Recenter elements after scale
+            pnlLeft_Resize(this, EventArgs.Empty);
+            pnlRight_Resize(this, EventArgs.Empty);
+        }
+
+        private void ScaleControlsFont(Control control, float scaleFactor)
+        {
+            control.Font = new Font(control.Font.FontFamily, control.Font.Size * scaleFactor, control.Font.Style);
+            foreach (Control child in control.Controls)
+            {
+                ScaleControlsFont(child, scaleFactor);
+            }
         }
     }
 }

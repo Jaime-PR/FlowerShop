@@ -22,6 +22,8 @@ namespace FlowerShop.Login
             this.lblSubtitulo = new System.Windows.Forms.Label();
             this.lblTituloPrincipal = new System.Windows.Forms.Label();
             this.pnlRight = new System.Windows.Forms.Panel();
+            this.btnZoomIn = new System.Windows.Forms.Button();
+            this.btnZoomOut = new System.Windows.Forms.Button();
             this.pnlCard = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -82,6 +84,8 @@ namespace FlowerShop.Login
             // pnlRight
             // 
             this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(109)))), ((int)(((byte)(129)))));
+            this.pnlRight.Controls.Add(this.btnZoomIn);
+            this.pnlRight.Controls.Add(this.btnZoomOut);
             this.pnlRight.Controls.Add(this.pnlCard);
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRight.Location = new System.Drawing.Point(600, 0);
@@ -90,6 +94,41 @@ namespace FlowerShop.Login
             this.pnlRight.TabIndex = 1;
             this.pnlRight.Resize += new System.EventHandler(this.pnlRight_Resize);
             // 
+            // 
+            // btnZoomIn
+            // 
+            this.btnZoomIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnZoomIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
+            this.btnZoomIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnZoomIn.FlatAppearance.BorderSize = 0;
+            this.btnZoomIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnZoomIn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnZoomIn.ForeColor = System.Drawing.Color.White;
+            this.btnZoomIn.Location = new System.Drawing.Point(490, 20);
+            this.btnZoomIn.Name = "btnZoomIn";
+            this.btnZoomIn.Size = new System.Drawing.Size(40, 40);
+            this.btnZoomIn.TabIndex = 2;
+            this.btnZoomIn.Text = "+";
+            this.btnZoomIn.UseVisualStyleBackColor = false;
+            this.btnZoomIn.Click += new System.EventHandler(this.btnZoomIn_Click);
+            // 
+            // btnZoomOut
+            // 
+            this.btnZoomOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnZoomOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
+            this.btnZoomOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnZoomOut.FlatAppearance.BorderSize = 0;
+            this.btnZoomOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnZoomOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnZoomOut.ForeColor = System.Drawing.Color.White;
+            this.btnZoomOut.Location = new System.Drawing.Point(540, 20);
+            this.btnZoomOut.Name = "btnZoomOut";
+            this.btnZoomOut.Size = new System.Drawing.Size(40, 40);
+            this.btnZoomOut.TabIndex = 3;
+            this.btnZoomOut.Text = "-";
+            this.btnZoomOut.UseVisualStyleBackColor = false;
+            this.btnZoomOut.Click += new System.EventHandler(this.btnZoomOut_Click);
+
             // pnlCard
             // 
             this.pnlCard.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -228,6 +267,7 @@ namespace FlowerShop.Login
             // 
             // frmInicio_Sesion
             // 
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -273,5 +313,8 @@ namespace FlowerShop.Login
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnZoomIn;
+        private System.Windows.Forms.Button btnZoomOut;
     }
 }
+

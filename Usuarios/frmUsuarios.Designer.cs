@@ -194,6 +194,13 @@ namespace FlowerShop.Usuarios
             this.dgvUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUsuarios.Location = new System.Drawing.Point(1, 1);
             this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.ReadOnly = true;
+            this.dgvUsuarios.AllowUserToAddRows = false;
+            this.dgvUsuarios.AllowUserToDeleteRows = false;
+            this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUsuarios.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.LightGray;
+            this.dgvUsuarios.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+
             this.dgvUsuarios.RowHeadersWidth = 51;
             this.dgvUsuarios.RowTemplate.Height = 24;
             this.dgvUsuarios.Size = new System.Drawing.Size(1008, 398);
@@ -212,6 +219,7 @@ namespace FlowerShop.Usuarios
             // 
             // frmUsuarios
             // 
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
@@ -261,3 +269,4 @@ namespace FlowerShop.Usuarios
         private System.Windows.Forms.Panel pnlSidebarDerecho;
     }
 }
+

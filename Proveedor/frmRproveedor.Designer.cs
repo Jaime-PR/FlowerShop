@@ -1,4 +1,4 @@
-﻿namespace FlowerShop.Proveedor
+namespace FlowerShop.Proveedor
 {
     partial class frmRproveedor
     {
@@ -85,7 +85,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(102, 28);
             this.label13.TabIndex = 56;
-            this.label13.Text = "Dirección";
+            this.label13.Text = "Direcci�n";
             // 
             // label12
             // 
@@ -107,7 +107,7 @@
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(3, 3);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(368, 26);
@@ -123,7 +123,7 @@
             // 
             // txtCP
             // 
-            this.txtCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCP.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCP.Location = new System.Drawing.Point(3, 3);
             this.txtCP.Name = "txtCP";
             this.txtCP.Size = new System.Drawing.Size(368, 26);
@@ -139,7 +139,7 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstado.Location = new System.Drawing.Point(3, 3);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(368, 26);
@@ -190,7 +190,7 @@
             // 
             // txtNEmpresa
             // 
-            this.txtNEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNEmpresa.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNEmpresa.Location = new System.Drawing.Point(3, 3);
             this.txtNEmpresa.Name = "txtNEmpresa";
             this.txtNEmpresa.Size = new System.Drawing.Size(368, 26);
@@ -244,7 +244,7 @@
             // 
             // txtRFC
             // 
-            this.txtRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRFC.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRFC.Location = new System.Drawing.Point(3, 3);
             this.txtRFC.Name = "txtRFC";
             this.txtRFC.Size = new System.Drawing.Size(368, 26);
@@ -260,7 +260,7 @@
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(3, 3);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(368, 26);
@@ -276,7 +276,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(3, 3);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(368, 26);
@@ -292,7 +292,7 @@
             // 
             // txtAMaterno
             // 
-            this.txtAMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAMaterno.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAMaterno.Location = new System.Drawing.Point(3, 3);
             this.txtAMaterno.Name = "txtAMaterno";
             this.txtAMaterno.Size = new System.Drawing.Size(368, 26);
@@ -308,7 +308,7 @@
             // 
             // txtAPaterno
             // 
-            this.txtAPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAPaterno.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAPaterno.Location = new System.Drawing.Point(3, 3);
             this.txtAPaterno.Name = "txtAPaterno";
             this.txtAPaterno.Size = new System.Drawing.Size(368, 26);
@@ -324,7 +324,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(3, 3);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(368, 26);
@@ -404,6 +404,7 @@
             // 
             // frmRproveedor
             // 
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(922, 592);
@@ -502,3 +503,4 @@
         private System.Windows.Forms.Label label2;
     }
 }
+

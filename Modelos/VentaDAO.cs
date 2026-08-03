@@ -132,6 +132,7 @@ namespace FlowerShop.Modelos
                     // If Metodo_Pago doesn't exist, we fallback to Estado_Venta or omit it depending on the actual schema, but schema showed Metodo_Pago in a previous checkpoint... wait, earlier schema checkpoint showed Fecha_Venta and Metodo_Pago. Let's use Fecha_Hora, Estado_Venta as they are used in RegistrarVenta.
                     string query = @"SELECT V.Id_Venta AS 'ID Venta', 
                                             CONCAT(C.Nombre, ' ', C.Apellido_Paterno) AS 'Cliente', 
+                                            IFNULL((SELECT GROUP_CONCAT(P.Nombre SEPARATOR ', ') FROM DETALLE_VENTA DV INNER JOIN PRODUCTO P ON DV.Id_Producto = P.Id_Producto WHERE DV.Id_Venta = V.Id_Venta), 'Sin productos') AS 'Productos',
                                             V.Fecha_Hora AS 'Fecha', 
                                             V.Estado_Venta AS 'Estado',
                                             V.Origen_Pedido AS 'Origen',

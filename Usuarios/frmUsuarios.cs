@@ -44,6 +44,10 @@ namespace FlowerShop.Usuarios
             DataTable dtUsuarios = dao.ObtenerTodosLosUsuarios();
             dgvUsuarios.DataSource = dtUsuarios;
             FlowerShop.Utilidades.UIHelper.FormatoDataGrid(dgvUsuarios);
+            if (dgvUsuarios.Columns.Contains("Id_Usuario"))
+            {
+                dgvUsuarios.Columns["Id_Usuario"].Visible = false;
+            }
             
             // Si la tabla no tiene estilo visual de encabezado
             dgvUsuarios.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(235, 235, 235);

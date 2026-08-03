@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,5 +15,6 @@ namespace FlowerShop.Modelos
         public decimal Precio_Venta { get; set; }
         public string Categoria { get; set; }
         public int Id_Proveedor { get; set; }
+        public string Proveedor { get; set; }
     }
 }

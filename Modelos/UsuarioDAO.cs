@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -112,22 +112,7 @@ namespace FlowerShop.Modelos
             }
             return total;
         }
-
-        private string HashPassword(string password)
-        {
-            using (System.Security.Cryptography.SHA256 sha256Hash = System.Security.Cryptography.SHA256.Create())
-            {
-                byte[] bytes = sha256Hash.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
-                System.Text.StringBuilder builder = new System.Text.StringBuilder();
-                for (int i = 0; i < bytes.Length; i++)
-                {
-                    builder.Append(bytes[i].ToString("x2"));
-                }
-                return builder.ToString();
-            }
-        }
-
-        public bool InsertarUsuario(string nombre, string apellidoPaterno, string apellidoMaterno, string correo, string telefono, string rol, string username, string contrasena)
+            public bool InsertarUsuario(string nombre, string apellidoPaterno, string apellidoMaterno, string correo, string telefono, string rol, string usuario, string contrasena)
         {
             bool exito = false;
             MySqlConnection con = conexion.ObtenerConexionAbierta();
@@ -136,21 +121,22 @@ namespace FlowerShop.Modelos
             {
                 try
                 {
-                    string query = @"INSERT INTO usuario (Nombre, Apellido_Paterno, Apellido_Materno, Correo, Telefono, Rol, username, contrasena, estatus) 
-                                     VALUES (@nom, @apPat, @apMat, @correo, @tel, @rol, @usr, @pass, 'Activo')";
-                    
+                    string hashContrasena = HashContrasena(contrasena);
+                    string query = "INSERT INTO usuario (Nombre, Apellido_Paterno, Apellido_Materno, Correo, Telefono, Rol, Usuario, Contrasena, Estatus) " +
+                                   "VALUES (@nombre, @apellidoP, @apellidoM, @correo, @telefono, @rol, @usuario, @contrasena, 'Activo')";
+
                     MySqlCommand cmd = new MySqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@nom", nombre);
-                    cmd.Parameters.AddWithValue("@apPat", apellidoPaterno);
-                    cmd.Parameters.AddWithValue("@apMat", apellidoMaterno);
+                    cmd.Parameters.AddWithValue("@nombre", nombre);
+                    cmd.Parameters.AddWithValue("@apellidoP", apellidoPaterno);
+                    cmd.Parameters.AddWithValue("@apellidoM", apellidoMaterno);
                     cmd.Parameters.AddWithValue("@correo", correo);
-                    cmd.Parameters.AddWithValue("@tel", telefono);
+                    cmd.Parameters.AddWithValue("@telefono", telefono);
                     cmd.Parameters.AddWithValue("@rol", rol);
-                    cmd.Parameters.AddWithValue("@usr", username);
-                    cmd.Parameters.AddWithValue("@pass", HashPassword(contrasena)); // Contraseña encriptada
+                    cmd.Parameters.AddWithValue("@usuario", usuario);
+                    cmd.Parameters.AddWithValue("@contrasena", hashContrasena);
 
                     int filasAfectadas = cmd.ExecuteNonQuery();
-                    exito = (filasAfectadas > 0);
+                    exito = filasAfectadas > 0;
                 }
                 catch (Exception ex)
                 {
@@ -173,13 +159,15 @@ namespace FlowerShop.Modelos
             {
                 try
                 {
-                    string query = "UPDATE usuario SET contrasena = @pass WHERE Id_Usuario = @id";
+                    string hashContrasena = HashContrasena(nuevaContrasena);
+                    string query = "UPDATE usuario SET Contrasena = @contrasena WHERE Id_Usuario = @id";
+
                     MySqlCommand cmd = new MySqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@pass", HashPassword(nuevaContrasena));
+                    cmd.Parameters.AddWithValue("@contrasena", hashContrasena);
                     cmd.Parameters.AddWithValue("@id", idUsuario);
-                    
+
                     int filasAfectadas = cmd.ExecuteNonQuery();
-                    exito = (filasAfectadas > 0);
+                    exito = filasAfectadas > 0;
                 }
                 catch (Exception ex)
                 {
@@ -192,5 +180,68 @@ namespace FlowerShop.Modelos
             }
             return exito;
         }
-    }
+
+        private string HashContrasena(string contrasena)
+        {
+            using (System.Security.Cryptography.SHA256 sha256 = System.Security.Cryptography.SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(contrasena));
+                System.Text.StringBuilder builder = new System.Text.StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+            public bool ExisteCorreo(string correo)
+        {
+            bool existe = false;
+            MySqlConnection con = conexion.ObtenerConexionAbierta();
+            if (con.State == ConnectionState.Open)
+            {
+                try
+                {
+                    string query = "SELECT COUNT(*) FROM USUARIO WHERE Correo = @correo";
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@correo", correo);
+                    existe = Convert.ToInt32(cmd.ExecuteScalar()) > 0;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error en ExisteCorreo: " + ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+            return existe;
+        }
+
+        public bool ExisteUsuario(string usuario)
+        {
+            bool existe = false;
+            MySqlConnection con = conexion.ObtenerConexionAbierta();
+            if (con.State == ConnectionState.Open)
+            {
+                try
+                {
+                    string query = "SELECT COUNT(*) FROM USUARIO WHERE Nombre_Usuario = @usuario";
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@usuario", usuario);
+                    existe = Convert.ToInt32(cmd.ExecuteScalar()) > 0;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error en ExisteUsuario: " + ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+            return existe;
+        }
+}
 }

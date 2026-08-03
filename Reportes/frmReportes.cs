@@ -1,5 +1,11 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using FlowerShop.Modelos;
 
@@ -7,55 +13,51 @@ namespace FlowerShop.Reportes
 {
     public partial class frmReportes : Form
     {
-        private ReporteDAO reporteDAO;
+        private ReportesDAO dao = new ReportesDAO();
 
         public frmReportes()
         {
             InitializeComponent();
-            FlowerShop.Utilidades.UIHelper.ConfigurarAccesibilidad(this);
-            FlowerShop.Utilidades.UIHelper.FormatoDataGrid(this.dgvReporte);
-            reporteDAO = new ReporteDAO();
-            
-            // Estilos para que parezca embebido
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.TopLevel = false;
-            this.Dock = DockStyle.Fill;
+            FlowerShop.Utilidades.UIHelper.FormatoDataGrid(dgvReporte);
+        }
+
+        private void frmReportes_Load(object sender, EventArgs e)
+        {
+            cmbTipoReporte.Items.Add("Productos Bajo Inventario");
+            cmbTipoReporte.Items.Add("Últimas Ventas");
+            cmbTipoReporte.Items.Add("Distribución de Clientes");
+            cmbTipoReporte.SelectedIndex = 0;
         }
 
         private void cmbTipoReporte_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbTipoReporte.SelectedIndex < 0) return;
+            CargarReporteSeleccionado();
+        }
 
-            try
+        private void CargarReporteSeleccionado()
+        {
+            if (cmbTipoReporte.SelectedItem == null) return;
+            string seleccion = cmbTipoReporte.SelectedItem.ToString();
+
+            if (seleccion == "Productos Bajo Inventario")
             {
-                DataTable dt = new DataTable();
-
-                switch (cmbTipoReporte.SelectedIndex)
-                {
-                    case 0:
-                        dt = reporteDAO.ObtenerTopProductos();
-                        break;
-                    case 1:
-                        dt = reporteDAO.ObtenerMejoresClientes();
-                        break;
-                    case 2:
-                        dt = reporteDAO.ObtenerResumenVentasPorDia();
-                        break;
-                    case 3:
-                        dt = reporteDAO.ObtenerVentasPorVendedor();
-                        break;
-                    case 4:
-                        dt = reporteDAO.ObtenerProductosPocoInventario();
-                        break;
-                }
-
-                dgvReporte.DataSource = dt;
+                dgvReporte.DataSource = dao.ObtenerProductosBajoInventario(10);
             }
-            catch (Exception ex)
+            else if (seleccion == "Últimas Ventas")
             {
-                MessageBox.Show(ex.Message, "Error al generar reporte", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dgvReporte.DataSource = dao.ObtenerVentasRecientes();
             }
+            else if (seleccion == "Distribución de Clientes")
+            {
+                dgvReporte.DataSource = dao.ObtenerDistribucionClientes();
+            }
+
+            dgvReporte.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvReporte.ReadOnly = true;
+            dgvReporte.AllowUserToAddRows = false;
+            dgvReporte.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvReporte.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.LightGray;
+            dgvReporte.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
         }
     }
 }
-

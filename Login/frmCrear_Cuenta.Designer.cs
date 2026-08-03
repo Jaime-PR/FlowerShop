@@ -99,7 +99,7 @@ namespace FlowerShop.Login
             // 
             this.textPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPassword.Location = new System.Drawing.Point(64, 15);
             this.textPassword.Name = "textPassword";
             this.textPassword.Size = new System.Drawing.Size(223, 23);
@@ -141,7 +141,7 @@ namespace FlowerShop.Login
             // 
             this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(69, 15);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(223, 23);
@@ -182,7 +182,7 @@ namespace FlowerShop.Login
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(64, 15);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(223, 23);
@@ -195,7 +195,7 @@ namespace FlowerShop.Login
             this.btnCrearCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCrearCuenta.FlatAppearance.BorderSize = 0;
             this.btnCrearCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearCuenta.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearCuenta.ForeColor = System.Drawing.Color.White;
             this.btnCrearCuenta.Location = new System.Drawing.Point(178, 461);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
@@ -242,6 +242,7 @@ namespace FlowerShop.Login
             // 
             // frmCrear_Cuenta
             // 
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
@@ -288,3 +289,4 @@ namespace FlowerShop.Login
         private System.Windows.Forms.Label label1;
     }
 }
+

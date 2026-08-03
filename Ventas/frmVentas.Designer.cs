@@ -74,7 +74,9 @@ namespace FlowerShop.Ventas
             this.btnNuevaVenta.Size = new System.Drawing.Size(200, 40);
             this.btnNuevaVenta.TabIndex = 1;
             this.btnNuevaVenta.Text = "Crear Venta";
+            this.btnNuevaVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevaVenta.UseVisualStyleBackColor = false;
+            this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
             // 
             // dgvVentas
             // 
@@ -104,6 +106,7 @@ namespace FlowerShop.Ventas
             // 
             // frmVentas
             // 
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
@@ -131,3 +134,4 @@ namespace FlowerShop.Ventas
         public System.Windows.Forms.DataGridView dgvVentas;
     }
 }
+

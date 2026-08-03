@@ -1,4 +1,4 @@
-﻿namespace FlowerShop.Inventario
+namespace FlowerShop.Inventario
 {
     partial class frmAgg_Producto
     {
@@ -52,6 +52,8 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(242, 10);
             this.btnCancelar.Name = "btnCancelar";
@@ -213,6 +215,7 @@
             // 
             // frmAgg_Producto
             // 
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -264,3 +267,4 @@
         private System.Windows.Forms.Panel panel2;
     }
 }
+

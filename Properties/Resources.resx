@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="user_3917688" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_3917688.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="user_39176881" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_39176881.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="inventory_100dp_000000_FILL0_wght400_GRAD0_opsz481" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\inventory_100dp_000000_FILL0_wght400_GRAD0_opsz481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit_to_app_100dp_000000_FILL0_wght400_GRAD0_opsz48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit_to_app_100dp_000000_FILL0_wght400_GRAD0_opsz48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,11 +196,14 @@
   <data name="logout_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="local_shipping_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\local_shipping_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="assignment_100dp_000000_FILL0_wght400_GRAD0_opsz48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\assignment_100dp_000000_FILL0_wght400_GRAD0_opsz48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exit_to_app_100dp_000000_FILL0_wght400_GRAD0_opsz48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exit_to_app_100dp_000000_FILL0_wght400_GRAD0_opsz48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user_3917688" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_3917688.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Black and White Modern Bold Y2K Streetwear Brand Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Black and White Modern Bold Y2K Streetwear Brand Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,7 +211,7 @@
   <data name="assignment_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz241" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\assignment_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="local_shipping_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\local_shipping_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="analytics_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\analytics_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
