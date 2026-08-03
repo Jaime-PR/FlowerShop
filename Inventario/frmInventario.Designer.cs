@@ -63,6 +63,13 @@ namespace FlowerShop.Inventario
             this.pnlKpi4.SuspendLayout();
             this.pnlPaddingCentral.SuspendLayout();
             this.pnlContenedorPrincipal.SuspendLayout();
+            this.btnAñadir = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.btnAcercar = new System.Windows.Forms.Button();
+            this.btnAlejar = new System.Windows.Forms.Button();
+            this.pnlDatosP.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.pnlDatosP.SuspendLayout();
             this.SuspendLayout();
@@ -292,6 +299,65 @@ namespace FlowerShop.Inventario
             this.lblFormulario.TabIndex = 0;
             this.lblFormulario.Text = "Detalle Producto";
 
+            this.pnlDatosP.Size = new System.Drawing.Size(263, 679);
+            this.pnlDatosP.TabIndex = 6;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(19, 637);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(225, 34);
+            this.btnEliminar.TabIndex = 6;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(19, 594);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(225, 37);
+            this.btnGuardar.TabIndex = 24;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            // 
+            // txtPrecioVenta
+            // 
+            this.txtPrecioVenta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrecioVenta.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtPrecioVenta.Location = new System.Drawing.Point(19, 400);
+            this.txtPrecioVenta.Name = "txtPrecioVenta";
+            this.txtPrecioVenta.Size = new System.Drawing.Size(225, 34);
+            this.txtPrecioVenta.TabIndex = 23;
+            // 
+            // lb6
+            // 
+            this.lb6.AutoSize = true;
+            this.lb6.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lb6.Location = new System.Drawing.Point(14, 369);
+            this.lb6.Name = "lb6";
+            this.lb6.Size = new System.Drawing.Size(201, 28);
+            this.lb6.TabIndex = 22;
+            this.lb6.Text = "Precio de venta (Mxn)";
+            // 
+            // txtPrecioCompra
+            // 
+            this.txtPrecioCompra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrecioCompra.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtPrecioCompra.Location = new System.Drawing.Point(19, 332);
+            this.txtPrecioCompra.Name = "txtPrecioCompra";
+            this.txtPrecioCompra.Size = new System.Drawing.Size(225, 34);
+            this.txtPrecioCompra.TabIndex = 21;
+            // 
             // lb1
             this.lb1.AutoSize = true;
             this.lb1.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -487,5 +553,10 @@ namespace FlowerShop.Inventario
         private System.Windows.Forms.TextBox txtPrecioVenta;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnAñadir;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.Button btnAlejar;
+        private System.Windows.Forms.Button btnAcercar;
     }
 }

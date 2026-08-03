@@ -23,6 +23,16 @@ namespace FlowerShop.Login
             this.lblTituloPrincipal = new System.Windows.Forms.Label();
             this.pnlRight = new System.Windows.Forms.Panel();
             this.pnlCard = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.bntAlejar = new System.Windows.Forms.Button();
+            this.btnAcercar = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +53,60 @@ namespace FlowerShop.Login
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnlLeft
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.AutoSize = true;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.bntAlejar);
+            this.panel1.Controls.Add(this.btnAcercar);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.btnLogin);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Location = new System.Drawing.Point(335, 88);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(430, 521);
+            this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // bntAlejar
+            // 
+            this.bntAlejar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bntAlejar.Location = new System.Drawing.Point(261, 482);
+            this.bntAlejar.Name = "bntAlejar";
+            this.bntAlejar.Size = new System.Drawing.Size(97, 34);
+            this.bntAlejar.TabIndex = 2;
+            this.bntAlejar.Text = "button1";
+            this.bntAlejar.UseVisualStyleBackColor = true;
+            this.bntAlejar.Click += new System.EventHandler(this.bntAlejar_Click);
+            // 
+            // btnAcercar
+            // 
+            this.btnAcercar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAcercar.Location = new System.Drawing.Point(86, 482);
+            this.btnAcercar.Name = "btnAcercar";
+            this.btnAcercar.Size = new System.Drawing.Size(97, 34);
+            this.btnAcercar.TabIndex = 3;
+            this.btnAcercar.Text = "button2";
+            this.btnAcercar.UseVisualStyleBackColor = true;
+            this.btnAcercar.Click += new System.EventHandler(this.btnAcercar_Click_1);
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.txtPassword);
+            this.panel3.Location = new System.Drawing.Point(70, 322);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(293, 61);
+            this.panel3.TabIndex = 10;
             // 
             this.pnlLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
             this.pnlLeft.Controls.Add(this.lblSubtitulo);
@@ -273,5 +336,8 @@ namespace FlowerShop.Login
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button bntAlejar;
+        private System.Windows.Forms.Button btnAcercar;
     }
 }
