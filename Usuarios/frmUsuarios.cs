@@ -63,8 +63,24 @@ namespace FlowerShop.Usuarios
 
         private void btnNuevoUsuario_Click(object sender, EventArgs e)
         {
-            // Lógica para nuevo usuario
-            MessageBox.Show("Funcionalidad para añadir nuevo usuario próximamente.", "Nuevo Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            frmAñadir_Usuario frm = new frmAñadir_Usuario();
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            
+            pnlSidebarDerecho.Controls.Clear();
+            pnlSidebarDerecho.Controls.Add(frm);
+            
+            frm.OperacionCompletada += Frm_OperacionCompletada;
+
+            frm.Show();
+            pnlSidebarDerecho.Visible = true;
+        }
+
+        private void Frm_OperacionCompletada(object sender, EventArgs e)
+        {
+            pnlSidebarDerecho.Visible = false;
+            pnlSidebarDerecho.Controls.Clear();
+            CargarDatos();
         }
     }
 }

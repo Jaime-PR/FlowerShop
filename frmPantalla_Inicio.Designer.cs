@@ -19,6 +19,13 @@ namespace FlowerShop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPantalla_Inicio));
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.lblGeneral = new System.Windows.Forms.Label();
+            this.pnlLogo = new System.Windows.Forms.Panel();
+            this.lblLogo = new System.Windows.Forms.Label();
+            this.pnlTopBar = new System.Windows.Forms.Panel();
+            this.pnlLineaNegra = new System.Windows.Forms.Panel();
+            this.lblTituloSeccion = new System.Windows.Forms.Label();
+            this.pnlContenedor = new System.Windows.Forms.Panel();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnProveedor = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
@@ -28,18 +35,11 @@ namespace FlowerShop
             this.btnVentas = new System.Windows.Forms.Button();
             this.bntProductos = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
-            this.lblGeneral = new System.Windows.Forms.Label();
-            this.pnlLogo = new System.Windows.Forms.Panel();
-            this.lblLogo = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
-            this.pnlTopBar = new System.Windows.Forms.Panel();
-            this.pnlLineaNegra = new System.Windows.Forms.Panel();
-            this.lblTituloSeccion = new System.Windows.Forms.Label();
-            this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlSidebar.SuspendLayout();
             this.pnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlTopBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -62,190 +62,11 @@ namespace FlowerShop
             this.pnlSidebar.Size = new System.Drawing.Size(260, 732);
             this.pnlSidebar.TabIndex = 0;
             // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.btnCerrarSesion.Image = global::FlowerShop.Properties.Resources.exit_to_app_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 672);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCerrarSesion.Size = new System.Drawing.Size(260, 60);
-            this.btnCerrarSesion.TabIndex = 10;
-            this.btnCerrarSesion.Text = "  Cerrar sesion";
-            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // btnProveedor
-            // 
-            this.btnProveedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProveedor.FlatAppearance.BorderSize = 0;
-            this.btnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProveedor.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.btnProveedor.Image = global::FlowerShop.Properties.Resources.local_shipping_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.Location = new System.Drawing.Point(0, 470);
-            this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnProveedor.Size = new System.Drawing.Size(260, 50);
-            this.btnProveedor.TabIndex = 9;
-            this.btnProveedor.Text = "  Proveedores";
-            this.btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProveedor.UseVisualStyleBackColor = true;
-            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
-            // 
-            // btnInventario
-            // 
-            this.btnInventario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInventario.FlatAppearance.BorderSize = 0;
-            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventario.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.btnInventario.Image = global::FlowerShop.Properties.Resources.inventory_100dp_000000_FILL0_wght400_GRAD0_opsz481;
-            this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.Location = new System.Drawing.Point(0, 420);
-            this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnInventario.Size = new System.Drawing.Size(260, 50);
-            this.btnInventario.TabIndex = 8;
-            this.btnInventario.Text = "  Inventario";
-            this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInventario.UseVisualStyleBackColor = true;
-            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.btnUsuarios.Image = global::FlowerShop.Properties.Resources.group_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(0, 370);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnUsuarios.Size = new System.Drawing.Size(260, 50);
-            this.btnUsuarios.TabIndex = 7;
-            this.btnUsuarios.Text = "  Usuarios";
-            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUsuarios.UseVisualStyleBackColor = true;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
-            // 
-            // btnClientes
-            // 
-            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnClientes.FlatAppearance.BorderSize = 0;
-            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.btnClientes.Image = global::FlowerShop.Properties.Resources.user_3917688;
-            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(0, 320);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnClientes.Size = new System.Drawing.Size(260, 50);
-            this.btnClientes.TabIndex = 6;
-            this.btnClientes.Text = "  Clientes";
-            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClientes.UseVisualStyleBackColor = true;
-            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
-            // 
-            // btnPedidos
-            // 
-            this.btnPedidos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPedidos.FlatAppearance.BorderSize = 0;
-            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedidos.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnPedidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.btnPedidos.Image = global::FlowerShop.Properties.Resources.assignment_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedidos.Location = new System.Drawing.Point(0, 270);
-            this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnPedidos.Size = new System.Drawing.Size(260, 50);
-            this.btnPedidos.TabIndex = 5;
-            this.btnPedidos.Text = "  Pedidos";
-            this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPedidos.UseVisualStyleBackColor = true;
-            // 
-            // btnVentas
-            // 
-            this.btnVentas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVentas.FlatAppearance.BorderSize = 0;
-            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentas.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.btnVentas.Image = global::FlowerShop.Properties.Resources.shopping_cart_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentas.Location = new System.Drawing.Point(0, 220);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnVentas.Size = new System.Drawing.Size(260, 50);
-            this.btnVentas.TabIndex = 4;
-            this.btnVentas.Text = "  Ventas";
-            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVentas.UseVisualStyleBackColor = true;
-            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
-            // 
-            // bntProductos
-            // 
-            this.bntProductos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bntProductos.FlatAppearance.BorderSize = 0;
-            this.bntProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntProductos.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.bntProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.bntProductos.Image = global::FlowerShop.Properties.Resources.photo_prints_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.bntProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntProductos.Location = new System.Drawing.Point(0, 170);
-            this.bntProductos.Name = "bntProductos";
-            this.bntProductos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.bntProductos.Size = new System.Drawing.Size(260, 50);
-            this.bntProductos.TabIndex = 3;
-            this.bntProductos.Text = "  Categorias";
-            this.bntProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bntProductos.UseVisualStyleBackColor = true;
-            this.bntProductos.Click += new System.EventHandler(this.bntCategotia_Click);
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInicio.FlatAppearance.BorderSize = 0;
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
-            this.btnInicio.Image = global::FlowerShop.Properties.Resources.home_100dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.Location = new System.Drawing.Point(0, 120);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnInicio.Size = new System.Drawing.Size(260, 50);
-            this.btnInicio.TabIndex = 2;
-            this.btnInicio.Text = "  Pagina de inicio";
-            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInicio.UseVisualStyleBackColor = true;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            // 
             // lblGeneral
             // 
             this.lblGeneral.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblGeneral.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblGeneral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.lblGeneral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.lblGeneral.Location = new System.Drawing.Point(0, 80);
             this.lblGeneral.Name = "lblGeneral";
             this.lblGeneral.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
@@ -274,16 +95,6 @@ namespace FlowerShop
             this.lblLogo.Size = new System.Drawing.Size(162, 32);
             this.lblLogo.TabIndex = 1;
             this.lblLogo.Text = "FLOWERSHOP";
-            // 
-            // picLogo
-            // 
-            this.picLogo.Image = global::FlowerShop.Properties.Resources.Black_and_White_Modern_Bold_Y2K_Streetwear_Brand_Logo;
-            this.picLogo.Location = new System.Drawing.Point(15, 15);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(50, 50);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 0;
-            this.picLogo.TabStop = false;
             // 
             // pnlTopBar
             // 
@@ -324,6 +135,195 @@ namespace FlowerShop
             this.pnlContenedor.Size = new System.Drawing.Size(858, 732);
             this.pnlContenedor.TabIndex = 2;
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btnCerrarSesion.Image = global::FlowerShop.Properties.Resources.logout_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24;
+            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 672);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(260, 60);
+            this.btnCerrarSesion.TabIndex = 10;
+            this.btnCerrarSesion.Text = "  Cerrar sesion";
+            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // btnProveedor
+            // 
+            this.btnProveedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProveedor.FlatAppearance.BorderSize = 0;
+            this.btnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProveedor.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btnProveedor.Image = global::FlowerShop.Properties.Resources.local_shipping_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24;
+            this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProveedor.Location = new System.Drawing.Point(0, 470);
+            this.btnProveedor.Name = "btnProveedor";
+            this.btnProveedor.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnProveedor.Size = new System.Drawing.Size(260, 50);
+            this.btnProveedor.TabIndex = 9;
+            this.btnProveedor.Text = "  Proveedores";
+            this.btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProveedor.UseVisualStyleBackColor = true;
+            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
+            // 
+            // btnInventario
+            // 
+            this.btnInventario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInventario.FlatAppearance.BorderSize = 0;
+            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventario.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btnInventario.Image = global::FlowerShop.Properties.Resources.inventory_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24;
+            this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventario.Location = new System.Drawing.Point(0, 420);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnInventario.Size = new System.Drawing.Size(260, 50);
+            this.btnInventario.TabIndex = 8;
+            this.btnInventario.Text = "  Inventario";
+            this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInventario.UseVisualStyleBackColor = true;
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btnUsuarios.Image = global::FlowerShop.Properties.Resources.group_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(0, 370);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnUsuarios.Size = new System.Drawing.Size(260, 50);
+            this.btnUsuarios.TabIndex = 7;
+            this.btnUsuarios.Text = "  Usuarios";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // btnClientes
+            // 
+            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btnClientes.Image = global::FlowerShop.Properties.Resources.person_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24;
+            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.Location = new System.Drawing.Point(0, 320);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnClientes.Size = new System.Drawing.Size(260, 50);
+            this.btnClientes.TabIndex = 6;
+            this.btnClientes.Text = "  Clientes";
+            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
+            // btnPedidos
+            // 
+            this.btnPedidos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPedidos.FlatAppearance.BorderSize = 0;
+            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPedidos.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnPedidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btnPedidos.Image = global::FlowerShop.Properties.Resources.assignment_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24;
+            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPedidos.Location = new System.Drawing.Point(0, 270);
+            this.btnPedidos.Name = "btnPedidos";
+            this.btnPedidos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnPedidos.Size = new System.Drawing.Size(260, 50);
+            this.btnPedidos.TabIndex = 5;
+            this.btnPedidos.Text = "  Pedidos";
+            this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPedidos.UseVisualStyleBackColor = true;
+            // 
+            // btnVentas
+            // 
+            this.btnVentas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVentas.FlatAppearance.BorderSize = 0;
+            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentas.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btnVentas.Image = global::FlowerShop.Properties.Resources.shopping_cart_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24;
+            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentas.Location = new System.Drawing.Point(0, 220);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnVentas.Size = new System.Drawing.Size(260, 50);
+            this.btnVentas.TabIndex = 4;
+            this.btnVentas.Text = "  Ventas";
+            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
+            // 
+            // bntProductos
+            // 
+            this.bntProductos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bntProductos.FlatAppearance.BorderSize = 0;
+            this.bntProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntProductos.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.bntProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.bntProductos.Image = global::FlowerShop.Properties.Resources.photo_prints_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24;
+            this.bntProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntProductos.Location = new System.Drawing.Point(0, 170);
+            this.bntProductos.Name = "bntProductos";
+            this.bntProductos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.bntProductos.Size = new System.Drawing.Size(260, 50);
+            this.bntProductos.TabIndex = 3;
+            this.bntProductos.Text = "  Insumos";
+            this.bntProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bntProductos.UseVisualStyleBackColor = true;
+            this.bntProductos.Click += new System.EventHandler(this.bntCategotia_Click);
+            // 
+            // btnInicio
+            // 
+            this.btnInicio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btnInicio.Image = global::FlowerShop.Properties.Resources.home_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicio.Location = new System.Drawing.Point(0, 120);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnInicio.Size = new System.Drawing.Size(260, 50);
+            this.btnInicio.TabIndex = 2;
+            this.btnInicio.Text = "  Pagina de inicio";
+            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            // 
+            // picLogo
+            // 
+            this.picLogo.Image = global::FlowerShop.Properties.Resources.Black_and_White_Modern_Bold_Y2K_Streetwear_Brand_Logo;
+            this.picLogo.Location = new System.Drawing.Point(15, 15);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(50, 50);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
+            // 
             // frmPantalla_Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -338,9 +338,9 @@ namespace FlowerShop
             this.pnlSidebar.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             this.pnlLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.pnlTopBar.ResumeLayout(false);
             this.pnlTopBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -31,6 +31,7 @@ namespace FlowerShop.Usuarios
             this.label5 = new System.Windows.Forms.Label();
             this.pnlContenedorGrid = new System.Windows.Forms.Panel();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.pnlSidebarDerecho = new System.Windows.Forms.Panel();
             this.pnlKPI1.SuspendLayout();
             this.pnlKPI2.SuspendLayout();
             this.pnlKPI3.SuspendLayout();
@@ -198,12 +199,24 @@ namespace FlowerShop.Usuarios
             this.dgvUsuarios.Size = new System.Drawing.Size(1008, 398);
             this.dgvUsuarios.TabIndex = 0;
             // 
+            // pnlSidebarDerecho
+            // 
+            this.pnlSidebarDerecho.BackColor = System.Drawing.Color.White;
+            this.pnlSidebarDerecho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSidebarDerecho.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlSidebarDerecho.Location = new System.Drawing.Point(590, 0);
+            this.pnlSidebarDerecho.Name = "pnlSidebarDerecho";
+            this.pnlSidebarDerecho.Size = new System.Drawing.Size(500, 720);
+            this.pnlSidebarDerecho.TabIndex = 7;
+            this.pnlSidebarDerecho.Visible = false;
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(1090, 720);
+            this.Controls.Add(this.pnlSidebarDerecho);
             this.Controls.Add(this.pnlContenedorGrid);
             this.Controls.Add(this.pnlKPI3);
             this.Controls.Add(this.pnlKPI2);
@@ -245,5 +258,6 @@ namespace FlowerShop.Usuarios
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel pnlContenedorGrid;
         private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.Panel pnlSidebarDerecho;
     }
 }

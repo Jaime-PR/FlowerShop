@@ -63,7 +63,7 @@ namespace FlowerShop.Login
             this.lblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
             this.lblSubtitulo.Location = new System.Drawing.Point(100, 350);
             this.lblSubtitulo.Name = "lblSubtitulo";
-            this.lblSubtitulo.Size = new System.Drawing.Size(394, 28);
+            this.lblSubtitulo.Size = new System.Drawing.Size(421, 28);
             this.lblSubtitulo.TabIndex = 1;
             this.lblSubtitulo.Text = "Punto de venta, gestion y control de inventario";
             // 
@@ -75,7 +75,7 @@ namespace FlowerShop.Login
             this.lblTituloPrincipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
             this.lblTituloPrincipal.Location = new System.Drawing.Point(60, 240);
             this.lblTituloPrincipal.Name = "lblTituloPrincipal";
-            this.lblTituloPrincipal.Size = new System.Drawing.Size(496, 106);
+            this.lblTituloPrincipal.Size = new System.Drawing.Size(490, 106);
             this.lblTituloPrincipal.TabIndex = 0;
             this.lblTituloPrincipal.Text = "FlowerShop";
             // 
@@ -101,18 +101,18 @@ namespace FlowerShop.Login
             this.pnlCard.Controls.Add(this.label4);
             this.pnlCard.Controls.Add(this.pnlPassword);
             this.pnlCard.Controls.Add(this.btnLogin);
-            this.pnlCard.Location = new System.Drawing.Point(80, 85);
+            this.pnlCard.Location = new System.Drawing.Point(62, 73);
             this.pnlCard.Name = "pnlCard";
-            this.pnlCard.Size = new System.Drawing.Size(430, 521);
+            this.pnlCard.Size = new System.Drawing.Size(482, 568);
             this.pnlCard.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(80, 50);
+            this.label2.Location = new System.Drawing.Point(105, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(278, 62);
+            this.label2.Size = new System.Drawing.Size(272, 62);
             this.label2.TabIndex = 0;
             this.label2.Text = "Bienvenido";
             // 
@@ -121,9 +121,9 @@ namespace FlowerShop.Login
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(105, 120);
+            this.label1.Location = new System.Drawing.Point(130, 133);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 23);
+            this.label1.Size = new System.Drawing.Size(219, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Inicia sesión para continuar";
             // 
@@ -132,9 +132,9 @@ namespace FlowerShop.Login
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(50, 180);
+            this.label3.Location = new System.Drawing.Point(75, 193);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 23);
+            this.label3.Size = new System.Drawing.Size(85, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "USUARIO";
             // 
@@ -143,7 +143,7 @@ namespace FlowerShop.Login
             this.pnlUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.pnlUser.Controls.Add(this.pictureBox1);
             this.pnlUser.Controls.Add(this.txtUser);
-            this.pnlUser.Location = new System.Drawing.Point(50, 210);
+            this.pnlUser.Location = new System.Drawing.Point(75, 223);
             this.pnlUser.Name = "pnlUser";
             this.pnlUser.Size = new System.Drawing.Size(330, 50);
             this.pnlUser.TabIndex = 3;
@@ -173,9 +173,9 @@ namespace FlowerShop.Login
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(50, 280);
+            this.label4.Location = new System.Drawing.Point(75, 293);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 23);
+            this.label4.Size = new System.Drawing.Size(124, 23);
             this.label4.TabIndex = 4;
             this.label4.Text = "CONTRASEÑA";
             // 
@@ -184,7 +184,7 @@ namespace FlowerShop.Login
             this.pnlPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.pnlPassword.Controls.Add(this.pictureBox2);
             this.pnlPassword.Controls.Add(this.txtPassword);
-            this.pnlPassword.Location = new System.Drawing.Point(50, 310);
+            this.pnlPassword.Location = new System.Drawing.Point(75, 323);
             this.pnlPassword.Name = "pnlPassword";
             this.pnlPassword.Size = new System.Drawing.Size(330, 50);
             this.pnlPassword.TabIndex = 5;
@@ -218,7 +218,7 @@ namespace FlowerShop.Login
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.Location = new System.Drawing.Point(50, 410);
+            this.btnLogin.Location = new System.Drawing.Point(75, 423);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(330, 50);
             this.btnLogin.TabIndex = 6;

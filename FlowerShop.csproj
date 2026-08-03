@@ -148,6 +148,12 @@
     <Compile Include="Modelos\ProductoDAO.cs" />
     <Compile Include="Modelos\UsuarioDAO.cs" />
     <Compile Include="Modelos\DashboardDAO.cs" />
+    <Compile Include="Usuarios\frmAñadir_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmAñadir_Usuario.Designer.cs">
+      <DependentUpon>frmAñadir_Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\frmInventario.resx">
       <DependentUpon>frmInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmAñadir_Usuario.resx">
+      <DependentUpon>frmAñadir_Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
@@ -348,6 +357,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\home_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_prints_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_cart_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignment_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignment_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\local_shipping_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

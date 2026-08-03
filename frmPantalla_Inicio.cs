@@ -21,6 +21,7 @@ namespace FlowerShop
         {
             InitializeComponent();
             RedimensionarIconos();
+            this.Load += FrmPantalla_Inicio_Load;
         }
 
         // 2. Único constructor unificado que recibe el rol
@@ -28,6 +29,7 @@ namespace FlowerShop
         {
             InitializeComponent();
             RedimensionarIconos();
+            this.Load += FrmPantalla_Inicio_Load;
 
             // Guardamos el rol que viene del Login en nuestra variable
             rolDelUsuarioLogueado = rolUsuario;
@@ -43,6 +45,11 @@ namespace FlowerShop
             {
                 // El administrador ve todo el menú intacto
             }
+        }
+
+        private void FrmPantalla_Inicio_Load(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmPrincipal>();
         }
 
         private void RedimensionarIconos()
