@@ -39,8 +39,8 @@ namespace FlowerShop.Clientes
                 return;
             }
 
-            string query = @"INSERT INTO Cliente (Nombre, Apellido_Paterno, Apellido_Materno, Telefono, Red_Social, Direccion) 
-                     VALUES (@Nombre, @Apellido_Paterno, @Apellido_Materno, @Telefono, @Red_Social, @Direccion)";
+            string query = @"INSERT INTO Cliente (Nombre, Apellido_Paterno, Apellido_Materno, Telefono, Origen, Direccion) 
+                     VALUES (@Nombre, @Apellido_Paterno, @Apellido_Materno, @Telefono, @Origen, @Direccion)";
 
             try
             {
@@ -54,7 +54,7 @@ namespace FlowerShop.Clientes
                         comando.Parameters.AddWithValue("@Apellido_Paterno", txtApellidoPaterno.Text.Trim());
                         comando.Parameters.AddWithValue("@Apellido_Materno", txtApellidoMaterno.Text.Trim());
                         comando.Parameters.AddWithValue("@Telefono", txtTelefono.Text.Trim());
-                        comando.Parameters.AddWithValue("@Red_Social", txtRedSocial.Text.Trim());
+                        comando.Parameters.AddWithValue("@Origen", txtRedSocial.Text.Trim());
                         comando.Parameters.AddWithValue("@Direccion", txtDireccion.Text.Trim());
 
                         

@@ -1,16 +1,9 @@
-ï»¿namespace FlowerShop.Inventario
+namespace FlowerShop.Inventario
 {
     partial class frmCategorias
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,136 +15,103 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.pnlFiltro = new System.Windows.Forms.Panel();
+            this.lblCategorias = new System.Windows.Forms.Label();
+            this.cmbCategorias = new System.Windows.Forms.ComboBox();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.pnlFiltro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // lblTitulo
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(197)))), ((int)(((byte)(156)))));
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1044, 72);
-            this.panel1.TabIndex = 0;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.lblTitulo.Location = new System.Drawing.Point(30, 20);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(146, 31);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Productos";
             // 
-            // panel2
+            // pnlFiltro
             // 
-            this.panel2.Location = new System.Drawing.Point(817, 78);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(227, 493);
-            this.panel2.TabIndex = 1;
+            this.pnlFiltro.BackColor = System.Drawing.Color.White;
+            this.pnlFiltro.Controls.Add(this.cmbCategorias);
+            this.pnlFiltro.Controls.Add(this.lblCategorias);
+            this.pnlFiltro.Location = new System.Drawing.Point(36, 70);
+            this.pnlFiltro.Name = "pnlFiltro";
+            this.pnlFiltro.Size = new System.Drawing.Size(960, 60);
+            this.pnlFiltro.TabIndex = 1;
             // 
-            // button4
+            // lblCategorias
             // 
-            this.button4.Location = new System.Drawing.Point(404, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(108, 42);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.lblCategorias.AutoSize = true;
+            this.lblCategorias.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategorias.ForeColor = System.Drawing.Color.Gray;
+            this.lblCategorias.Location = new System.Drawing.Point(20, 20);
+            this.lblCategorias.Name = "lblCategorias";
+            this.lblCategorias.Size = new System.Drawing.Size(90, 20);
+            this.lblCategorias.TabIndex = 0;
+            this.lblCategorias.Text = "Categorías";
             // 
-            // button3
+            // cmbCategorias
             // 
-            this.button3.Location = new System.Drawing.Point(276, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 42);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.cmbCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCategorias.FormattingEnabled = true;
+            this.cmbCategorias.Location = new System.Drawing.Point(120, 18);
+            this.cmbCategorias.Name = "cmbCategorias";
+            this.cmbCategorias.Size = new System.Drawing.Size(250, 24);
+            this.cmbCategorias.TabIndex = 1;
+            this.cmbCategorias.SelectedIndexChanged += new System.EventHandler(this.cmbCategorias_SelectedIndexChanged);
             // 
-            // button2
+            // dgvProductos
             // 
-            this.button2.Location = new System.Drawing.Point(148, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 42);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(21, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 42);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(829, 492);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(197)))), ((int)(((byte)(156)))));
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 72);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1044, 498);
-            this.tableLayoutPanel1.TabIndex = 3;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            this.dgvProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
+            this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Location = new System.Drawing.Point(36, 150);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.RowHeadersVisible = false;
+            this.dgvProductos.RowTemplate.Height = 35;
+            this.dgvProductos.Size = new System.Drawing.Size(960, 400);
+            this.dgvProductos.TabIndex = 2;
+            this.dgvProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // frmCategorias
             // 
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1044, 570);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dgvProductos);
+            this.Controls.Add(this.pnlFiltro);
+            this.Controls.Add(this.lblTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCategorias";
-            this.Text = "frmCategorias";
+            this.Text = "Productos";
             this.Load += new System.EventHandler(this.frmCategorias_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.pnlFiltro.ResumeLayout(false);
+            this.pnlFiltro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Panel pnlFiltro;
+        private System.Windows.Forms.Label lblCategorias;
+        private System.Windows.Forms.ComboBox cmbCategorias;
+        private System.Windows.Forms.DataGridView dgvProductos;
     }
 }
+

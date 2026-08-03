@@ -227,7 +227,7 @@ namespace FlowerShop.Usuarios
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.BackColor = System.Drawing.Color.White;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCancelar.FlatAppearance.BorderSize = 1;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(107, 650);
@@ -256,6 +256,7 @@ namespace FlowerShop.Usuarios
             // 
             // frmAñadir_Usuario
             // 
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -310,3 +311,4 @@ namespace FlowerShop.Usuarios
         private System.Windows.Forms.Button btnGuardar;
     }
 }
+

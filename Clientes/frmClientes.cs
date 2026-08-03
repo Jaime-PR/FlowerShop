@@ -67,7 +67,9 @@ namespace FlowerShop.Clientes
                                        Apellido_Paterno AS 'Apellido Paterno', 
                                        Apellido_Materno AS 'Apellido Materno', 
                                        Telefono AS 'Teléfono',
-                                       Red_Social AS 'Red Social' 
+                                       Origen AS 'Origen',
+                                       Direccion AS 'Dirección',
+                                       Correo AS 'Correo'
                                 FROM CLIENTE";
 
             using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
@@ -81,11 +83,31 @@ namespace FlowerShop.Clientes
                     dgvClientes.DataSource = dt;
 
                     
-                    dgvClientes.Columns["Apellido Materno"].Visible = false;
-                    dgvClientes.Columns["Teléfono"].Visible = false;
-                    dgvClientes.Columns["Red Social"].Visible = false;
+                    if (dgvClientes.Columns.Contains("ID"))
+                        dgvClientes.Columns["ID"].Visible = false;
 
-                    
+                    if (!dgvClientes.Columns.Contains("btnEditar"))
+                    {
+                        DataGridViewButtonColumn btnEditar = new DataGridViewButtonColumn();
+                        btnEditar.Name = "btnEditar";
+                        btnEditar.HeaderText = "Editar";
+                        btnEditar.Text = "Editar";
+                        btnEditar.UseColumnTextForButtonValue = true;
+                        btnEditar.FlatStyle = FlatStyle.Flat;
+                        dgvClientes.Columns.Add(btnEditar);
+                    }
+
+                    if (!dgvClientes.Columns.Contains("btnEliminar"))
+                    {
+                        DataGridViewButtonColumn btnEliminar = new DataGridViewButtonColumn();
+                        btnEliminar.Name = "btnEliminar";
+                        btnEliminar.HeaderText = "Eliminar";
+                        btnEliminar.Text = "Eliminar";
+                        btnEliminar.UseColumnTextForButtonValue = true;
+                        btnEliminar.FlatStyle = FlatStyle.Flat;
+                        dgvClientes.Columns.Add(btnEliminar);
+                    }
+
                     dgvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 }
                 catch (Exception ex)
@@ -106,11 +128,39 @@ namespace FlowerShop.Clientes
                 txtApPaterno.Text = fila.Cells["Apellido Paterno"].Value.ToString();
                 txtApMaterno.Text = fila.Cells["Apellido Materno"].Value.ToString();
                 txtTelefono.Text = fila.Cells["Teléfono"].Value.ToString();
+                txtRedSocial.Text = fila.Cells["Origen"].Value.ToString();
 
-                
-                txtRedSocial.Text = fila.Cells["Red Social"].Value.ToString();
-
-               
+                if (dgvClientes.Columns[e.ColumnIndex].Name == "btnEditar")
+                {
+                    pnlSidebarDerecho.Controls.Clear();
+                    var frm = new FlowerShop.Clientes.frmAñadir_Cliente(idClienteSeleccionado);
+                    frm.TopLevel = false;
+                    frm.Dock = DockStyle.Fill;
+                    pnlSidebarDerecho.Controls.Add(frm);
+                    pnlSidebarDerecho.Visible = true; pnlSidebarDerecho.BringToFront();
+                    frm.OperacionCompletada += Frm_OperacionCompletada;
+                    frm.Show();
+                }
+                else if (dgvClientes.Columns[e.ColumnIndex].Name == "btnEliminar")
+                {
+                    DialogResult result = MessageBox.Show("¿Está seguro de eliminar este cliente?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            FlowerShop.Modelos.ClienteDAO dao = new FlowerShop.Modelos.ClienteDAO();
+                            if (dao.EliminarCliente(idClienteSeleccionado))
+                            {
+                                MessageBox.Show("Cliente eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                CargarClientes();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al eliminar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
             }
         }
         private void AbrirFormulario<TForm>() where TForm : Form, new()
@@ -176,8 +226,14 @@ namespace FlowerShop.Clientes
 
         private void btnAñadirCliente_Click_1(object sender, EventArgs e)
         {
-            AbrirFormulario<Clientes.frmRegistro_Clientes>();
-            CargarClientes();
+                        pnlSidebarDerecho.Controls.Clear();
+            var frm = new FlowerShop.Clientes.frmAñadir_Cliente();
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            pnlSidebarDerecho.Controls.Add(frm);
+            pnlSidebarDerecho.Visible = true; pnlSidebarDerecho.BringToFront();
+            frm.OperacionCompletada += Frm_OperacionCompletada;
+            frm.Show();
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
@@ -190,9 +246,15 @@ namespace FlowerShop.Clientes
 
         }
 
-        private void txtApPaterno_TextChanged(object sender, EventArgs e)
+                private void Frm_OperacionCompletada(object sender, EventArgs e)
         {
-
+            pnlSidebarDerecho.Controls.Clear();
+            pnlSidebarDerecho.Visible = false;
+            CargarClientes();
         }
     }
 }
+
+
+
+

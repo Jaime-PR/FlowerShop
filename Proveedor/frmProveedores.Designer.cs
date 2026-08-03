@@ -23,6 +23,7 @@ namespace FlowerShop.Proveedor
             
             this.pnlPaddingCentral = new System.Windows.Forms.Panel();
             this.pnlContenedorPrincipal = new System.Windows.Forms.Panel();
+            this.pnlSidebarDerecho = new System.Windows.Forms.Panel();
             
             this.pnlListaProveedores = new System.Windows.Forms.Panel();
             this.pnlBuscador = new System.Windows.Forms.Panel();
@@ -123,9 +124,17 @@ namespace FlowerShop.Proveedor
             this.pnlPaddingCentral.TabIndex = 1;
 
             // pnlContenedorPrincipal
+            this.pnlSidebarDerecho.BackColor = System.Drawing.Color.White;
+            this.pnlSidebarDerecho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSidebarDerecho.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlSidebarDerecho.Location = new System.Drawing.Point(700, 0);
+            this.pnlSidebarDerecho.Name = "pnlSidebarDerecho";
+            this.pnlSidebarDerecho.Size = new System.Drawing.Size(500, 700);
+            this.pnlSidebarDerecho.TabIndex = 6;
+            this.pnlSidebarDerecho.AutoScroll = true;
+            this.pnlSidebarDerecho.Visible = false;
             this.pnlContenedorPrincipal.BackColor = System.Drawing.Color.Transparent;
             this.pnlContenedorPrincipal.Controls.Add(this.pnlListaProveedores);
-            this.pnlContenedorPrincipal.Controls.Add(this.pnlDatosProv);
             this.pnlContenedorPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedorPrincipal.Location = new System.Drawing.Point(45, 10);
             this.pnlContenedorPrincipal.Name = "pnlContenedorPrincipal";
@@ -178,6 +187,13 @@ namespace FlowerShop.Proveedor
             this.dgvProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProveedor.Location = new System.Drawing.Point(15, 75);
             this.dgvProveedor.Name = "dgvProveedor";
+            this.dgvProveedor.ReadOnly = true;
+            this.dgvProveedor.AllowUserToAddRows = false;
+            this.dgvProveedor.AllowUserToDeleteRows = false;
+            this.dgvProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProveedor.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.LightGray;
+            this.dgvProveedor.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+
             this.dgvProveedor.RowHeadersVisible = false;
             this.dgvProveedor.RowHeadersWidth = 51;
             this.dgvProveedor.RowTemplate.Height = 24;
@@ -289,7 +305,7 @@ namespace FlowerShop.Proveedor
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 19);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Teléfono";
+            this.label5.Text = "TelÃ©fono";
 
             // txtTelefono
             this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -403,7 +419,7 @@ namespace FlowerShop.Proveedor
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(65, 19);
             this.label12.TabIndex = 21;
-            this.label12.Text = "Dirección";
+            this.label12.Text = "DirecciÃ³n";
 
             // txtDireccion
             this.txtDireccion.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -444,13 +460,15 @@ namespace FlowerShop.Proveedor
             this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.button1_Click);
+            
 
             // frmProveedores
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.Controls.Add(this.pnlSidebarDerecho);
             this.Controls.Add(this.pnlPaddingCentral);
             this.Controls.Add(this.pnlTop);
             this.Name = "frmProveedores";
@@ -476,6 +494,7 @@ namespace FlowerShop.Proveedor
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.Panel pnlPaddingCentral;
+        private System.Windows.Forms.Panel pnlSidebarDerecho;
         private System.Windows.Forms.Panel pnlContenedorPrincipal;
         private System.Windows.Forms.Panel pnlListaProveedores;
         private System.Windows.Forms.Panel pnlBuscador;
@@ -510,3 +529,7 @@ namespace FlowerShop.Proveedor
         private System.Windows.Forms.Button btnEliminar;
     }
 }
+
+
+
+

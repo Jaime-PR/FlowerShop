@@ -19,8 +19,11 @@ namespace FlowerShop.Proveedor
         {
             InitializeComponent();
             AplicarBordesRedondeados(pnlListaProveedores, 15);
-            AplicarBordesRedondeados(pnlDatosProv, 15);
             FlowerShop.Utilidades.UIHelper.FormatoDataGrid(dgvProveedor);
+            if (dgvProveedor.Columns.Contains("Id_Proveedor"))
+            {
+                dgvProveedor.Columns["Id_Proveedor"].Visible = false;
+            }
         }
         private void frmProveedores_Load(object sender, EventArgs e)
         {
@@ -58,6 +61,7 @@ namespace FlowerShop.Proveedor
                 panel.Region = new Region(p);
             };
         }
+
         private void CargarProveedores()
         {
             
@@ -87,16 +91,29 @@ namespace FlowerShop.Proveedor
                     dgvProveedor.DataSource = dt;
 
 
-                    dgvProveedor.Columns["Apellido_Paterno"].Visible = false;
-                    dgvProveedor.Columns["Apellido_Materno"].Visible = false;
-                    dgvProveedor.Columns["RFC"].Visible = false;
-                    dgvProveedor.Columns["Telefono"].Visible = false;
-                    dgvProveedor.Columns["Correo"].Visible = false;
-                    dgvProveedor.Columns["Direccion"].Visible = false;
-                    dgvProveedor.Columns["Ciudad"].Visible = false;
-                    dgvProveedor.Columns["Estado"].Visible = false;
-                    dgvProveedor.Columns["Codigo_Postal"].Visible = false;
+                    dgvProveedor.Columns["ID"].Visible = false;
 
+                    if (!dgvProveedor.Columns.Contains("btnEditar"))
+                    {
+                        DataGridViewButtonColumn btnEditar = new DataGridViewButtonColumn();
+                        btnEditar.Name = "btnEditar";
+                        btnEditar.HeaderText = "Editar";
+                        btnEditar.Text = "Editar";
+                        btnEditar.UseColumnTextForButtonValue = true;
+                        btnEditar.FlatStyle = FlatStyle.Flat;
+                        dgvProveedor.Columns.Add(btnEditar);
+                    }
+
+                    if (!dgvProveedor.Columns.Contains("btnEliminar"))
+                    {
+                        DataGridViewButtonColumn btnEliminar = new DataGridViewButtonColumn();
+                        btnEliminar.Name = "btnEliminar";
+                        btnEliminar.HeaderText = "Eliminar";
+                        btnEliminar.Text = "Eliminar";
+                        btnEliminar.UseColumnTextForButtonValue = true;
+                        btnEliminar.FlatStyle = FlatStyle.Flat;
+                        dgvProveedor.Columns.Add(btnEliminar);
+                    }
 
                     dgvProveedor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     dgvProveedor.RowHeadersVisible = false;
@@ -110,28 +127,41 @@ namespace FlowerShop.Proveedor
         }
         private void dgvProveedor_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow fila = dgvProveedor.Rows[e.RowIndex];
-
-                
                 idProveedorSeleccionado = Convert.ToInt32(fila.Cells["ID"].Value);
-
-                
-                txtNombre.Text = fila.Cells["Nombre"].Value.ToString();
-                txtApPaterno.Text = fila.Cells["Apellido_Paterno"].Value.ToString();
-                txtApMaterno.Text = fila.Cells["Apellido_Materno"].Value.ToString();
-                txtTelefono.Text = fila.Cells["Telefono"].Value.ToString();
-                txtCorreo.Text = fila.Cells["Correo"].Value.ToString();
-                txtRFC.Text = fila.Cells["RFC"].Value.ToString();
-
-                
-                txtEmpresa.Text = fila.Cells["Empresa"].Value.ToString();
-                txtCiudad.Text = fila.Cells["Ciudad"].Value.ToString();
-                txtEstado.Text = fila.Cells["Estado"].Value.ToString();
-                txtCP.Text = fila.Cells["Codigo_Postal"].Value.ToString();
-                txtDireccion.Text = fila.Cells["Direccion"].Value.ToString();
+                if (dgvProveedor.Columns[e.ColumnIndex].Name == "btnEditar")
+                {
+                    pnlSidebarDerecho.Controls.Clear();
+                    var frm = new FlowerShop.Proveedor.frmAñadir_Proveedor(idProveedorSeleccionado);
+                    frm.TopLevel = false;
+                    frm.Dock = DockStyle.Fill;
+                    pnlSidebarDerecho.Controls.Add(frm);
+                    pnlSidebarDerecho.Visible = true; pnlSidebarDerecho.BringToFront();
+                    frm.OperacionCompletada += Frm_OperacionCompletada;
+                    frm.Show();
+                }
+                else if (dgvProveedor.Columns[e.ColumnIndex].Name == "btnEliminar")
+                {
+                    DialogResult result = MessageBox.Show("¿Está seguro de eliminar este proveedor?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            FlowerShop.Modelos.ProveedorDAO dao = new FlowerShop.Modelos.ProveedorDAO();
+                            if (dao.EliminarProveedor(idProveedorSeleccionado))
+                            {
+                                MessageBox.Show("Proveedor eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                CargarProveedores();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al eliminar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
             }
         }
         private void AbrirFormulario<TForm>() where TForm : Form, new()
@@ -165,13 +195,22 @@ namespace FlowerShop.Proveedor
 
         private void btnAñadirCliente_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Proveedor.frmRproveedor>();
-            CargarProveedores();
+                        pnlSidebarDerecho.Controls.Clear();
+            var frm = new FlowerShop.Proveedor.frmAñadir_Proveedor();
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            pnlSidebarDerecho.Controls.Add(frm);
+            pnlSidebarDerecho.Visible = true; pnlSidebarDerecho.BringToFront();
+            frm.OperacionCompletada += Frm_OperacionCompletada;
+            frm.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+                private void Frm_OperacionCompletada(object sender, EventArgs e)
         {
-
+            pnlSidebarDerecho.Controls.Clear();
+            pnlSidebarDerecho.Visible = false;
+            CargarProveedores();
         }
     }
 }
+

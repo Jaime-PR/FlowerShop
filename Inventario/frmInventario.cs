@@ -83,6 +83,32 @@ namespace FlowerShop.Inventario
                 ProductoDAO dao = new ProductoDAO();
                 dgvProductos.DataSource = dao.ObtenerTodosLosProductos();
                 FlowerShop.Utilidades.UIHelper.FormatoDataGrid(dgvProductos);
+                if (dgvProductos.Columns.Contains("Id_Producto"))
+                    dgvProductos.Columns["Id_Producto"].Visible = false;
+                if (dgvProductos.Columns.Contains("Id_Proveedor"))
+                    dgvProductos.Columns["Id_Proveedor"].Visible = false;
+
+                if (!dgvProductos.Columns.Contains("btnEditar"))
+                {
+                    DataGridViewButtonColumn btnEditar = new DataGridViewButtonColumn();
+                    btnEditar.Name = "btnEditar";
+                    btnEditar.HeaderText = "Editar";
+                    btnEditar.Text = "Editar";
+                    btnEditar.UseColumnTextForButtonValue = true;
+                    btnEditar.FlatStyle = FlatStyle.Flat;
+                    dgvProductos.Columns.Add(btnEditar);
+                }
+
+                if (!dgvProductos.Columns.Contains("btnEliminar"))
+                {
+                    DataGridViewButtonColumn btnEliminar = new DataGridViewButtonColumn();
+                    btnEliminar.Name = "btnEliminar";
+                    btnEliminar.HeaderText = "Eliminar";
+                    btnEliminar.Text = "Eliminar";
+                    btnEliminar.UseColumnTextForButtonValue = true;
+                    btnEliminar.FlatStyle = FlatStyle.Flat;
+                    dgvProductos.Columns.Add(btnEliminar);
+                }
 
                 // Cargar KPIs
                 lblKpi1Valor.Text = dao.ObtenerTotalProductosEnInventario().ToString();
@@ -106,17 +132,49 @@ namespace FlowerShop.Inventario
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow fila = dgvProductos.Rows[e.RowIndex];
-
-
                 idProductoSeleccionado = Convert.ToInt32(fila.Cells["Id_Producto"].Value);
-
-
+                
                 txtNombre.Text = fila.Cells["Nombre"].Value.ToString();
                 txtCategoria.Text = fila.Cells["Categoria"].Value.ToString();
                 txtProveedor.Text = fila.Cells["Id_Proveedor"].Value.ToString();
                 txtCantidad.Text = fila.Cells["Cantidad"].Value.ToString();
                 txtPrecioCompra.Text = fila.Cells["Precio_Compra"].Value.ToString();
                 txtPrecioVenta.Text = fila.Cells["Precio_Venta"].Value.ToString();
+
+                if (dgvProductos.Columns[e.ColumnIndex].Name == "btnEditar")
+                {
+                    pnlDatosP.Width = 500;
+                    pnlDatosP.Controls.Clear();
+                    frmAñadir_Producto frmEditar = new frmAñadir_Producto(idProductoSeleccionado);
+                    frmEditar.TopLevel = false;
+                    frmEditar.Dock = DockStyle.Fill;
+                    pnlDatosP.Controls.Add(frmEditar);
+                    pnlDatosP.Visible = true;
+                    pnlDatosP.BringToFront();
+                    frmEditar.OperacionCompletada += Frm_OperacionCompletada;
+                    frmEditar.Show();
+                }
+                else if (dgvProductos.Columns[e.ColumnIndex].Name == "btnEliminar")
+                {
+                    DialogResult result = MessageBox.Show("¿Está seguro de eliminar este producto?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            ProductoDAO dao = new ProductoDAO();
+                            if (dao.EliminarProducto(idProductoSeleccionado))
+                            {
+                                MessageBox.Show("Producto eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                CargarDatosInventario();
+                                LimpiarCajas();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al eliminar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
             }
         }
 
@@ -129,7 +187,7 @@ namespace FlowerShop.Inventario
                 return;
             }
 
-            DialogResult confirmacion = MessageBox.Show("¿Estás seguro de que deseas actualizar la información de este producto?", "Confirmar actualización", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult confirmacion = MessageBox.Show("Â¿EstÃ¡s seguro de que deseas actualizar la informaciÃ³n de este producto?", "Confirmar actualizaciÃ³n", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (confirmacion == DialogResult.Yes)
             {
@@ -137,7 +195,7 @@ namespace FlowerShop.Inventario
                 {
 
                     Producto prod = new Producto();
-                    prod.Id_Producto = idProductoSeleccionado; // Le damos el ID que teníamos guardado
+                    prod.Id_Producto = idProductoSeleccionado; // Le damos el ID que tenÃ­amos guardado
                     prod.Nombre = txtNombre.Text;
                     prod.Categoria = txtCategoria.Text;
                     prod.Id_Proveedor = Convert.ToInt32(txtProveedor.Text);
@@ -149,8 +207,8 @@ namespace FlowerShop.Inventario
                     ProductoDAO dao = new ProductoDAO();
                     if (dao.ActualizarProducto(prod))
                     {
-                        MessageBox.Show("Producto actualizado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        CargarDatosInventario();
+                        MessageBox.Show("Producto actualizado exitosamente.", "Ã‰xito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarDatosInventario(); 
                         LimpiarCajas();
                     }
                 }
@@ -170,7 +228,7 @@ namespace FlowerShop.Inventario
                 return;
             }
 
-            DialogResult confirmacion = MessageBox.Show("¿Estás seguro de eliminar este producto por completo? Esta acción no se puede deshacer.", "Advertencia Crítica", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult confirmacion = MessageBox.Show("Â¿EstÃ¡s seguro de eliminar este producto por completo? Esta acciÃ³n no se puede deshacer.", "Advertencia CrÃ­tica", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (confirmacion == DialogResult.Yes)
             {
@@ -180,7 +238,7 @@ namespace FlowerShop.Inventario
 
                     if (dao.EliminarProducto(idProductoSeleccionado))
                     {
-                        MessageBox.Show("Producto eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Producto eliminado correctamente.", "Ã‰xito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CargarDatosInventario();
                         LimpiarCajas();
                     }
@@ -192,17 +250,26 @@ namespace FlowerShop.Inventario
             }
         }
 
+        
+        private void Frm_OperacionCompletada(object sender, EventArgs e)
+        {
+            pnlDatosP.Controls.Clear();
+            pnlDatosP.Visible = false;
+            CargarDatosInventario();
+        }
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            frmAgg_Producto ventanaAgregar = new frmAgg_Producto();
-
-
-            if (ventanaAgregar.ShowDialog() == DialogResult.OK)
-            {
-
-                CargarDatosInventario();
-            }
+            pnlDatosP.Width = 500;
+            pnlDatosP.Controls.Clear();
+            frmAñadir_Producto frm = new frmAñadir_Producto();
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            pnlDatosP.Controls.Add(frm);
+            pnlDatosP.Visible = true;
+            pnlDatosP.BringToFront();
+            frm.OperacionCompletada += Frm_OperacionCompletada;
+            frm.Show();
         }
 
 
@@ -253,3 +320,6 @@ namespace FlowerShop.Inventario
         }
     }
 }
+
+
+

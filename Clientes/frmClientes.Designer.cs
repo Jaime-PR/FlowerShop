@@ -22,6 +22,7 @@ namespace FlowerShop.Clientes
             this.btnAñadirCliente = new System.Windows.Forms.Button();
             this.pnlPaddingCentral = new System.Windows.Forms.Panel();
             this.pnlContenedorPrincipal = new System.Windows.Forms.Panel();
+            this.pnlSidebarDerecho = new System.Windows.Forms.Panel();
             this.pnlListaClientes = new System.Windows.Forms.Panel();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.pnlBuscador = new System.Windows.Forms.Panel();
@@ -102,9 +103,17 @@ namespace FlowerShop.Clientes
             // 
             // pnlContenedorPrincipal
             // 
+            this.pnlSidebarDerecho.BackColor = System.Drawing.Color.White;
+            this.pnlSidebarDerecho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSidebarDerecho.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlSidebarDerecho.Location = new System.Drawing.Point(700, 0);
+            this.pnlSidebarDerecho.Name = "pnlSidebarDerecho";
+            this.pnlSidebarDerecho.Size = new System.Drawing.Size(500, 700);
+            this.pnlSidebarDerecho.TabIndex = 6;
+            this.pnlSidebarDerecho.AutoScroll = true;
+            this.pnlSidebarDerecho.Visible = false;
             this.pnlContenedorPrincipal.BackColor = System.Drawing.Color.Transparent;
             this.pnlContenedorPrincipal.Controls.Add(this.pnlListaClientes);
-            this.pnlContenedorPrincipal.Controls.Add(this.pnlDatosP);
             this.pnlContenedorPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedorPrincipal.Location = new System.Drawing.Point(45, 10);
             this.pnlContenedorPrincipal.Name = "pnlContenedorPrincipal";
@@ -132,6 +141,13 @@ namespace FlowerShop.Clientes
             this.dgvClientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvClientes.Location = new System.Drawing.Point(15, 75);
             this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
+            this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvClientes.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.LightGray;
+            this.dgvClientes.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+
             this.dgvClientes.RowHeadersVisible = false;
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowTemplate.Height = 24;
@@ -241,7 +257,6 @@ namespace FlowerShop.Clientes
             this.txtApPaterno.Name = "txtApPaterno";
             this.txtApPaterno.Size = new System.Drawing.Size(317, 30);
             this.txtApPaterno.TabIndex = 4;
-            this.txtApPaterno.TextChanged += new System.EventHandler(this.txtApPaterno_TextChanged);
             // 
             // lblApMaterno
             // 
@@ -270,7 +285,7 @@ namespace FlowerShop.Clientes
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 23);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Teléfono";
+            this.label4.Text = "TelÃ©fono";
             // 
             // txtTelefono
             // 
@@ -308,7 +323,7 @@ namespace FlowerShop.Clientes
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 23);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Dirección";
+            this.label6.Text = "DirecciÃ³n";
             // 
             // textBox6
             // 
@@ -354,10 +369,12 @@ namespace FlowerShop.Clientes
             // 
             // frmClientes
             // 
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.Controls.Add(this.pnlSidebarDerecho);
             this.Controls.Add(this.pnlPaddingCentral);
             this.Controls.Add(this.pnlTop);
             this.Name = "frmClientes";
@@ -383,6 +400,7 @@ namespace FlowerShop.Clientes
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnAñadirCliente;
         private System.Windows.Forms.Panel pnlPaddingCentral;
+        private System.Windows.Forms.Panel pnlSidebarDerecho;
         private System.Windows.Forms.Panel pnlContenedorPrincipal;
         private System.Windows.Forms.Panel pnlListaClientes;
         private System.Windows.Forms.Panel pnlBuscador;
@@ -407,3 +425,6 @@ namespace FlowerShop.Clientes
         private System.Windows.Forms.Button button3;
     }
 }
+
+
+

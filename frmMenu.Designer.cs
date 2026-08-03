@@ -184,6 +184,7 @@ namespace FlowerShop
             // 
             // frmMenu
             // 
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -214,3 +215,4 @@ namespace FlowerShop
         private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
+

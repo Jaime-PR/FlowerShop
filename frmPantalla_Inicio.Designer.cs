@@ -19,14 +19,12 @@ namespace FlowerShop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPantalla_Inicio));
             this.pnlSidebar = new System.Windows.Forms.Panel();
-            this.lblGeneral = new System.Windows.Forms.Label();
-            this.pnlLogo = new System.Windows.Forms.Panel();
-            this.lblLogo = new System.Windows.Forms.Label();
-            this.pnlTopBar = new System.Windows.Forms.Panel();
-            this.pnlLineaNegra = new System.Windows.Forms.Panel();
-            this.lblTituloSeccion = new System.Windows.Forms.Label();
-            this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.btnInvertirColores = new System.Windows.Forms.Button();
+            this.btnRestaurarColores = new System.Windows.Forms.Button();
+            this.btnTTS = new System.Windows.Forms.Button();
+            this.lblAccesibilidad = new System.Windows.Forms.Label();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
             this.btnProveedor = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
@@ -35,17 +33,29 @@ namespace FlowerShop
             this.btnVentas = new System.Windows.Forms.Button();
             this.bntProductos = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
+            this.lblGeneral = new System.Windows.Forms.Label();
+            this.pnlLogo = new System.Windows.Forms.Panel();
+            this.lblLogo = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
+            this.pnlTopBar = new System.Windows.Forms.Panel();
+            this.pnlLineaNegra = new System.Windows.Forms.Panel();
+            this.lblTituloSeccion = new System.Windows.Forms.Label();
+            this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlSidebar.SuspendLayout();
             this.pnlLogo.SuspendLayout();
-            this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.pnlTopBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSidebar
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
+            this.pnlSidebar.Controls.Add(this.btnRestaurarColores);
+            this.pnlSidebar.Controls.Add(this.btnInvertirColores);
+            this.pnlSidebar.Controls.Add(this.btnTTS);
+            this.pnlSidebar.Controls.Add(this.lblAccesibilidad);
             this.pnlSidebar.Controls.Add(this.btnCerrarSesion);
+            this.pnlSidebar.Controls.Add(this.btnReportes);
             this.pnlSidebar.Controls.Add(this.btnProveedor);
             this.pnlSidebar.Controls.Add(this.btnInventario);
             this.pnlSidebar.Controls.Add(this.btnUsuarios);
@@ -62,78 +72,75 @@ namespace FlowerShop
             this.pnlSidebar.Size = new System.Drawing.Size(260, 732);
             this.pnlSidebar.TabIndex = 0;
             // 
-            // lblGeneral
+            // btnInvertirColores
             // 
-            this.lblGeneral.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblGeneral.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblGeneral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.lblGeneral.Location = new System.Drawing.Point(0, 80);
-            this.lblGeneral.Name = "lblGeneral";
-            this.lblGeneral.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.lblGeneral.Size = new System.Drawing.Size(260, 40);
-            this.lblGeneral.TabIndex = 1;
-            this.lblGeneral.Text = "GENERAL";
-            this.lblGeneral.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInvertirColores.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnInvertirColores.FlatAppearance.BorderSize = 0;
+            this.btnInvertirColores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInvertirColores.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnInvertirColores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btnInvertirColores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInvertirColores.Location = new System.Drawing.Point(0, 562);
+            this.btnInvertirColores.Name = "btnInvertirColores";
+            this.btnInvertirColores.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnInvertirColores.Size = new System.Drawing.Size(260, 50);
+            this.btnInvertirColores.TabIndex = 13;
+            this.btnInvertirColores.Text = "  Alto contraste";
+            this.btnInvertirColores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInvertirColores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInvertirColores.UseVisualStyleBackColor = true;
+            this.btnInvertirColores.Click += new System.EventHandler(this.btnInvertirColores_Click);
             // 
-            // pnlLogo
+            // btnRestaurarColores
             // 
-            this.pnlLogo.Controls.Add(this.lblLogo);
-            this.pnlLogo.Controls.Add(this.picLogo);
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(260, 80);
-            this.pnlLogo.TabIndex = 0;
+            this.btnRestaurarColores.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnRestaurarColores.FlatAppearance.BorderSize = 0;
+            this.btnRestaurarColores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestaurarColores.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnRestaurarColores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btnRestaurarColores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRestaurarColores.Location = new System.Drawing.Point(0, 562);
+            this.btnRestaurarColores.Name = "btnRestaurarColores";
+            this.btnRestaurarColores.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnRestaurarColores.Size = new System.Drawing.Size(260, 50);
+            this.btnRestaurarColores.TabIndex = 14;
+            this.btnRestaurarColores.Text = "  Restaurar Colores";
+            this.btnRestaurarColores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRestaurarColores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRestaurarColores.UseVisualStyleBackColor = true;
+            this.btnRestaurarColores.Click += new System.EventHandler(this.btnRestaurarColores_Click);
             // 
-            // lblLogo
+            // btnTTS
             // 
-            this.lblLogo.AutoSize = true;
-            this.lblLogo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
-            this.lblLogo.Location = new System.Drawing.Point(70, 25);
-            this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(162, 32);
-            this.lblLogo.TabIndex = 1;
-            this.lblLogo.Text = "FLOWERSHOP";
+            this.btnTTS.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnTTS.FlatAppearance.BorderSize = 0;
+            this.btnTTS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTTS.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnTTS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btnTTS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTTS.Location = new System.Drawing.Point(0, 612);
+            this.btnTTS.Name = "btnTTS";
+            this.btnTTS.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnTTS.Size = new System.Drawing.Size(260, 50);
+            this.btnTTS.TabIndex = 12;
+            this.btnTTS.Text = "  Activar Texto a Voz";
+            this.btnTTS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTTS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTTS.UseVisualStyleBackColor = true;
+            this.btnTTS.Click += new System.EventHandler(this.btnTTS_Click);
             // 
-            // pnlTopBar
+            // lblAccesibilidad
             // 
-            this.pnlTopBar.BackColor = System.Drawing.Color.White;
-            this.pnlTopBar.Controls.Add(this.pnlLineaNegra);
-            this.pnlTopBar.Controls.Add(this.lblTituloSeccion);
-            this.pnlTopBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTopBar.Location = new System.Drawing.Point(260, 0);
-            this.pnlTopBar.Name = "pnlTopBar";
-            this.pnlTopBar.Size = new System.Drawing.Size(858, 60);
-            this.pnlTopBar.TabIndex = 1;
-            // 
-            // pnlLineaNegra
-            // 
-            this.pnlLineaNegra.BackColor = System.Drawing.Color.Black;
-            this.pnlLineaNegra.Location = new System.Drawing.Point(30, 27);
-            this.pnlLineaNegra.Name = "pnlLineaNegra";
-            this.pnlLineaNegra.Size = new System.Drawing.Size(20, 6);
-            this.pnlLineaNegra.TabIndex = 1;
-            // 
-            // lblTituloSeccion
-            // 
-            this.lblTituloSeccion.AutoSize = true;
-            this.lblTituloSeccion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloSeccion.ForeColor = System.Drawing.Color.Black;
-            this.lblTituloSeccion.Location = new System.Drawing.Point(60, 16);
-            this.lblTituloSeccion.Name = "lblTituloSeccion";
-            this.lblTituloSeccion.Size = new System.Drawing.Size(149, 28);
-            this.lblTituloSeccion.TabIndex = 0;
-            this.lblTituloSeccion.Text = "Pagina de inicio";
-            // 
-            // pnlContenedor
-            // 
-            this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
-            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedor.Location = new System.Drawing.Point(260, 0);
-            this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(858, 732);
-            this.pnlContenedor.TabIndex = 2;
+            this.lblAccesibilidad.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblAccesibilidad.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblAccesibilidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.lblAccesibilidad.Location = new System.Drawing.Point(0, 662);
+            this.lblAccesibilidad.Name = "lblAccesibilidad";
+            this.lblAccesibilidad.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.lblAccesibilidad.Size = new System.Drawing.Size(260, 40);
+            this.lblAccesibilidad.TabIndex = 11;
+            this.lblAccesibilidad.Text = "ACCESIBILIDAD";
+            this.lblAccesibilidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnCerrarSesion
             // 
@@ -154,6 +161,26 @@ namespace FlowerShop
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnReportes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btnReportes.Image = global::FlowerShop.Properties.Resources.analytics_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24;
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.Location = new System.Drawing.Point(0, 520);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnReportes.Size = new System.Drawing.Size(260, 60);
+            this.btnReportes.TabIndex = 8;
+            this.btnReportes.Text = "  Reportes";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnProveedor
             // 
@@ -314,6 +341,40 @@ namespace FlowerShop
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
+            // lblGeneral
+            // 
+            this.lblGeneral.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblGeneral.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblGeneral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.lblGeneral.Location = new System.Drawing.Point(0, 80);
+            this.lblGeneral.Name = "lblGeneral";
+            this.lblGeneral.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.lblGeneral.Size = new System.Drawing.Size(260, 40);
+            this.lblGeneral.TabIndex = 1;
+            this.lblGeneral.Text = "GENERAL";
+            this.lblGeneral.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.Controls.Add(this.lblLogo);
+            this.pnlLogo.Controls.Add(this.picLogo);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(260, 80);
+            this.pnlLogo.TabIndex = 0;
+            // 
+            // lblLogo
+            // 
+            this.lblLogo.AutoSize = true;
+            this.lblLogo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
+            this.lblLogo.Location = new System.Drawing.Point(70, 25);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(162, 32);
+            this.lblLogo.TabIndex = 1;
+            this.lblLogo.Text = "FLOWERSHOP";
+            // 
             // picLogo
             // 
             this.picLogo.Image = global::FlowerShop.Properties.Resources.Black_and_White_Modern_Bold_Y2K_Streetwear_Brand_Logo;
@@ -324,8 +385,48 @@ namespace FlowerShop
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
             // 
+            // pnlTopBar
+            // 
+            this.pnlTopBar.BackColor = System.Drawing.Color.White;
+            this.pnlTopBar.Controls.Add(this.pnlLineaNegra);
+            this.pnlTopBar.Controls.Add(this.lblTituloSeccion);
+            this.pnlTopBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTopBar.Location = new System.Drawing.Point(260, 0);
+            this.pnlTopBar.Name = "pnlTopBar";
+            this.pnlTopBar.Size = new System.Drawing.Size(858, 60);
+            this.pnlTopBar.TabIndex = 1;
+            // 
+            // pnlLineaNegra
+            // 
+            this.pnlLineaNegra.BackColor = System.Drawing.Color.Black;
+            this.pnlLineaNegra.Location = new System.Drawing.Point(30, 27);
+            this.pnlLineaNegra.Name = "pnlLineaNegra";
+            this.pnlLineaNegra.Size = new System.Drawing.Size(20, 6);
+            this.pnlLineaNegra.TabIndex = 1;
+            // 
+            // lblTituloSeccion
+            // 
+            this.lblTituloSeccion.AutoSize = true;
+            this.lblTituloSeccion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloSeccion.ForeColor = System.Drawing.Color.Black;
+            this.lblTituloSeccion.Location = new System.Drawing.Point(60, 16);
+            this.lblTituloSeccion.Name = "lblTituloSeccion";
+            this.lblTituloSeccion.Size = new System.Drawing.Size(149, 28);
+            this.lblTituloSeccion.TabIndex = 0;
+            this.lblTituloSeccion.Text = "Pagina de inicio";
+            // 
+            // pnlContenedor
+            // 
+            this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
+            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenedor.Location = new System.Drawing.Point(260, 0);
+            this.pnlContenedor.Name = "pnlContenedor";
+            this.pnlContenedor.Size = new System.Drawing.Size(858, 732);
+            this.pnlContenedor.TabIndex = 2;
+            // 
             // frmPantalla_Inicio
             // 
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1118, 732);
@@ -338,9 +439,9 @@ namespace FlowerShop
             this.pnlSidebar.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             this.pnlLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.pnlTopBar.ResumeLayout(false);
             this.pnlTopBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,9 +462,19 @@ namespace FlowerShop
         private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button btnProveedor;
         private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Button btnTTS;
+        private System.Windows.Forms.Button btnInvertirColores;
+        private System.Windows.Forms.Button btnRestaurarColores;
+        private System.Windows.Forms.Label lblAccesibilidad;
+        private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Panel pnlTopBar;
         private System.Windows.Forms.Label lblTituloSeccion;
         private System.Windows.Forms.Panel pnlLineaNegra;
         private System.Windows.Forms.Panel pnlContenedor;
     }
 }
+
+
+
+
+

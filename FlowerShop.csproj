@@ -55,6 +55,7 @@
       <HintPath>packages\MySql.Data.9.7.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
     </Reference>
@@ -193,6 +194,7 @@
     </Compile>
     <Compile Include="Utilidades\Validaciones.cs" />
     <Compile Include="Utilidades\UIHelper.cs" />
+    <Compile Include="Utilidades\ValidationUtils.cs" />
     <Compile Include="Reportes\frmReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +281,38 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Clientes\frmAñadir_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\frmAñadir_Cliente.Designer.cs">
+      <DependentUpon>frmAñadir_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\frmAñadir_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\frmAñadir_Producto.Designer.cs">
+      <DependentUpon>frmAñadir_Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\ClienteDAO.cs" />
+    <Compile Include="Modelos\ProveedorDAO.cs" />
+    <Compile Include="Modelos\ReportesDAO.cs" />
+    <Compile Include="Proveedor\frmAñadir_Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor\frmAñadir_Proveedor.Designer.cs">
+      <DependentUpon>frmAñadir_Proveedor.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Clientes\frmAñadir_Cliente.resx">
+      <DependentUpon>frmAñadir_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\frmAñadir_Producto.resx">
+      <DependentUpon>frmAñadir_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedor\frmAñadir_Proveedor.resx">
+      <DependentUpon>frmAñadir_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -387,6 +421,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\local_shipping_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics_24dp_E5E5E5_FILL0_wght400_GRAD0_opsz24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

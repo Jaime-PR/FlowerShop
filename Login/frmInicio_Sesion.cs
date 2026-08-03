@@ -40,6 +40,12 @@ namespace FlowerShop.Login
             Conexion db = new Conexion();
             MySqlConnection con = db.ObtenerConexionAbierta();
 
+            if (con == null)
+            {
+                MessageBox.Show("No se pudo establecer conexión con la base de datos. Comprueba la configuración.", "Error de conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (con.State == System.Data.ConnectionState.Open)
             {
                 try
@@ -78,7 +84,14 @@ namespace FlowerShop.Login
                 }
                 finally
                 {
-                    con.Close();
+                    if (con != null)
+                    {
+                        try
+                        {
+                            con.Close();
+                        }
+                        catch { }
+                    }
                 }
             }
         }
@@ -125,73 +138,33 @@ namespace FlowerShop.Login
             crearCuentaForm.Show();
             this.Hide();
         }
-        private void btnAcercar_Click(object sender, EventArgs e)
-        {
-            // Limitar el zoom máximo (opcional, aquí lo limitamos a 2 veces su tamaño)
-            if (nivelZoomActual < 2.0f)
-            {
-                // Scale(SizeF) redimensiona el ancho y el alto
-                this.Scale(new SizeF(factorZoom, factorZoom));
 
-                // Actualizamos nuestro registro
-                nivelZoomActual *= factorZoom;
-            }
+        private void btnZoomIn_Click(object sender, EventArgs e)
+        {
+            this.Scale(new SizeF(1.1f, 1.1f));
+            ScaleControlsFont(this, 1.1f);
+            
+            // Recenter elements after scale
+            pnlLeft_Resize(this, EventArgs.Empty);
+            pnlRight_Resize(this, EventArgs.Empty);
         }
 
-        private void btnAlejar_Click(object sender, EventArgs e)
+        private void btnZoomOut_Click(object sender, EventArgs e)
         {
-            // Evitamos que el usuario haga la ventana más pequeña que el diseño original
-            if (nivelZoomActual > 1.05f)
-            {
-                // Calculamos la reducción (la inversa del factor de zoom)
-                float reduccion = 1.0f / factorZoom;
-
-                this.Scale(new SizeF(reduccion, reduccion));
-
-                // Actualizamos nuestro registro
-                nivelZoomActual *= reduccion;
-            }
-            else if (nivelZoomActual > 1.0f)
-            {
-                // Si está muy cerca del original, lo forzamos a regresar exactamente a 1.0
-                float ajusteFinal = 1.0f / nivelZoomActual;
-                this.Scale(new SizeF(ajusteFinal, ajusteFinal));
-                nivelZoomActual = 1.0f;
-            }
+            this.Scale(new SizeF(0.9090909f, 0.9090909f));
+            ScaleControlsFont(this, 0.9090909f);
+            
+            // Recenter elements after scale
+            pnlLeft_Resize(this, EventArgs.Empty);
+            pnlRight_Resize(this, EventArgs.Empty);
         }
 
-        private void bntAlejar_Click(object sender, EventArgs e)
+        private void ScaleControlsFont(Control control, float scaleFactor)
         {
-            // Evitamos que el usuario haga la ventana más pequeña que el diseño original
-            if (nivelZoomActual > 1.05f)
+            control.Font = new Font(control.Font.FontFamily, control.Font.Size * scaleFactor, control.Font.Style);
+            foreach (Control child in control.Controls)
             {
-                // Calculamos la reducción (la inversa del factor de zoom)
-                float reduccion = 1.0f / factorZoom;
-
-                this.Scale(new SizeF(reduccion, reduccion));
-
-                // Actualizamos nuestro registro
-                nivelZoomActual *= reduccion;
-            }
-            else if (nivelZoomActual > 1.0f)
-            {
-                // Si está muy cerca del original, lo forzamos a regresar exactamente a 1.0
-                float ajusteFinal = 1.0f / nivelZoomActual;
-                this.Scale(new SizeF(ajusteFinal, ajusteFinal));
-                nivelZoomActual = 1.0f;
-            }
-        }
-
-        private void btnAcercar_Click_1(object sender, EventArgs e)
-        {
-            // Limitar el zoom máximo (opcional, aquí lo limitamos a 2 veces su tamaño)
-            if (nivelZoomActual < 2.0f)
-            {
-                // Scale(SizeF) redimensiona el ancho y el alto
-                this.Scale(new SizeF(factorZoom, factorZoom));
-
-                // Actualizamos nuestro registro
-                nivelZoomActual *= factorZoom;
+                ScaleControlsFont(child, scaleFactor);
             }
         }
     }
