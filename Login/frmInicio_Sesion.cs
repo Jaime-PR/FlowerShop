@@ -19,6 +19,11 @@ namespace FlowerShop.Login
         {
             InitializeComponent();
         }
+        // Variable para controlar que no se reduzca más allá del tamaño original
+        private float nivelZoomActual = 1.0f;
+
+        // Factor de aumento: 1.1f significa que crecerá un 10% por cada clic
+        private const float factorZoom = 1.1f;
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
