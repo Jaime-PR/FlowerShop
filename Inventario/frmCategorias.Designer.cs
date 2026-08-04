@@ -1,4 +1,4 @@
-namespace FlowerShop.Inventario
+ï»¿namespace FlowerShop.Inventario
 {
     partial class frmCategorias
     {
@@ -56,7 +56,7 @@ namespace FlowerShop.Inventario
             this.lblCategorias.Name = "lblCategorias";
             this.lblCategorias.Size = new System.Drawing.Size(90, 20);
             this.lblCategorias.TabIndex = 0;
-            this.lblCategorias.Text = "Categorías";
+            this.lblCategorias.Text = "Categorï¿½as";
             // 
             // cmbCategorias
             // 
@@ -114,4 +114,5 @@ namespace FlowerShop.Inventario
         private System.Windows.Forms.DataGridView dgvProductos;
     }
 }
+
 

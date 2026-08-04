@@ -19,7 +19,7 @@ namespace FlowerShop.Inventario
         {
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnA�adir = new System.Windows.Forms.Button();
+            this.btnAñadir = new System.Windows.Forms.Button();
             
             this.flowLayoutPanelKPIs = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlKpi1 = new System.Windows.Forms.Panel();
@@ -76,7 +76,7 @@ namespace FlowerShop.Inventario
 
             // pnlTop
             this.pnlTop.Controls.Add(this.lblTitulo);
-            this.pnlTop.Controls.Add(this.btnA�adir);
+            this.pnlTop.Controls.Add(this.btnAñadir);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
@@ -93,21 +93,21 @@ namespace FlowerShop.Inventario
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "INVENTARIO";
 
-            // btnA�adir
-            this.btnA�adir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnA�adir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
-            this.btnA�adir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnA�adir.FlatAppearance.BorderSize = 0;
-            this.btnA�adir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnA�adir.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnA�adir.ForeColor = System.Drawing.Color.White;
-            this.btnA�adir.Location = new System.Drawing.Point(1171, 25);
-            this.btnA�adir.Name = "btnA�adir";
-            this.btnA�adir.Size = new System.Drawing.Size(180, 40);
-            this.btnA�adir.TabIndex = 1;
-            this.btnA�adir.Text = "+ Nuevo producto";
-            this.btnA�adir.UseVisualStyleBackColor = false;
-            this.btnA�adir.Click += new System.EventHandler(this.btnA�adir_Click);
+            // btnAñadir
+            this.btnAñadir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAñadir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
+            this.btnAñadir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAñadir.FlatAppearance.BorderSize = 0;
+            this.btnAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAñadir.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnAñadir.ForeColor = System.Drawing.Color.White;
+            this.btnAñadir.Location = new System.Drawing.Point(1171, 25);
+            this.btnAñadir.Name = "btnAñadir";
+            this.btnAñadir.Size = new System.Drawing.Size(180, 40);
+            this.btnAñadir.TabIndex = 1;
+            this.btnAñadir.Text = "+ Nuevo producto";
+            this.btnAñadir.UseVisualStyleBackColor = false;
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
 
             // flowLayoutPanelKPIs
             this.flowLayoutPanelKPIs.Controls.Add(this.pnlKpi1);
@@ -521,7 +521,7 @@ namespace FlowerShop.Inventario
 
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Button btnA�adir;
+        private System.Windows.Forms.Button btnAñadir;
         
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelKPIs;
         private System.Windows.Forms.Panel pnlKpi1;
@@ -556,13 +556,12 @@ namespace FlowerShop.Inventario
         private System.Windows.Forms.TextBox txtPrecioVenta;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.Button btnAlejar;
         private System.Windows.Forms.Button btnAcercar;
     }
 }
+
 
 
 

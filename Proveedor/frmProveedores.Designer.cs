@@ -1,4 +1,4 @@
-namespace FlowerShop.Proveedor
+﻿namespace FlowerShop.Proveedor
 {
     partial class frmProveedores
     {
@@ -529,6 +529,7 @@ namespace FlowerShop.Proveedor
         private System.Windows.Forms.Button btnEliminar;
     }
 }
+
 
 
 

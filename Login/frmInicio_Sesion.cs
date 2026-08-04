@@ -167,5 +167,9 @@ namespace FlowerShop.Login
                 ScaleControlsFont(child, scaleFactor);
             }
         }
+
+        private void bntAlejar_Click(object sender, EventArgs e) {}
+        private void btnAcercar_Click_1(object sender, EventArgs e) {}
+        private void panel1_Paint(object sender, PaintEventArgs e) {}
     }
 }

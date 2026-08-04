@@ -1,4 +1,4 @@
-namespace FlowerShop.Ventas
+﻿namespace FlowerShop.Ventas
 {
     partial class frmVentas
     {
@@ -134,4 +134,5 @@ namespace FlowerShop.Ventas
         public System.Windows.Forms.DataGridView dgvVentas;
     }
 }
+
 

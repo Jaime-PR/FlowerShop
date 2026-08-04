@@ -1,4 +1,4 @@
-namespace FlowerShop.Inventario
+﻿namespace FlowerShop.Inventario
 {
     partial class frmAñadir_Producto
     {
@@ -337,4 +337,5 @@ namespace FlowerShop.Inventario
         private System.Windows.Forms.Button btnGuardar;
     }
 }
+
 

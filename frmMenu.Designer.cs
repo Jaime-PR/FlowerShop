@@ -1,4 +1,4 @@
-namespace FlowerShop
+﻿namespace FlowerShop
 {
     partial class frmMenu
     {
@@ -215,4 +215,5 @@ namespace FlowerShop
         private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
+
 

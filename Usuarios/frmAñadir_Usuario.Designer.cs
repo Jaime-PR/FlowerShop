@@ -1,4 +1,4 @@
-namespace FlowerShop.Usuarios
+﻿namespace FlowerShop.Usuarios
 {
     partial class frmAñadir_Usuario
     {
@@ -311,4 +311,5 @@ namespace FlowerShop.Usuarios
         private System.Windows.Forms.Button btnGuardar;
     }
 }
+
 

@@ -1,4 +1,4 @@
-namespace FlowerShop
+﻿namespace FlowerShop
 {
     partial class frmPantalla_Inicio
     {
@@ -473,6 +473,7 @@ namespace FlowerShop
         private System.Windows.Forms.Panel pnlContenedor;
     }
 }
+
 
 
 

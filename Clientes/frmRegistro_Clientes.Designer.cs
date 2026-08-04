@@ -1,4 +1,4 @@
-namespace FlowerShop.Clientes
+﻿namespace FlowerShop.Clientes
 {
     partial class frmRegistro_Clientes
     {
@@ -368,4 +368,5 @@ namespace FlowerShop.Clientes
         private System.Windows.Forms.Button btnGuardar;
     }
 }
+
 

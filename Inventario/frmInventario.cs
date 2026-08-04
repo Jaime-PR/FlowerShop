@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,9 +18,23 @@ namespace FlowerShop.Inventario
 
         private int idProductoSeleccionado = 0;
 
+        private Panel pnlSidebarDerecho;
+
         public frmInventario()
         {
             InitializeComponent();
+            
+            pnlSidebarDerecho = new Panel();
+            pnlSidebarDerecho.BackColor = System.Drawing.Color.White;
+            pnlSidebarDerecho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pnlSidebarDerecho.Dock = System.Windows.Forms.DockStyle.Right;
+            pnlSidebarDerecho.Width = 500;
+            pnlSidebarDerecho.AutoScroll = true;
+            pnlSidebarDerecho.Visible = false;
+            
+            this.Controls.Add(pnlSidebarDerecho);
+            this.pnlPaddingCentral.BringToFront();
+
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             
@@ -143,14 +157,13 @@ namespace FlowerShop.Inventario
 
                 if (dgvProductos.Columns[e.ColumnIndex].Name == "btnEditar")
                 {
-                    pnlDatosP.Width = 500;
-                    pnlDatosP.Controls.Clear();
+                    pnlSidebarDerecho.Controls.Clear();
                     frmAñadir_Producto frmEditar = new frmAñadir_Producto(idProductoSeleccionado);
                     frmEditar.TopLevel = false;
                     frmEditar.Dock = DockStyle.Fill;
-                    pnlDatosP.Controls.Add(frmEditar);
-                    pnlDatosP.Visible = true;
-                    pnlDatosP.BringToFront();
+                    pnlSidebarDerecho.Controls.Add(frmEditar);
+                    pnlSidebarDerecho.Visible = true;
+                    pnlSidebarDerecho.BringToFront();
                     frmEditar.OperacionCompletada += Frm_OperacionCompletada;
                     frmEditar.Show();
                 }
@@ -253,21 +266,20 @@ namespace FlowerShop.Inventario
         
         private void Frm_OperacionCompletada(object sender, EventArgs e)
         {
-            pnlDatosP.Controls.Clear();
-            pnlDatosP.Visible = false;
+            pnlSidebarDerecho.Controls.Clear();
+            pnlSidebarDerecho.Visible = false;
             CargarDatosInventario();
         }
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            pnlDatosP.Width = 500;
-            pnlDatosP.Controls.Clear();
+            pnlSidebarDerecho.Controls.Clear();
             frmAñadir_Producto frm = new frmAñadir_Producto();
             frm.TopLevel = false;
             frm.Dock = DockStyle.Fill;
-            pnlDatosP.Controls.Add(frm);
-            pnlDatosP.Visible = true;
-            pnlDatosP.BringToFront();
+            pnlSidebarDerecho.Controls.Add(frm);
+            pnlSidebarDerecho.Visible = true;
+            pnlSidebarDerecho.BringToFront();
             frm.OperacionCompletada += Frm_OperacionCompletada;
             frm.Show();
         }
@@ -320,6 +332,7 @@ namespace FlowerShop.Inventario
         }
     }
 }
+
 
 
 
