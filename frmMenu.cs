@@ -24,24 +24,21 @@ namespace FlowerShop
             int nHeightEllipse
         );
 
-        // Único constructor unificado: Recibe el rol y aplica el diseño
         public frmMenu(string rolUsuario)
         {
             InitializeComponent();
             this.Load += (s, e) => { btnInicio_Click(this, EventArgs.Empty); };
 
-            // Lógica de diseño: bordes redondeados
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 30, 30));
 
-            // Lógica de permisos: evaluación de roles
             if (rolUsuario == "Vendedor")
             {
                 btnAdminEmpleados.Visible = false;
             }
             else if (rolUsuario == "Administrador")
             {
-                // El administrador ve todo el menú intacto
+
             }
         }
 
@@ -76,3 +73,5 @@ namespace FlowerShop
         }
     }
 }
+
+

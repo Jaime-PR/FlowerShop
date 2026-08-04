@@ -33,7 +33,6 @@ namespace FlowerShop.Ventas
 
         private void AplicarEstilosRedondeados()
         {
-            // Simple helper for rounded panels/buttons
             Utilidades.UIHelper.AplicarBordesRedondeados(pnlTop, 15);
             Utilidades.UIHelper.AplicarBordesRedondeados(pnlMiddle, 15);
             Utilidades.UIHelper.AplicarBordesRedondeados(pnlBottom, 15);
@@ -102,8 +101,6 @@ namespace FlowerShop.Ventas
             decimal precio = Convert.ToDecimal(drv["Precio_Venta"]);
             int stockDisponible = Convert.ToInt32(drv["Cantidad"]);
             int cantidadSolicitada = (int)numCantidad.Value;
-
-            // Verificar si ya existe en el carrito
             int cantidadEnCarrito = 0;
             foreach (DataRow row in dtCarrito.Rows)
             {
@@ -118,8 +115,6 @@ namespace FlowerShop.Ventas
                 MessageBox.Show($"No hay suficiente stock. Tienes {cantidadEnCarrito} en el carrito y el stock total es {stockDisponible}.", "Stock Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            // Agregar o actualizar fila en carrito
             bool encontrado = false;
             foreach (DataRow row in dtCarrito.Rows)
             {
@@ -165,7 +160,6 @@ namespace FlowerShop.Ventas
 
         private void dgvCarrito_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Columna de Eliminar es el index 5
             if (e.RowIndex >= 0 && e.ColumnIndex == 5)
             {
                 int idProducto = Convert.ToInt32(dgvCarrito.Rows[e.RowIndex].Cells["colIdProducto"].Value);
@@ -201,7 +195,7 @@ namespace FlowerShop.Ventas
             {
                 int idCliente = Convert.ToInt32(cmbCliente.SelectedValue);
                 string origenPedido = cmbOrigen.SelectedItem.ToString();
-                int idUsuarioTemp = 1; // ID temporal autorizado por el usuario
+                int idUsuarioTemp = 1; 
 
                 bool exito = ventaDAO.RegistrarVenta(idCliente, origenPedido, idUsuarioTemp, totalVenta, dtCarrito);
 
@@ -209,7 +203,7 @@ namespace FlowerShop.Ventas
                 {
                     MessageBox.Show("Venta registrada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarFormulario();
-                    this.Close(); // Close the form after successful sale
+                    this.Close(); 
                 }
             }
             catch (Exception ex)
@@ -234,4 +228,5 @@ namespace FlowerShop.Ventas
         }
     }
 }
+
 

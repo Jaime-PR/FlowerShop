@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,10 +19,7 @@ namespace FlowerShop.Login
         {
             InitializeComponent();
         }
-        // Variable para controlar que no se reduzca más allá del tamaño original
         private float nivelZoomActual = 1.0f;
-
-        // Factor de aumento: 1.1f significa que crecerá un 10% por cada clic
         private const float factorZoom = 1.1f;
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -55,7 +52,7 @@ namespace FlowerShop.Login
                     MySqlCommand cmd = new MySqlCommand(query, con);
 
                     cmd.Parameters.AddWithValue("@user", txtUser.Text);
-                    cmd.Parameters.AddWithValue("@cont", passwordCifrada); // Cambiar a passwordCifrada cuando actives el Hashing
+                    cmd.Parameters.AddWithValue("@cont", passwordCifrada); 
 
                     
                     using (MySqlDataReader reader = cmd.ExecuteReader())
@@ -63,7 +60,7 @@ namespace FlowerShop.Login
                         if (reader.Read()) 
                         {
                             string nombreUsuario = reader["nombre"].ToString();
-                            string rolUsuario = reader["Rol"].ToString(); // Extraemos el Rol
+                            string rolUsuario = reader["Rol"].ToString(); 
 
                             MessageBox.Show("Bienvenido, " + nombreUsuario, "Acceso concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -98,7 +95,6 @@ namespace FlowerShop.Login
 
         private void frmInicio_Sesion_Load(object sender, EventArgs e)
         {
-            // Centrar controles manualmente en la carga
             pnlLeft_Resize(this, EventArgs.Empty);
             pnlRight_Resize(this, EventArgs.Empty);
             FlowerShop.Utilidades.UIHelper.AplicarBordesRedondeados(pnlCard, 15);
@@ -112,12 +108,8 @@ namespace FlowerShop.Login
             if (pnlLeft != null)
             {
                 pnlLeft.Width = this.Width / 2;
-                
-                // Centrar título principal
                 lblTituloPrincipal.Left = (pnlLeft.Width - lblTituloPrincipal.Width) / 2;
                 lblTituloPrincipal.Top = (pnlLeft.Height / 2) - lblTituloPrincipal.Height;
-                
-                // Centrar subtítulo
                 lblSubtitulo.Left = (pnlLeft.Width - lblSubtitulo.Width) / 2;
                 lblSubtitulo.Top = lblTituloPrincipal.Bottom + 10;
             }
@@ -143,8 +135,6 @@ namespace FlowerShop.Login
         {
             this.Scale(new SizeF(1.1f, 1.1f));
             ScaleControlsFont(this, 1.1f);
-            
-            // Recenter elements after scale
             pnlLeft_Resize(this, EventArgs.Empty);
             pnlRight_Resize(this, EventArgs.Empty);
         }
@@ -153,8 +143,6 @@ namespace FlowerShop.Login
         {
             this.Scale(new SizeF(0.9090909f, 0.9090909f));
             ScaleControlsFont(this, 0.9090909f);
-            
-            // Recenter elements after scale
             pnlLeft_Resize(this, EventArgs.Empty);
             pnlRight_Resize(this, EventArgs.Empty);
         }
@@ -173,3 +161,4 @@ namespace FlowerShop.Login
         private void panel1_Paint(object sender, PaintEventArgs e) {}
     }
 }
+

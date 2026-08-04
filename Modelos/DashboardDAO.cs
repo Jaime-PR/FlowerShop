@@ -16,7 +16,6 @@ namespace FlowerShop.Modelos
                 {
                     try
                     {
-                        // Calculating sum from detalle_venta as requested
                         string query = "SELECT IFNULL(SUM(Precio_Unitario), 0) FROM DETALLE_VENTA";
                         using (MySqlCommand cmd = new MySqlCommand(query, con))
                         {
@@ -92,7 +91,6 @@ namespace FlowerShop.Modelos
                 {
                     try
                     {
-                        // Explicitly omitting Id_Usuario per user request
                         string query = "SELECT Nombre, Apellido_Paterno, Apellido_Materno, Correo, Telefono, Rol FROM USUARIO WHERE Rol = 'Vendedor'";
                         using (MySqlCommand cmd = new MySqlCommand(query, con))
                         {
@@ -139,4 +137,5 @@ namespace FlowerShop.Modelos
         }
     }
 }
+
 

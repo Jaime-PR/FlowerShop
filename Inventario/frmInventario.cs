@@ -45,10 +45,7 @@ namespace FlowerShop.Inventario
             AplicarBordesRedondeados(pnlContenedorPrincipal, 15);
             AplicarBordesRedondeados(pnlDatosP, 15);
         }
-        // Variable para controlar que no se reduzca más allá del tamaño original
         private float nivelZoomActual = 1.0f;
-
-        // Factor de aumento: 1.1f significa que crecerá un 10% por cada clic
         private const float factorZoom = 1.1f;
 
         private void frmInventario_Load(object sender, EventArgs e)
@@ -123,8 +120,6 @@ namespace FlowerShop.Inventario
                     btnEliminar.FlatStyle = FlatStyle.Flat;
                     dgvProductos.Columns.Add(btnEliminar);
                 }
-
-                // Cargar KPIs
                 lblKpi1Valor.Text = dao.ObtenerTotalProductosEnInventario().ToString();
                 lblKpi2Valor.Text = dao.ObtenerProductosBajoStock(10).ToString();
                 
@@ -208,7 +203,7 @@ namespace FlowerShop.Inventario
                 {
 
                     Producto prod = new Producto();
-                    prod.Id_Producto = idProductoSeleccionado; // Le damos el ID que tenÃ­amos guardado
+                    prod.Id_Producto = idProductoSeleccionado; 
                     prod.Nombre = txtNombre.Text;
                     prod.Categoria = txtCategoria.Text;
                     prod.Id_Proveedor = Convert.ToInt32(txtProveedor.Text);
@@ -298,33 +293,24 @@ namespace FlowerShop.Inventario
 
         private void btnAcercar_Click(object sender, EventArgs e)
         {
-            // Limitar el zoom máximo (opcional, aquí lo limitamos a 2 veces su tamaño)
             if (nivelZoomActual < 2.0f)
             {
-                // Scale(SizeF) redimensiona el ancho y el alto
                 this.Scale(new SizeF(factorZoom, factorZoom));
-
-                // Actualizamos nuestro registro
                 nivelZoomActual *= factorZoom;
             }
         }
 
         private void btnAlejar_Click(object sender, EventArgs e)
         {
-            // Evitamos que el usuario haga la ventana más pequeña que el diseño original
             if (nivelZoomActual > 1.05f)
             {
-                // Calculamos la reducción (la inversa del factor de zoom)
                 float reduccion = 1.0f / factorZoom;
 
                 this.Scale(new SizeF(reduccion, reduccion));
-
-                // Actualizamos nuestro registro
                 nivelZoomActual *= reduccion;
             }
             else if (nivelZoomActual > 1.0f)
             {
-                // Si está muy cerca del original, lo forzamos a regresar exactamente a 1.0
                 float ajusteFinal = 1.0f / nivelZoomActual;
                 this.Scale(new SizeF(ajusteFinal, ajusteFinal));
                 nivelZoomActual = 1.0f;
@@ -332,6 +318,7 @@ namespace FlowerShop.Inventario
         }
     }
 }
+
 
 
 

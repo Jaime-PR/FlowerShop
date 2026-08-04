@@ -1,4 +1,4 @@
-namespace FlowerShop.Inventario
+﻿namespace FlowerShop.Inventario
 {
     partial class frmInventario
     {
@@ -73,8 +73,6 @@ namespace FlowerShop.Inventario
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.pnlDatosP.SuspendLayout();
             this.SuspendLayout();
-
-            // pnlTop
             this.pnlTop.Controls.Add(this.lblTitulo);
             this.pnlTop.Controls.Add(this.btnAñadir);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -82,8 +80,6 @@ namespace FlowerShop.Inventario
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(1391, 100);
             this.pnlTop.TabIndex = 0;
-
-            // lblTitulo
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
@@ -92,8 +88,6 @@ namespace FlowerShop.Inventario
             this.lblTitulo.Size = new System.Drawing.Size(229, 46);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "INVENTARIO";
-
-            // btnAñadir
             this.btnAñadir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAñadir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
             this.btnAñadir.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -108,8 +102,6 @@ namespace FlowerShop.Inventario
             this.btnAñadir.Text = "+ Nuevo producto";
             this.btnAñadir.UseVisualStyleBackColor = false;
             this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
-
-            // flowLayoutPanelKPIs
             this.flowLayoutPanelKPIs.Controls.Add(this.pnlKpi1);
             this.flowLayoutPanelKPIs.Controls.Add(this.pnlKpi2);
             this.flowLayoutPanelKPIs.Controls.Add(this.pnlKpi3);
@@ -120,8 +112,6 @@ namespace FlowerShop.Inventario
             this.flowLayoutPanelKPIs.Padding = new System.Windows.Forms.Padding(35, 10, 35, 10);
             this.flowLayoutPanelKPIs.Size = new System.Drawing.Size(1391, 160);
             this.flowLayoutPanelKPIs.TabIndex = 1;
-
-            // pnlKpi1
             this.pnlKpi1.BackColor = System.Drawing.Color.White;
             this.pnlKpi1.Controls.Add(this.lblKpi1Valor);
             this.pnlKpi1.Controls.Add(this.lblKpi1Titulo);
@@ -148,8 +138,6 @@ namespace FlowerShop.Inventario
             this.lblKpi1Titulo.Size = new System.Drawing.Size(155, 28);
             this.lblKpi1Titulo.TabIndex = 0;
             this.lblKpi1Titulo.Text = "Total Productos";
-
-            // pnlKpi2
             this.pnlKpi2.BackColor = System.Drawing.Color.White;
             this.pnlKpi2.Controls.Add(this.lblKpi2Valor);
             this.pnlKpi2.Controls.Add(this.lblKpi2Titulo);
@@ -176,8 +164,6 @@ namespace FlowerShop.Inventario
             this.lblKpi2Titulo.Size = new System.Drawing.Size(161, 28);
             this.lblKpi2Titulo.TabIndex = 0;
             this.lblKpi2Titulo.Text = "Bajo Inventario";
-
-            // pnlKpi3
             this.pnlKpi3.BackColor = System.Drawing.Color.White;
             this.pnlKpi3.Controls.Add(this.lblKpi3Valor);
             this.pnlKpi3.Controls.Add(this.lblKpi3Titulo);
@@ -204,8 +190,6 @@ namespace FlowerShop.Inventario
             this.lblKpi3Titulo.Size = new System.Drawing.Size(107, 28);
             this.lblKpi3Titulo.TabIndex = 0;
             this.lblKpi3Titulo.Text = "Categorías";
-
-            // pnlKpi4
             this.pnlKpi4.BackColor = System.Drawing.Color.White;
             this.pnlKpi4.Controls.Add(this.lblKpi4Valor);
             this.pnlKpi4.Controls.Add(this.lblKpi4Titulo);
@@ -232,8 +216,6 @@ namespace FlowerShop.Inventario
             this.lblKpi4Titulo.Size = new System.Drawing.Size(162, 28);
             this.lblKpi4Titulo.TabIndex = 0;
             this.lblKpi4Titulo.Text = "Valor Inventario";
-
-            // pnlPaddingCentral
             this.pnlPaddingCentral.Controls.Add(this.pnlContenedorPrincipal);
             this.pnlPaddingCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPaddingCentral.Location = new System.Drawing.Point(0, 260);
@@ -241,8 +223,6 @@ namespace FlowerShop.Inventario
             this.pnlPaddingCentral.Padding = new System.Windows.Forms.Padding(45, 10, 45, 30);
             this.pnlPaddingCentral.Size = new System.Drawing.Size(1391, 538);
             this.pnlPaddingCentral.TabIndex = 2;
-
-            // pnlContenedorPrincipal
             this.pnlContenedorPrincipal.BackColor = System.Drawing.Color.Transparent;
             this.pnlContenedorPrincipal.Controls.Add(this.dgvProductos);
             this.pnlContenedorPrincipal.Controls.Add(this.pnlDatosP);
@@ -251,13 +231,10 @@ namespace FlowerShop.Inventario
             this.pnlContenedorPrincipal.Name = "pnlContenedorPrincipal";
             this.pnlContenedorPrincipal.Size = new System.Drawing.Size(1301, 498);
             this.pnlContenedorPrincipal.TabIndex = 0;
-
-            // dgvProductos
             this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProductos.BackgroundColor = System.Drawing.Color.White;
             this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            // Hacer que el DataGridView ocupe todo el espacio del contenedor principal
             this.dgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProductos.Location = new System.Drawing.Point(0, 0);
             this.dgvProductos.Name = "dgvProductos";
@@ -265,8 +242,6 @@ namespace FlowerShop.Inventario
             this.dgvProductos.RowTemplate.Height = 24;
             this.dgvProductos.TabIndex = 0;
             this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
-
-            // pnlDatosP
             this.pnlDatosP.BackColor = System.Drawing.Color.White;
             this.pnlDatosP.Controls.Add(this.lblFormulario);
             this.pnlDatosP.Controls.Add(this.btnEliminar);
@@ -287,11 +262,8 @@ namespace FlowerShop.Inventario
             this.pnlDatosP.Location = new System.Drawing.Point(1001, 0);
             this.pnlDatosP.Name = "pnlDatosP";
             this.pnlDatosP.Size = new System.Drawing.Size(300, 498);
-            // Ocultar panel de detalle para que la tabla ocupe todo el espacio
             this.pnlDatosP.Visible = false;
             this.pnlDatosP.TabIndex = 1;
-
-            // lblFormulario
             this.lblFormulario.AutoSize = true;
             this.lblFormulario.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblFormulario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
@@ -303,9 +275,6 @@ namespace FlowerShop.Inventario
 
             this.pnlDatosP.Size = new System.Drawing.Size(263, 679);
             this.pnlDatosP.TabIndex = 6;
-            // 
-            // btnEliminar
-            // 
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
@@ -316,9 +285,6 @@ namespace FlowerShop.Inventario
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
-            // btnGuardar
-            // 
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
@@ -329,9 +295,6 @@ namespace FlowerShop.Inventario
             this.btnGuardar.TabIndex = 24;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
-            // 
-            // txtPrecioVenta
-            // 
             this.txtPrecioVenta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrecioVenta.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -339,9 +302,6 @@ namespace FlowerShop.Inventario
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(225, 34);
             this.txtPrecioVenta.TabIndex = 23;
-            // 
-            // lb6
-            // 
             this.lb6.AutoSize = true;
             this.lb6.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lb6.Location = new System.Drawing.Point(14, 369);
@@ -349,9 +309,6 @@ namespace FlowerShop.Inventario
             this.lb6.Size = new System.Drawing.Size(201, 28);
             this.lb6.TabIndex = 22;
             this.lb6.Text = "Precio de venta (Mxn)";
-            // 
-            // txtPrecioCompra
-            // 
             this.txtPrecioCompra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrecioCompra.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -359,8 +316,6 @@ namespace FlowerShop.Inventario
             this.txtPrecioCompra.Name = "txtPrecioCompra";
             this.txtPrecioCompra.Size = new System.Drawing.Size(225, 34);
             this.txtPrecioCompra.TabIndex = 21;
-            // 
-            // lb1
             this.lb1.AutoSize = true;
             this.lb1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lb1.Location = new System.Drawing.Point(20, 70);
@@ -368,15 +323,11 @@ namespace FlowerShop.Inventario
             this.lb1.Size = new System.Drawing.Size(171, 23);
             this.lb1.TabIndex = 1;
             this.lb1.Text = "Nombre de producto";
-
-            // txtNombre
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtNombre.Location = new System.Drawing.Point(20, 95);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(260, 30);
             this.txtNombre.TabIndex = 2;
-
-            // lb2
             this.lb2.AutoSize = true;
             this.lb2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lb2.Location = new System.Drawing.Point(20, 135);
@@ -384,15 +335,11 @@ namespace FlowerShop.Inventario
             this.lb2.Size = new System.Drawing.Size(84, 23);
             this.lb2.TabIndex = 3;
             this.lb2.Text = "Categoría";
-
-            // txtCategoria
             this.txtCategoria.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtCategoria.Location = new System.Drawing.Point(20, 160);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(260, 30);
             this.txtCategoria.TabIndex = 4;
-
-            // lb3
             this.lb3.AutoSize = true;
             this.lb3.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lb3.Location = new System.Drawing.Point(20, 200);
@@ -400,15 +347,11 @@ namespace FlowerShop.Inventario
             this.lb3.Size = new System.Drawing.Size(89, 23);
             this.lb3.TabIndex = 5;
             this.lb3.Text = "Proveedor";
-
-            // txtProveedor
             this.txtProveedor.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtProveedor.Location = new System.Drawing.Point(20, 225);
             this.txtProveedor.Name = "txtProveedor";
             this.txtProveedor.Size = new System.Drawing.Size(260, 30);
             this.txtProveedor.TabIndex = 6;
-
-            // lb4
             this.lb4.AutoSize = true;
             this.lb4.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lb4.Location = new System.Drawing.Point(20, 265);
@@ -416,15 +359,11 @@ namespace FlowerShop.Inventario
             this.lb4.Size = new System.Drawing.Size(79, 23);
             this.lb4.TabIndex = 7;
             this.lb4.Text = "Cantidad";
-
-            // txtCantidad
             this.txtCantidad.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtCantidad.Location = new System.Drawing.Point(20, 290);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(260, 30);
             this.txtCantidad.TabIndex = 8;
-
-            // lb5
             this.lb5.AutoSize = true;
             this.lb5.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lb5.Location = new System.Drawing.Point(20, 330);
@@ -432,15 +371,11 @@ namespace FlowerShop.Inventario
             this.lb5.Size = new System.Drawing.Size(123, 23);
             this.lb5.TabIndex = 9;
             this.lb5.Text = "Precio Compra";
-
-            // txtPrecioCompra
             this.txtPrecioCompra.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtPrecioCompra.Location = new System.Drawing.Point(20, 355);
             this.txtPrecioCompra.Name = "txtPrecioCompra";
             this.txtPrecioCompra.Size = new System.Drawing.Size(260, 30);
             this.txtPrecioCompra.TabIndex = 10;
-
-            // lb6
             this.lb6.AutoSize = true;
             this.lb6.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lb6.Location = new System.Drawing.Point(20, 395);
@@ -448,15 +383,11 @@ namespace FlowerShop.Inventario
             this.lb6.Size = new System.Drawing.Size(106, 23);
             this.lb6.TabIndex = 11;
             this.lb6.Text = "Precio Venta";
-
-            // txtPrecioVenta
             this.txtPrecioVenta.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtPrecioVenta.Location = new System.Drawing.Point(20, 420);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(260, 30);
             this.txtPrecioVenta.TabIndex = 12;
-
-            // btnGuardar
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -470,8 +401,6 @@ namespace FlowerShop.Inventario
             this.btnGuardar.TabIndex = 13;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
-
-            // btnEliminar
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -485,8 +414,6 @@ namespace FlowerShop.Inventario
             this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
-
-            // frmInventario
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -561,6 +488,7 @@ namespace FlowerShop.Inventario
         private System.Windows.Forms.Button btnAcercar;
     }
 }
+
 
 
 

@@ -6,12 +6,11 @@ namespace FlowerShop.Utilidades
 {
     public static class UIHelper
     {
-        // Paleta de colores "Black and Gold Elegance"
-        public static readonly Color ColorFondoPrincipal = Color.FromArgb(255, 255, 255); // Blanco
-        public static readonly Color ColorFondoSecundario = Color.FromArgb(229, 229, 229); // Gris Claro (#E5E5E5)
-        public static readonly Color ColorAcentoDorado = Color.FromArgb(252, 163, 17); // Dorado (#FCA311)
-        public static readonly Color ColorAzulOscuro = Color.FromArgb(20, 33, 61); // Azul oscuro (#14213D)
-        public static readonly Color ColorTextoSecundario = Color.FromArgb(0, 0, 0); // Negro (#000000)
+        public static readonly Color ColorFondoPrincipal = Color.FromArgb(255, 255, 255); 
+        public static readonly Color ColorFondoSecundario = Color.FromArgb(229, 229, 229); 
+        public static readonly Color ColorAcentoDorado = Color.FromArgb(252, 163, 17); 
+        public static readonly Color ColorAzulOscuro = Color.FromArgb(20, 33, 61); 
+        public static readonly Color ColorTextoSecundario = Color.FromArgb(0, 0, 0); 
 
         public static void FormatoDataGrid(DataGridView dgv)
         {
@@ -19,14 +18,10 @@ namespace FlowerShop.Utilidades
             dgv.BorderStyle = BorderStyle.None;
             dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            
-            // Habilitar estilos personalizados de encabezado
             dgv.EnableHeadersVisualStyles = false;
-
-            // Estilo de encabezado de columna
             DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
-            headerStyle.BackColor = ColorFondoSecundario; // Gris claro
-            headerStyle.ForeColor = ColorAzulOscuro; // Azul oscuro
+            headerStyle.BackColor = ColorFondoSecundario; 
+            headerStyle.ForeColor = ColorAzulOscuro; 
             headerStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             headerStyle.SelectionBackColor = ColorFondoSecundario;
             headerStyle.SelectionForeColor = ColorAzulOscuro;
@@ -35,25 +30,19 @@ namespace FlowerShop.Utilidades
             dgv.ColumnHeadersDefaultCellStyle = headerStyle;
             dgv.ColumnHeadersHeight = 40;
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-
-            // Estilo de celdas por defecto
             DataGridViewCellStyle cellStyle = new DataGridViewCellStyle();
             cellStyle.BackColor = ColorFondoPrincipal;
-            cellStyle.ForeColor = ColorTextoSecundario; // Negro
+            cellStyle.ForeColor = ColorTextoSecundario; 
             cellStyle.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
-            cellStyle.SelectionBackColor = ColorFondoSecundario; // Gris claro
-            cellStyle.SelectionForeColor = ColorTextoSecundario; // Negro (para que contraste bien)
+            cellStyle.SelectionBackColor = ColorFondoSecundario; 
+            cellStyle.SelectionForeColor = ColorTextoSecundario; 
             cellStyle.Padding = new Padding(5);
             dgv.DefaultCellStyle = cellStyle;
-
-            // Opciones generales
-            dgv.GridColor = Color.FromArgb(210, 210, 210); // Gris claro para bordes
+            dgv.GridColor = Color.FromArgb(210, 210, 210); 
             dgv.RowHeadersVisible = false;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv.RowTemplate.Height = 35;
-            
-            // Solo lectura y sin agregar filas
             dgv.AllowUserToAddRows = false;
             dgv.AllowUserToDeleteRows = false;
             dgv.AllowUserToResizeRows = false;
@@ -93,13 +82,11 @@ namespace FlowerShop.Utilidades
         {
             foreach (Control ctrl in parent.Controls)
             {
-                // Asignar rol y nombre según el tipo de control
                 if (ctrl is TextBox txt)
                 {
                     txt.AccessibleRole = AccessibleRole.Text;
                     if (string.IsNullOrEmpty(txt.AccessibleName))
                     {
-                        // Intentar deducir el nombre basándose en el Name (ej. txtNombre -> Nombre)
                         string name = txt.Name.Replace("txt", "");
                         txt.AccessibleName = name;
                     }
@@ -145,8 +132,6 @@ namespace FlowerShop.Utilidades
                 {
                     pic.AccessibleRole = AccessibleRole.Graphic;
                 }
-
-                // Recursión para controles anidados (paneles, groupboxes, etc.)
                 if (ctrl.HasChildren)
                 {
                     ConfigurarAccesibilidad(ctrl);
@@ -155,4 +140,5 @@ namespace FlowerShop.Utilidades
         }
     }
 }
+
 

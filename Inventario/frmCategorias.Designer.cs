@@ -25,9 +25,6 @@
             this.pnlFiltro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTitulo
-            // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
@@ -36,9 +33,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(146, 31);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Productos";
-            // 
-            // pnlFiltro
-            // 
             this.pnlFiltro.BackColor = System.Drawing.Color.White;
             this.pnlFiltro.Controls.Add(this.cmbCategorias);
             this.pnlFiltro.Controls.Add(this.lblCategorias);
@@ -46,9 +40,6 @@
             this.pnlFiltro.Name = "pnlFiltro";
             this.pnlFiltro.Size = new System.Drawing.Size(960, 60);
             this.pnlFiltro.TabIndex = 1;
-            // 
-            // lblCategorias
-            // 
             this.lblCategorias.AutoSize = true;
             this.lblCategorias.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategorias.ForeColor = System.Drawing.Color.Gray;
@@ -57,9 +48,6 @@
             this.lblCategorias.Size = new System.Drawing.Size(90, 20);
             this.lblCategorias.TabIndex = 0;
             this.lblCategorias.Text = "Categor�as";
-            // 
-            // cmbCategorias
-            // 
             this.cmbCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategorias.FormattingEnabled = true;
             this.cmbCategorias.Location = new System.Drawing.Point(120, 18);
@@ -67,9 +55,6 @@
             this.cmbCategorias.Size = new System.Drawing.Size(250, 24);
             this.cmbCategorias.TabIndex = 1;
             this.cmbCategorias.SelectedIndexChanged += new System.EventHandler(this.cmbCategorias_SelectedIndexChanged);
-            // 
-            // dgvProductos
-            // 
             this.dgvProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
             this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -82,9 +67,6 @@
             this.dgvProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // frmCategorias
-            // 
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -114,5 +96,6 @@
         private System.Windows.Forms.DataGridView dgvProductos;
     }
 }
+
 
 
