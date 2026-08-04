@@ -1,4 +1,4 @@
-namespace FlowerShop.Proveedor
+﻿namespace FlowerShop.Proveedor
 {
     partial class frmAñadir_Proveedor
     {
@@ -403,4 +403,5 @@ namespace FlowerShop.Proveedor
         private System.Windows.Forms.Button btnGuardar;
     }
 }
+
 

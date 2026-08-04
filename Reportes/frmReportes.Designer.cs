@@ -1,4 +1,4 @@
-namespace FlowerShop.Reportes
+ï»¿namespace FlowerShop.Reportes
 {
     partial class frmReportes
     {
@@ -32,7 +32,7 @@ namespace FlowerShop.Reportes
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(146, 31);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Reportes y Estadísticas";
+            this.lblTitulo.Text = "Reportes y Estadï¿½sticas";
             
             // pnlFiltro
             this.pnlFiltro.BackColor = System.Drawing.Color.White;
@@ -103,4 +103,5 @@ namespace FlowerShop.Reportes
         private System.Windows.Forms.DataGridView dgvReporte;
     }
 }
+
 

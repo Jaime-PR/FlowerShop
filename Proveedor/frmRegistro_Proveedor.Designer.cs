@@ -1,4 +1,4 @@
-namespace FlowerShop.Proveedor
+ï»¿namespace FlowerShop.Proveedor
 {
     
      partial class frmRegistro_Proveedor
@@ -129,7 +129,7 @@ namespace FlowerShop.Proveedor
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(102, 28);
             this.label13.TabIndex = 30;
-            this.label13.Text = "Dirección";
+            this.label13.Text = "Direcciï¿½n";
             // 
             // label12
             // 
@@ -540,4 +540,5 @@ namespace FlowerShop.Proveedor
         private System.Windows.Forms.TextBox textBox4;
     }
 }
+
 

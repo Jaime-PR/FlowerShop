@@ -1,4 +1,4 @@
-namespace FlowerShop.Login
+﻿namespace FlowerShop.Login
 {
     partial class frmCrear_Cuenta
     {
@@ -289,4 +289,5 @@ namespace FlowerShop.Login
         private System.Windows.Forms.Label label1;
     }
 }
+
 

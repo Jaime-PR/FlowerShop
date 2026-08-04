@@ -1,4 +1,4 @@
-namespace FlowerShop.Clientes
+﻿namespace FlowerShop.Clientes
 {
     partial class frmClientes
     {
@@ -425,6 +425,7 @@ namespace FlowerShop.Clientes
         private System.Windows.Forms.Button button3;
     }
 }
+
 
 
 

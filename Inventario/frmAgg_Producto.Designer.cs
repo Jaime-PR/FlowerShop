@@ -1,4 +1,4 @@
-namespace FlowerShop.Inventario
+﻿namespace FlowerShop.Inventario
 {
     partial class frmAgg_Producto
     {
@@ -267,4 +267,5 @@ namespace FlowerShop.Inventario
         private System.Windows.Forms.Panel panel2;
     }
 }
+
 

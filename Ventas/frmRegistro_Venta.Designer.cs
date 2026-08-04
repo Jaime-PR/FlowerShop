@@ -1,4 +1,4 @@
-namespace FlowerShop.Ventas
+﻿namespace FlowerShop.Ventas
 {
     partial class frmRegistro_Venta
     {
@@ -453,4 +453,5 @@ namespace FlowerShop.Ventas
         private System.Windows.Forms.Button btnCancelar;
     }
 }
+
 

@@ -20,10 +20,10 @@ namespace FlowerShop.Usuarios
         public frmAñadir_Usuario()
         {
             InitializeComponent();
-            this.Load += FrmAñadir_Usuario_Load;
+            this.Load += frmAñadir_Usuario_Load;
         }
 
-        private void FrmAñadir_Usuario_Load(object sender, EventArgs e)
+        private void frmAñadir_Usuario_Load(object sender, EventArgs e)
         {
             // Solo opciÃ³n Vendedor por el momento
             cmbRol.Items.Clear();
@@ -173,6 +173,7 @@ namespace FlowerShop.Usuarios
         }
     }
 }
+
 
 
 

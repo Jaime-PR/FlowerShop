@@ -1,4 +1,4 @@
-namespace FlowerShop.Usuarios
+﻿namespace FlowerShop.Usuarios
 {
     partial class frmUsuarios
     {
@@ -269,4 +269,5 @@ namespace FlowerShop.Usuarios
         private System.Windows.Forms.Panel pnlSidebarDerecho;
     }
 }
+
 
