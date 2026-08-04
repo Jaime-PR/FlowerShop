@@ -1,4 +1,4 @@
-namespace FlowerShop.Login
+﻿namespace FlowerShop.Login
 {
     partial class frmInicio_Sesion
     {
@@ -54,9 +54,6 @@ namespace FlowerShop.Login
             this.pnlPassword.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -75,9 +72,6 @@ namespace FlowerShop.Login
             this.panel1.Size = new System.Drawing.Size(430, 521);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // bntAlejar
-            // 
             this.bntAlejar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bntAlejar.Location = new System.Drawing.Point(261, 482);
@@ -87,9 +81,6 @@ namespace FlowerShop.Login
             this.bntAlejar.Text = "button1";
             this.bntAlejar.UseVisualStyleBackColor = true;
             this.bntAlejar.Click += new System.EventHandler(this.bntAlejar_Click);
-            // 
-            // btnAcercar
-            // 
             this.btnAcercar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAcercar.Location = new System.Drawing.Point(86, 482);
@@ -99,9 +90,6 @@ namespace FlowerShop.Login
             this.btnAcercar.Text = "button2";
             this.btnAcercar.UseVisualStyleBackColor = true;
             this.btnAcercar.Click += new System.EventHandler(this.btnAcercar_Click_1);
-            // 
-            // panel3
-            // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.txtPassword);
@@ -109,7 +97,6 @@ namespace FlowerShop.Login
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(293, 61);
             this.panel3.TabIndex = 10;
-            // 
             this.pnlLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
             this.pnlLeft.Controls.Add(this.lblSubtitulo);
             this.pnlLeft.Controls.Add(this.lblTituloPrincipal);
@@ -119,9 +106,6 @@ namespace FlowerShop.Login
             this.pnlLeft.Size = new System.Drawing.Size(600, 690);
             this.pnlLeft.TabIndex = 0;
             this.pnlLeft.Resize += new System.EventHandler(this.pnlLeft_Resize);
-            // 
-            // lblSubtitulo
-            // 
             this.lblSubtitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSubtitulo.AutoSize = true;
             this.lblSubtitulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -131,9 +115,6 @@ namespace FlowerShop.Login
             this.lblSubtitulo.Size = new System.Drawing.Size(421, 28);
             this.lblSubtitulo.TabIndex = 1;
             this.lblSubtitulo.Text = "Punto de venta, gestion y control de inventario";
-            // 
-            // lblTituloPrincipal
-            // 
             this.lblTituloPrincipal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTituloPrincipal.AutoSize = true;
             this.lblTituloPrincipal.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -143,9 +124,6 @@ namespace FlowerShop.Login
             this.lblTituloPrincipal.Size = new System.Drawing.Size(490, 106);
             this.lblTituloPrincipal.TabIndex = 0;
             this.lblTituloPrincipal.Text = "FlowerShop";
-            // 
-            // pnlRight
-            // 
             this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(109)))), ((int)(((byte)(129)))));
             this.pnlRight.Controls.Add(this.btnZoomIn);
             this.pnlRight.Controls.Add(this.btnZoomOut);
@@ -156,10 +134,6 @@ namespace FlowerShop.Login
             this.pnlRight.Size = new System.Drawing.Size(597, 690);
             this.pnlRight.TabIndex = 1;
             this.pnlRight.Resize += new System.EventHandler(this.pnlRight_Resize);
-            // 
-            // 
-            // btnZoomIn
-            // 
             this.btnZoomIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnZoomIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
             this.btnZoomIn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -174,9 +148,6 @@ namespace FlowerShop.Login
             this.btnZoomIn.Text = "+";
             this.btnZoomIn.UseVisualStyleBackColor = false;
             this.btnZoomIn.Click += new System.EventHandler(this.btnZoomIn_Click);
-            // 
-            // btnZoomOut
-            // 
             this.btnZoomOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnZoomOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
             this.btnZoomOut.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -191,9 +162,6 @@ namespace FlowerShop.Login
             this.btnZoomOut.Text = "-";
             this.btnZoomOut.UseVisualStyleBackColor = false;
             this.btnZoomOut.Click += new System.EventHandler(this.btnZoomOut_Click);
-
-            // pnlCard
-            // 
             this.pnlCard.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlCard.BackColor = System.Drawing.Color.White;
             this.pnlCard.Controls.Add(this.label2);
@@ -207,9 +175,6 @@ namespace FlowerShop.Login
             this.pnlCard.Name = "pnlCard";
             this.pnlCard.Size = new System.Drawing.Size(482, 568);
             this.pnlCard.TabIndex = 0;
-            // 
-            // label2
-            // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(105, 63);
@@ -217,9 +182,6 @@ namespace FlowerShop.Login
             this.label2.Size = new System.Drawing.Size(272, 62);
             this.label2.TabIndex = 0;
             this.label2.Text = "Bienvenido";
-            // 
-            // label1
-            // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
@@ -228,9 +190,6 @@ namespace FlowerShop.Login
             this.label1.Size = new System.Drawing.Size(219, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Inicia sesión para continuar";
-            // 
-            // label3
-            // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
@@ -239,9 +198,6 @@ namespace FlowerShop.Login
             this.label3.Size = new System.Drawing.Size(85, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "USUARIO";
-            // 
-            // pnlUser
-            // 
             this.pnlUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.pnlUser.Controls.Add(this.pictureBox1);
             this.pnlUser.Controls.Add(this.txtUser);
@@ -249,9 +205,6 @@ namespace FlowerShop.Login
             this.pnlUser.Name = "pnlUser";
             this.pnlUser.Size = new System.Drawing.Size(330, 50);
             this.pnlUser.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
             this.pictureBox1.Image = global::FlowerShop.Properties.Resources.user_3917688;
             this.pictureBox1.Location = new System.Drawing.Point(10, 10);
             this.pictureBox1.Name = "pictureBox1";
@@ -259,9 +212,6 @@ namespace FlowerShop.Login
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // txtUser
-            // 
             this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUser.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -269,9 +219,6 @@ namespace FlowerShop.Login
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(260, 27);
             this.txtUser.TabIndex = 1;
-            // 
-            // label4
-            // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
@@ -280,9 +227,6 @@ namespace FlowerShop.Login
             this.label4.Size = new System.Drawing.Size(124, 23);
             this.label4.TabIndex = 4;
             this.label4.Text = "CONTRASEÑA";
-            // 
-            // pnlPassword
-            // 
             this.pnlPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.pnlPassword.Controls.Add(this.pictureBox2);
             this.pnlPassword.Controls.Add(this.txtPassword);
@@ -290,9 +234,6 @@ namespace FlowerShop.Login
             this.pnlPassword.Name = "pnlPassword";
             this.pnlPassword.Size = new System.Drawing.Size(330, 50);
             this.pnlPassword.TabIndex = 5;
-            // 
-            // pictureBox2
-            // 
             this.pictureBox2.Image = global::FlowerShop.Properties.Resources.lock_3917591;
             this.pictureBox2.Location = new System.Drawing.Point(10, 10);
             this.pictureBox2.Name = "pictureBox2";
@@ -300,9 +241,6 @@ namespace FlowerShop.Login
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // txtPassword
-            // 
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -311,9 +249,6 @@ namespace FlowerShop.Login
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(260, 27);
             this.txtPassword.TabIndex = 1;
-            // 
-            // btnLogin
-            // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderSize = 0;
@@ -327,9 +262,6 @@ namespace FlowerShop.Login
             this.btnLogin.Text = "Iniciar sesion";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // frmInicio_Sesion
-            // 
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -385,5 +317,6 @@ namespace FlowerShop.Login
         private System.Windows.Forms.Button bntAlejar;
     }
 }
+
 
 

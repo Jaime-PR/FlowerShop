@@ -28,9 +28,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.pnlPaddingCentral.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlTop
-            // 
             this.pnlTop.Controls.Add(this.btnNuevaVenta);
             this.pnlTop.Controls.Add(this.lblTitulo);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -38,9 +35,6 @@
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(1000, 100);
             this.pnlTop.TabIndex = 0;
-            // 
-            // lblTitulo
-            // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
@@ -49,9 +43,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(149, 46);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "VENTAS";
-            // 
-            // pnlContenedorVentas
-            // 
             this.pnlContenedorVentas.BackColor = System.Drawing.Color.White;
             this.pnlContenedorVentas.Controls.Add(this.dgvVentas);
             this.pnlContenedorVentas.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -59,9 +50,6 @@
             this.pnlContenedorVentas.Name = "pnlContenedorVentas";
             this.pnlContenedorVentas.Size = new System.Drawing.Size(910, 480);
             this.pnlContenedorVentas.TabIndex = 1;
-            // 
-            // btnNuevaVenta
-            // 
             this.btnNuevaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNuevaVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
             this.btnNuevaVenta.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -77,9 +65,6 @@
             this.btnNuevaVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevaVenta.UseVisualStyleBackColor = false;
             this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
-            // 
-            // dgvVentas
-            // 
             this.dgvVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -93,9 +78,6 @@
             this.dgvVentas.RowTemplate.Height = 24;
             this.dgvVentas.Size = new System.Drawing.Size(870, 380);
             this.dgvVentas.TabIndex = 2;
-            // 
-            // pnlPaddingCentral
-            // 
             this.pnlPaddingCentral.Controls.Add(this.pnlContenedorVentas);
             this.pnlPaddingCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPaddingCentral.Location = new System.Drawing.Point(0, 100);
@@ -103,9 +85,6 @@
             this.pnlPaddingCentral.Padding = new System.Windows.Forms.Padding(45, 10, 45, 30);
             this.pnlPaddingCentral.Size = new System.Drawing.Size(1000, 520);
             this.pnlPaddingCentral.TabIndex = 2;
-            // 
-            // frmVentas
-            // 
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,5 +113,6 @@
         public System.Windows.Forms.DataGridView dgvVentas;
     }
 }
+
 
 

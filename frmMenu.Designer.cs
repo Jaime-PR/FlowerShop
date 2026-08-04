@@ -2,15 +2,7 @@
 {
     partial class frmMenu
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,11 +13,6 @@
         }
 
         #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -43,9 +30,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tableLayoutPanel1
-            // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
@@ -67,9 +51,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.48327F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(323, 331);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // pictureBox2
-            // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox2.Image = global::FlowerShop.Properties.Resources.accessibility_100dp_000000_FILL0_wght400_GRAD0_opsz48;
             this.pictureBox2.Location = new System.Drawing.Point(29, 136);
@@ -78,9 +59,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox1.Image = global::FlowerShop.Properties.Resources.group_100dp_000000_FILL0_wght400_GRAD0_opsz48;
             this.pictureBox1.Location = new System.Drawing.Point(29, 75);
@@ -89,9 +67,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox4
-            // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox4.Image = global::FlowerShop.Properties.Resources.user_3917688;
             this.pictureBox4.Location = new System.Drawing.Point(29, 14);
@@ -100,9 +75,6 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 10;
             this.pictureBox4.TabStop = false;
-            // 
-            // btnCerrarSesion
-            // 
             this.btnCerrarSesion.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnCerrarSesion.AutoSize = true;
             this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
@@ -118,9 +90,6 @@
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // btnGestionCuenta
-            // 
             this.btnGestionCuenta.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnGestionCuenta.AutoSize = true;
             this.btnGestionCuenta.FlatAppearance.BorderSize = 0;
@@ -135,9 +104,6 @@
             this.btnGestionCuenta.Text = "Administrar cuenta";
             this.btnGestionCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGestionCuenta.UseVisualStyleBackColor = true;
-            // 
-            // btnAdminEmpleados
-            // 
             this.btnAdminEmpleados.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnAdminEmpleados.AutoSize = true;
             this.btnAdminEmpleados.FlatAppearance.BorderSize = 0;
@@ -152,9 +118,6 @@
             this.btnAdminEmpleados.Text = "Administrar empleados";
             this.btnAdminEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdminEmpleados.UseVisualStyleBackColor = true;
-            // 
-            // btnAccesibilidad
-            // 
             this.btnAccesibilidad.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnAccesibilidad.AutoSize = true;
             this.btnAccesibilidad.FlatAppearance.BorderSize = 0;
@@ -170,9 +133,6 @@
             this.btnAccesibilidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAccesibilidad.UseVisualStyleBackColor = true;
             this.btnAccesibilidad.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // pictureBox3
-            // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox3.Image = global::FlowerShop.Properties.Resources.exit_to_app_100dp_000000_FILL0_wght400_GRAD0_opsz48;
             this.pictureBox3.Location = new System.Drawing.Point(29, 284);
@@ -181,9 +141,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
-            // 
-            // frmMenu
-            // 
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -215,5 +172,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
+
 
 

@@ -122,7 +122,7 @@ namespace FlowerShop.Datos
                     cmd.Parameters.AddWithValue("@precioVenta", productoModificado.Precio_Venta);
                     cmd.Parameters.AddWithValue("@categoria", productoModificado.Categoria);
                     cmd.Parameters.AddWithValue("@idProveedor", productoModificado.Id_Proveedor);
-                    cmd.Parameters.AddWithValue("@id", productoModificado.Id_Producto); // El ID es clave para saber cuál actualizar
+                    cmd.Parameters.AddWithValue("@id", productoModificado.Id_Producto); 
 
                     if (cmd.ExecuteNonQuery() > 0) exito = true;
                 }
@@ -431,4 +431,5 @@ namespace FlowerShop.Datos
         }
     }
 }
+
 

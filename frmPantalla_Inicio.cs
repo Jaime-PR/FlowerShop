@@ -15,29 +15,22 @@ namespace FlowerShop
 {
     public partial class frmPantalla_Inicio : Form
     {
-        // 1. Variable global privada para guardar el rol
         private string rolDelUsuarioLogueado;
         private SpeechSynthesizer synth = new SpeechSynthesizer();
         private bool isTTSActive = false;
         private bool isHighContrast = false;
         private Dictionary<Control, Tuple<Color, Color>> originalColors = new Dictionary<Control, Tuple<Color, Color>>();
-
-        // Constructor sin parÃ¡metros requerido por el DiseÃ±ador de Visual Studio
         public frmPantalla_Inicio()
         {
             InitializeComponent();
             RedimensionarIconos();
             this.Load += FrmPantalla_Inicio_Load;
         }
-
-        // 2. Ãšnico constructor unificado que recibe el rol
         public frmPantalla_Inicio(string rolUsuario)
         {
             InitializeComponent();
             RedimensionarIconos();
             this.Load += FrmPantalla_Inicio_Load;
-
-            // Guardamos el rol que viene del Login en nuestra variable
             rolDelUsuarioLogueado = rolUsuario;
 
             if (rolDelUsuarioLogueado != "Administrador")
@@ -81,7 +74,7 @@ namespace FlowerShop
 
             if (formularioViejo != null)
             {
-                formularioViejo.Close(); // Destruir la instancia vieja para asegurar que los datos se recarguen de BD
+                formularioViejo.Close(); 
             }
 
             Form formulario = new MiForm();
@@ -134,8 +127,6 @@ namespace FlowerShop
         {
             AbrirFormulario<frmPrincipal>();
         }
-
-        // Manejador para Cerrar SesiÃ³n (agregado para el botÃ³n inferior)
                 private void btnReportes_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Reportes.frmReportes>();
@@ -201,19 +192,14 @@ namespace FlowerShop
             if (isHighContrast)
             {
                 isHighContrast = false;
-                
-                // Restore main form background
                 this.BackColor = SystemColors.Control;
                 this.ForeColor = SystemColors.ControlText;
-                
-                // Hardcode original colors for pnlSidebar and its components
                 pnlSidebar.BackColor = Color.FromArgb(20, 33, 61);
                 
                 foreach (Control c in pnlSidebar.Controls)
                 {
                     if (c is Button btn)
                     {
-                        // Some buttons might have had special backcolors, but in designer they are all transparent or match sidebar
                         btn.BackColor = Color.FromArgb(20, 33, 61); 
                         btn.ForeColor = Color.FromArgb(229, 229, 229);
                     }
@@ -230,20 +216,13 @@ namespace FlowerShop
                         lbl.BackColor = Color.Transparent;
                     }
                 }
-                
-                // Active button logic (if any) could be overridden here, but currently none exists.
-                // We'll reset btnTTS specifically if TTS is active
                 if (isTTSActive)
                 {
                     btnTTS.BackColor = Color.FromArgb(252, 163, 17);
                     btnTTS.ForeColor = Color.Black;
                 }
-                
-                // Restore original colors for pnlTopBar
                 if (pnlTopBar != null) pnlTopBar.BackColor = Color.White;
                 if (lblTituloSeccion != null) lblTituloSeccion.ForeColor = Color.Black;
-
-                // Close and recreate the active child form to fully load native VS designer colors
                 Form activeForm = pnlContenedor.Controls.OfType<Form>().FirstOrDefault();
                 if (activeForm != null)
                 {
@@ -264,13 +243,10 @@ namespace FlowerShop
         {
             if (applyHighContrast)
             {
-                // Save original colors if not saved
                 if (!originalColors.ContainsKey(parent))
                 {
                     originalColors[parent] = new Tuple<Color, Color>(parent.BackColor, parent.ForeColor);
                 }
-
-                // Invert colors if not fully transparent
                 if (parent.BackColor.A > 0)
                 {
                     parent.BackColor = Color.FromArgb(parent.BackColor.A, 255 - parent.BackColor.R, 255 - parent.BackColor.G, 255 - parent.BackColor.B);
@@ -282,7 +258,6 @@ namespace FlowerShop
             }
             else
             {
-                // Restore original colors
                 if (originalColors.ContainsKey(parent))
                 {
                     parent.BackColor = originalColors[parent].Item1;
@@ -297,4 +272,5 @@ namespace FlowerShop
         }
     }
 }
+
 

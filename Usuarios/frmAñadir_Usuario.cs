@@ -14,7 +14,6 @@ namespace FlowerShop.Usuarios
 {
     public partial class frmAñadir_Usuario : Form
     {
-        // Evento para notificar al padre que la operaciÃ³n se cancelÃ³ o completÃ³ con Ã©xito
         public event EventHandler OperacionCompletada;
 
         public frmAñadir_Usuario()
@@ -25,22 +24,15 @@ namespace FlowerShop.Usuarios
 
         private void frmAñadir_Usuario_Load(object sender, EventArgs e)
         {
-            // Solo opciÃ³n Vendedor por el momento
             cmbRol.Items.Clear();
             cmbRol.Items.Add("Vendedor");
             cmbRol.SelectedIndex = 0;
-            
-            // Aplicar bordes al formulario si es necesario y dar estilo a botones
             FlowerShop.Utilidades.UIHelper.AplicarBordesRedondeados(btnGuardar, 15);
             FlowerShop.Utilidades.UIHelper.AplicarBordesRedondeados(btnCancelar, 15);
-            
-            // Bordes a los textbox usando un helper si existe, si no, se deja nativo.
-            // La configuraciÃ³n se harÃ¡ desde el designer.
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            // Avisar al formulario padre para que cierre el panel
             OperacionCompletada?.Invoke(this, EventArgs.Empty);
         }
 
@@ -145,7 +137,6 @@ namespace FlowerShop.Usuarios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // Validar campos vacÃ­os
             if (!ValidarNombres() || !ValidarCorreo() || !ValidarTelefono() || !ValidarUsuario() || !ValidarPassword() || cmbRol.SelectedItem == null) { MessageBox.Show("Por favor, complete todos los campos correctamente.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning); return; }
 
 
@@ -173,6 +164,7 @@ namespace FlowerShop.Usuarios
         }
     }
 }
+
 
 
 

@@ -2,15 +2,7 @@
 {
     partial class frmAñadir_Usuario
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,11 +13,6 @@
         }
 
         #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -48,9 +35,6 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // lblTitulo
-            // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(30, 30);
@@ -58,9 +42,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(236, 37);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Nuevo Empleado";
-            // 
-            // lblNombre
-            // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(33, 90);
@@ -68,9 +49,6 @@
             this.lblNombre.Size = new System.Drawing.Size(76, 23);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre";
-            // 
-            // txtNombre
-            // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -78,9 +56,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 32);
             this.txtNombre.TabIndex = 2;
-            // 
-            // lblApellidoPaterno
-            // 
             this.lblApellidoPaterno.AutoSize = true;
             this.lblApellidoPaterno.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellidoPaterno.Location = new System.Drawing.Point(253, 90);
@@ -88,9 +63,6 @@
             this.lblApellidoPaterno.Size = new System.Drawing.Size(146, 23);
             this.lblApellidoPaterno.TabIndex = 3;
             this.lblApellidoPaterno.Text = "Apellido paterno";
-            // 
-            // txtApellidoPaterno
-            // 
             this.txtApellidoPaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.txtApellidoPaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApellidoPaterno.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -98,9 +70,6 @@
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(200, 32);
             this.txtApellidoPaterno.TabIndex = 4;
-            // 
-            // lblApellidoMaterno
-            // 
             this.lblApellidoMaterno.AutoSize = true;
             this.lblApellidoMaterno.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellidoMaterno.Location = new System.Drawing.Point(33, 160);
@@ -108,9 +77,6 @@
             this.lblApellidoMaterno.Size = new System.Drawing.Size(151, 23);
             this.lblApellidoMaterno.TabIndex = 5;
             this.lblApellidoMaterno.Text = "Apellido materno";
-            // 
-            // txtApellidoMaterno
-            // 
             this.txtApellidoMaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.txtApellidoMaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApellidoMaterno.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -118,9 +84,6 @@
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(200, 32);
             this.txtApellidoMaterno.TabIndex = 6;
-            // 
-            // lblTelefono
-            // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.Location = new System.Drawing.Point(253, 160);
@@ -128,9 +91,6 @@
             this.lblTelefono.Size = new System.Drawing.Size(78, 23);
             this.lblTelefono.TabIndex = 7;
             this.lblTelefono.Text = "Telefono";
-            // 
-            // txtTelefono
-            // 
             this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,9 +98,6 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(200, 32);
             this.txtTelefono.TabIndex = 8;
-            // 
-            // lblCorreo
-            // 
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.Location = new System.Drawing.Point(33, 230);
@@ -148,9 +105,6 @@
             this.lblCorreo.Size = new System.Drawing.Size(155, 23);
             this.lblCorreo.TabIndex = 9;
             this.lblCorreo.Text = "Correo electronico";
-            // 
-            // txtCorreo
-            // 
             this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,9 +112,6 @@
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(200, 32);
             this.txtCorreo.TabIndex = 10;
-            // 
-            // lblRol
-            // 
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.Location = new System.Drawing.Point(253, 230);
@@ -168,9 +119,6 @@
             this.lblRol.Size = new System.Drawing.Size(36, 23);
             this.lblRol.TabIndex = 11;
             this.lblRol.Text = "Rol";
-            // 
-            // cmbRol
-            // 
             this.cmbRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.cmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -180,9 +128,6 @@
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(200, 33);
             this.cmbRol.TabIndex = 12;
-            // 
-            // lblUsuario
-            // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(33, 300);
@@ -190,9 +135,6 @@
             this.lblUsuario.Size = new System.Drawing.Size(70, 23);
             this.lblUsuario.TabIndex = 13;
             this.lblUsuario.Text = "Usuario";
-            // 
-            // txtUsuario
-            // 
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -200,9 +142,6 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(200, 32);
             this.txtUsuario.TabIndex = 14;
-            // 
-            // lblContrasena
-            // 
             this.lblContrasena.AutoSize = true;
             this.lblContrasena.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContrasena.Location = new System.Drawing.Point(253, 300);
@@ -210,9 +149,6 @@
             this.lblContrasena.Size = new System.Drawing.Size(100, 23);
             this.lblContrasena.TabIndex = 15;
             this.lblContrasena.Text = "Contraseña";
-            // 
-            // txtContrasena
-            // 
             this.txtContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtContrasena.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -221,9 +157,6 @@
             this.txtContrasena.Size = new System.Drawing.Size(200, 32);
             this.txtContrasena.TabIndex = 16;
             this.txtContrasena.UseSystemPasswordChar = true;
-            // 
-            // btnCancelar
-            // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.BackColor = System.Drawing.Color.White;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
@@ -237,9 +170,6 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnGuardar
-            // 
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(11)))));
             this.btnGuardar.FlatAppearance.BorderSize = 0;
@@ -253,9 +183,6 @@
             this.btnGuardar.Text = "Guardar empleado";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // frmAñadir_Usuario
-            // 
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -311,5 +238,6 @@
         private System.Windows.Forms.Button btnGuardar;
     }
 }
+
 
 

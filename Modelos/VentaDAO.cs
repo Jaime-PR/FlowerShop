@@ -19,7 +19,6 @@ namespace FlowerShop.Modelos
                     MySqlTransaction transaccion = con.BeginTransaction();
                     try
                     {
-                        // 1. Insertar VENTA
                         string queryVenta = @"INSERT INTO VENTA (Fecha_Hora, Estado_Venta, Origen_Pedido, Id_Usuario, Id_Cliente) 
                                               VALUES (NOW(), 'Completada', @origen, @idUsuario, @idCliente);
                                               SELECT LAST_INSERT_ID();";
@@ -33,8 +32,6 @@ namespace FlowerShop.Modelos
                             
                             idVenta = Convert.ToInt64(cmdVenta.ExecuteScalar());
                         }
-
-                        // 2. Insertar DETALLE_VENTA y descontar stock en PRODUCTO
                         string queryDetalle = @"INSERT INTO DETALLE_VENTA (Cantidad, Precio_Unitario, Id_Venta, Id_Producto) 
                                                 VALUES (@cant, @precio, @idVenta, @idProd)";
                                                 
@@ -45,8 +42,6 @@ namespace FlowerShop.Modelos
                             int idProducto = Convert.ToInt32(row["IdProducto"]);
                             int cantidad = Convert.ToInt32(row["Cantidad"]);
                             decimal precio = Convert.ToDecimal(row["PrecioUnitario"]);
-
-                            // Detalle
                             using (MySqlCommand cmdDetalle = new MySqlCommand(queryDetalle, con, transaccion))
                             {
                                 cmdDetalle.Parameters.AddWithValue("@cant", cantidad);
@@ -55,8 +50,6 @@ namespace FlowerShop.Modelos
                                 cmdDetalle.Parameters.AddWithValue("@idProd", idProducto);
                                 cmdDetalle.ExecuteNonQuery();
                             }
-
-                            // Descontar Stock
                             using (MySqlCommand cmdStock = new MySqlCommand(queryStock, con, transaccion))
                             {
                                 cmdStock.Parameters.AddWithValue("@cant", cantidad);
@@ -64,14 +57,11 @@ namespace FlowerShop.Modelos
                                 cmdStock.ExecuteNonQuery();
                             }
                         }
-
-                        // Si todo sale bien, confirmar transacción
                         transaccion.Commit();
                         exito = true;
                     }
                     catch (Exception ex)
                     {
-                        // Si algo falla, deshacer todo
                         transaccion.Rollback();
                         throw new Exception("Error al registrar la venta: " + ex.Message);
                     }
@@ -129,7 +119,6 @@ namespace FlowerShop.Modelos
             {
                 if (con.State == ConnectionState.Open)
                 {
-                    // If Metodo_Pago doesn't exist, we fallback to Estado_Venta or omit it depending on the actual schema, but schema showed Metodo_Pago in a previous checkpoint... wait, earlier schema checkpoint showed Fecha_Venta and Metodo_Pago. Let's use Fecha_Hora, Estado_Venta as they are used in RegistrarVenta.
                     string query = @"SELECT V.Id_Venta AS 'ID Venta', 
                                             CONCAT(C.Nombre, ' ', C.Apellido_Paterno) AS 'Cliente', 
                                             IFNULL((SELECT GROUP_CONCAT(P.Nombre SEPARATOR ', ') FROM DETALLE_VENTA DV INNER JOIN PRODUCTO P ON DV.Id_Producto = P.Id_Producto WHERE DV.Id_Venta = V.Id_Venta), 'Sin productos') AS 'Productos',
@@ -153,4 +142,5 @@ namespace FlowerShop.Modelos
         }
     }
 }
+
 

@@ -22,25 +22,19 @@ namespace FlowerShop.Usuarios
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
-            // Aplicar bordes redondeados a los paneles y botón
             FlowerShop.Utilidades.UIHelper.AplicarBordesRedondeados(pnlKPI1, 15);
             FlowerShop.Utilidades.UIHelper.AplicarBordesRedondeados(pnlKPI2, 15);
             FlowerShop.Utilidades.UIHelper.AplicarBordesRedondeados(pnlKPI3, 15);
             FlowerShop.Utilidades.UIHelper.AplicarBordesRedondeados(pnlContenedorGrid, 15);
             FlowerShop.Utilidades.UIHelper.AplicarBordesRedondeados(btnNuevoUsuario, 20);
-
-            // Cargar datos
             CargarDatos();
         }
 
         private void CargarDatos()
         {
-            // KPIs
             lblUsuariosTotal.Text = dao.ObtenerTotalUsuarios().ToString();
             lblActivos.Text = dao.ObtenerUsuariosActivos().ToString();
             lblInactivos.Text = dao.ObtenerUsuariosInactivos().ToString();
-
-            // Grid
             DataTable dtUsuarios = dao.ObtenerTodosLosUsuarios();
             dgvUsuarios.DataSource = dtUsuarios;
             FlowerShop.Utilidades.UIHelper.FormatoDataGrid(dgvUsuarios);
@@ -48,8 +42,6 @@ namespace FlowerShop.Usuarios
             {
                 dgvUsuarios.Columns["Id_Usuario"].Visible = false;
             }
-            
-            // Si la tabla no tiene estilo visual de encabezado
             dgvUsuarios.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(235, 235, 235);
             dgvUsuarios.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(74, 85, 115);
             dgvUsuarios.EnableHeadersVisualStyles = false;
@@ -57,7 +49,6 @@ namespace FlowerShop.Usuarios
 
         private void frmUsuarios_Resize(object sender, EventArgs e)
         {
-            // Reaplicar bordes si se cambia de tamaño
             FlowerShop.Utilidades.UIHelper.AplicarBordesRedondeados(pnlKPI1, 15);
             FlowerShop.Utilidades.UIHelper.AplicarBordesRedondeados(pnlKPI2, 15);
             FlowerShop.Utilidades.UIHelper.AplicarBordesRedondeados(pnlKPI3, 15);
@@ -88,4 +79,5 @@ namespace FlowerShop.Usuarios
         }
     }
 }
+
 

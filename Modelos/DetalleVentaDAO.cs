@@ -26,7 +26,6 @@ namespace FlowerShop.Datos
                         {
                             DetalleVenta det = new DetalleVenta();
                             det.Id_Detalle_Venta = Convert.ToInt32(reader["Id_Detalle_Venta"]);
-                            // En caso de que la cantidad en BD sea un valor que pueda ser null, Convert.ToInt32 maneja DBNull como 0
                             det.Cantidad = reader["Cantidad"] != DBNull.Value ? Convert.ToInt32(reader["Cantidad"]) : 0;
                             det.Precio_Unitario = reader["Precio_Unitario"] != DBNull.Value ? Convert.ToDecimal(reader["Precio_Unitario"]) : 0;
                             det.Id_Venta = reader["Id_Venta"] != DBNull.Value ? Convert.ToInt32(reader["Id_Venta"]) : 0;
@@ -49,4 +48,5 @@ namespace FlowerShop.Datos
         }
     }
 }
+
 

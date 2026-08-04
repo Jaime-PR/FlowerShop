@@ -38,9 +38,6 @@
             this.pnlContenedorGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTitulo
-            // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
@@ -49,9 +46,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(175, 54);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Usuarios";
-            // 
-            // lblSubtitulo
-            // 
             this.lblSubtitulo.AutoSize = true;
             this.lblSubtitulo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(85)))), ((int)(((byte)(115)))));
@@ -60,9 +54,6 @@
             this.lblSubtitulo.Size = new System.Drawing.Size(188, 25);
             this.lblSubtitulo.TabIndex = 1;
             this.lblSubtitulo.Text = "Gestiona tus usuarios";
-            // 
-            // btnNuevoUsuario
-            // 
             this.btnNuevoUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNuevoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
             this.btnNuevoUsuario.FlatAppearance.BorderSize = 0;
@@ -76,9 +67,6 @@
             this.btnNuevoUsuario.Text = "+ Nuevo usuario";
             this.btnNuevoUsuario.UseVisualStyleBackColor = false;
             this.btnNuevoUsuario.Click += new System.EventHandler(this.btnNuevoUsuario_Click);
-            // 
-            // pnlKPI1
-            // 
             this.pnlKPI1.BackColor = System.Drawing.Color.White;
             this.pnlKPI1.Controls.Add(this.lblUsuariosTotal);
             this.pnlKPI1.Controls.Add(this.label1);
@@ -86,9 +74,6 @@
             this.pnlKPI1.Name = "pnlKPI1";
             this.pnlKPI1.Size = new System.Drawing.Size(280, 130);
             this.pnlKPI1.TabIndex = 3;
-            // 
-            // lblUsuariosTotal
-            // 
             this.lblUsuariosTotal.AutoSize = true;
             this.lblUsuariosTotal.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuariosTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
@@ -97,9 +82,6 @@
             this.lblUsuariosTotal.Size = new System.Drawing.Size(45, 54);
             this.lblUsuariosTotal.TabIndex = 1;
             this.lblUsuariosTotal.Text = "0";
-            // 
-            // label1
-            // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(130)))));
@@ -108,9 +90,6 @@
             this.label1.Size = new System.Drawing.Size(107, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "USUARIOS";
-            // 
-            // pnlKPI2
-            // 
             this.pnlKPI2.BackColor = System.Drawing.Color.White;
             this.pnlKPI2.Controls.Add(this.lblActivos);
             this.pnlKPI2.Controls.Add(this.label3);
@@ -118,9 +97,6 @@
             this.pnlKPI2.Name = "pnlKPI2";
             this.pnlKPI2.Size = new System.Drawing.Size(280, 130);
             this.pnlKPI2.TabIndex = 4;
-            // 
-            // lblActivos
-            // 
             this.lblActivos.AutoSize = true;
             this.lblActivos.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActivos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
@@ -129,9 +105,6 @@
             this.lblActivos.Size = new System.Drawing.Size(45, 54);
             this.lblActivos.TabIndex = 1;
             this.lblActivos.Text = "0";
-            // 
-            // label3
-            // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(130)))));
@@ -140,9 +113,6 @@
             this.label3.Size = new System.Drawing.Size(90, 28);
             this.label3.TabIndex = 0;
             this.label3.Text = "ACTIVOS";
-            // 
-            // pnlKPI3
-            // 
             this.pnlKPI3.BackColor = System.Drawing.Color.White;
             this.pnlKPI3.Controls.Add(this.lblInactivos);
             this.pnlKPI3.Controls.Add(this.label5);
@@ -150,9 +120,6 @@
             this.pnlKPI3.Name = "pnlKPI3";
             this.pnlKPI3.Size = new System.Drawing.Size(280, 130);
             this.pnlKPI3.TabIndex = 5;
-            // 
-            // lblInactivos
-            // 
             this.lblInactivos.AutoSize = true;
             this.lblInactivos.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInactivos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
@@ -161,9 +128,6 @@
             this.lblInactivos.Size = new System.Drawing.Size(45, 54);
             this.lblInactivos.TabIndex = 1;
             this.lblInactivos.Text = "0";
-            // 
-            // label5
-            // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(130)))));
@@ -172,9 +136,6 @@
             this.label5.Size = new System.Drawing.Size(107, 28);
             this.label5.TabIndex = 0;
             this.label5.Text = "INACTIVOS";
-            // 
-            // pnlContenedorGrid
-            // 
             this.pnlContenedorGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -185,9 +146,6 @@
             this.pnlContenedorGrid.Padding = new System.Windows.Forms.Padding(1);
             this.pnlContenedorGrid.Size = new System.Drawing.Size(1010, 400);
             this.pnlContenedorGrid.TabIndex = 6;
-            // 
-            // dgvUsuarios
-            // 
             this.dgvUsuarios.BackgroundColor = System.Drawing.Color.White;
             this.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -205,9 +163,6 @@
             this.dgvUsuarios.RowTemplate.Height = 24;
             this.dgvUsuarios.Size = new System.Drawing.Size(1008, 398);
             this.dgvUsuarios.TabIndex = 0;
-            // 
-            // pnlSidebarDerecho
-            // 
             this.pnlSidebarDerecho.BackColor = System.Drawing.Color.White;
             this.pnlSidebarDerecho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSidebarDerecho.Dock = System.Windows.Forms.DockStyle.Right;
@@ -216,9 +171,6 @@
             this.pnlSidebarDerecho.Size = new System.Drawing.Size(500, 720);
             this.pnlSidebarDerecho.TabIndex = 7;
             this.pnlSidebarDerecho.Visible = false;
-            // 
-            // frmUsuarios
-            // 
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -269,5 +221,6 @@
         private System.Windows.Forms.Panel pnlSidebarDerecho;
     }
 }
+
 
 

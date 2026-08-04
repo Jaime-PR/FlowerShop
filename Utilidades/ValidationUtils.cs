@@ -7,7 +7,6 @@ namespace FlowerShop.Utilidades
 {
     public static class ValidationUtils
     {
-        // Expresiones regulares
         public static readonly string RegexNombres = @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$";
         public static readonly string RegexEmail = @"^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$";
         public static readonly string RegexRFC = @"^[A-ZÑ&]{3,4}\d{6}[A-Z0-9]{3}$";
@@ -44,8 +43,6 @@ namespace FlowerShop.Utilidades
         {
             return Regex.IsMatch(texto, RegexAlfanumericoSimbolos);
         }
-
-        // Manejo de UI de Errores
         public static void MostrarError(Control control, string mensaje)
         {
             if (control.Parent == null) return;
@@ -60,7 +57,7 @@ namespace FlowerShop.Utilidades
                 lblError.ForeColor = ColorTranslator.FromHtml("#FCA311");
                 lblError.Font = new Font("Segoe UI", 8F, FontStyle.Regular);
                 lblError.AutoSize = true;
-                lblError.MaximumSize = new Size(control.Width, 0); // Envolver texto si es muy largo
+                lblError.MaximumSize = new Size(control.Width, 0); 
                 control.Parent.Controls.Add(lblError);
             }
 
@@ -83,4 +80,5 @@ namespace FlowerShop.Utilidades
         }
     }
 }
+
 

@@ -2,15 +2,7 @@
 {
     partial class frmCrear_Cuenta
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,11 +13,6 @@
         }
 
         #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCrear_Cuenta));
@@ -53,9 +40,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -74,9 +58,6 @@
             this.panel1.Size = new System.Drawing.Size(487, 560);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // panel4
-            // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.textPassword);
@@ -84,9 +65,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(293, 61);
             this.panel4.TabIndex = 12;
-            // 
-            // pictureBox3
-            // 
             this.pictureBox3.Image = global::FlowerShop.Properties.Resources.lock_3917591;
             this.pictureBox3.Location = new System.Drawing.Point(15, 3);
             this.pictureBox3.Name = "pictureBox3";
@@ -94,9 +72,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
-            // 
-            // textPassword
-            // 
             this.textPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -104,9 +79,6 @@
             this.textPassword.Name = "textPassword";
             this.textPassword.Size = new System.Drawing.Size(223, 23);
             this.textPassword.TabIndex = 0;
-            // 
-            // label1
-            // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -116,9 +88,6 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Contraseña:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel3
-            // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.txtUser);
@@ -126,9 +95,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(293, 61);
             this.panel3.TabIndex = 10;
-            // 
-            // pictureBox2
-            // 
             this.pictureBox2.Image = global::FlowerShop.Properties.Resources.user_3917688;
             this.pictureBox2.Location = new System.Drawing.Point(15, 3);
             this.pictureBox2.Name = "pictureBox2";
@@ -136,9 +102,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            // 
-            // txtUser
-            // 
             this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -146,9 +109,6 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(223, 23);
             this.txtUser.TabIndex = 0;
-            // 
-            // lklblIniciarSesion
-            // 
             this.lklblIniciarSesion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lklblIniciarSesion.AutoSize = true;
             this.lklblIniciarSesion.Location = new System.Drawing.Point(200, 523);
@@ -158,9 +118,6 @@
             this.lklblIniciarSesion.TabStop = true;
             this.lklblIniciarSesion.Text = "iniciar Sesión";
             this.lklblIniciarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklblIniciarSesion_LinkClicked);
-            // 
-            // panel2
-            // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.txtNombre);
@@ -168,18 +125,12 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(293, 61);
             this.panel2.TabIndex = 9;
-            // 
-            // pictureBox1
-            // 
             this.pictureBox1.Location = new System.Drawing.Point(15, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(43, 53);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // txtNombre
-            // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,9 +138,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(223, 23);
             this.txtNombre.TabIndex = 0;
-            // 
-            // btnCrearCuenta
-            // 
             this.btnCrearCuenta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCrearCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(163)))), ((int)(((byte)(17)))));
             this.btnCrearCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -203,9 +151,6 @@
             this.btnCrearCuenta.TabIndex = 4;
             this.btnCrearCuenta.Text = "Crear cuenta";
             this.btnCrearCuenta.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -215,9 +160,6 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Crear Cuenta";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -227,9 +169,6 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Nombre:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -239,9 +178,6 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Usuario:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // frmCrear_Cuenta
-            // 
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -289,5 +225,6 @@
         private System.Windows.Forms.Label label1;
     }
 }
+
 
 

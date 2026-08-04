@@ -75,8 +75,6 @@ namespace FlowerShop.Inventario
                     {
                         cmbProveedor.SelectedItem = proveedores[prod.Id_Proveedor];
                     }
-
-                    // Cargar receta
                     string receta = dao.ObtenerReceta(_idProductoEdicion);
                     if (!string.IsNullOrEmpty(receta))
                     {
@@ -165,7 +163,6 @@ namespace FlowerShop.Inventario
 
             if (compraOk && ventaOk && compra == venta)
             {
-                // Warning only
                 ValidationUtils.MostrarError(txtPrecioVenta, "Advertencia: Precio venta igual a precio compra.");
             }
             return compraOk && (venta >= compra);
@@ -305,6 +302,7 @@ namespace FlowerShop.Inventario
         }
     }
 }
+
 
 
 

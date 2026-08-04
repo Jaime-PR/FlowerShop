@@ -23,8 +23,6 @@
             this.pnlFiltro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporte)).BeginInit();
             this.SuspendLayout();
-            
-            // lblTitulo
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
@@ -33,8 +31,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(146, 31);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Reportes y Estad�sticas";
-            
-            // pnlFiltro
             this.pnlFiltro.BackColor = System.Drawing.Color.White;
             this.pnlFiltro.Controls.Add(this.cmbTipoReporte);
             this.pnlFiltro.Controls.Add(this.lblTipoReporte);
@@ -42,8 +38,6 @@
             this.pnlFiltro.Name = "pnlFiltro";
             this.pnlFiltro.Size = new System.Drawing.Size(960, 60);
             this.pnlFiltro.TabIndex = 1;
-            
-            // lblTipoReporte
             this.lblTipoReporte.AutoSize = true;
             this.lblTipoReporte.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoReporte.ForeColor = System.Drawing.Color.Gray;
@@ -52,8 +46,6 @@
             this.lblTipoReporte.Size = new System.Drawing.Size(130, 20);
             this.lblTipoReporte.TabIndex = 0;
             this.lblTipoReporte.Text = "Tipo de Reporte:";
-            
-            // cmbTipoReporte
             this.cmbTipoReporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoReporte.FormattingEnabled = true;
             this.cmbTipoReporte.Location = new System.Drawing.Point(160, 18);
@@ -61,8 +53,6 @@
             this.cmbTipoReporte.Size = new System.Drawing.Size(250, 24);
             this.cmbTipoReporte.TabIndex = 1;
             this.cmbTipoReporte.SelectedIndexChanged += new System.EventHandler(this.cmbTipoReporte_SelectedIndexChanged);
-            
-            // dgvReporte
             this.dgvReporte.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(231)))), ((int)(((byte)(223)))));
             this.dgvReporte.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -75,8 +65,6 @@
             this.dgvReporte.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            
-            // frmReportes
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,5 +91,6 @@
         private System.Windows.Forms.DataGridView dgvReporte;
     }
 }
+
 
 

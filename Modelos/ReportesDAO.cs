@@ -48,7 +48,6 @@ namespace FlowerShop.Modelos
             {
                 try
                 {
-                    // Assuming Venta has Fecha_Hora, Estado_Venta, Id_Cliente. We join with Cliente to get the name.
                     string query = @"SELECT V.Id_Venta AS 'Folio', V.Fecha_Hora AS 'Fecha', C.Nombre AS 'Cliente', V.Estado_Venta AS 'Estado', V.Origen_Pedido AS 'Origen'
                                      FROM VENTA V
                                      LEFT JOIN CLIENTE C ON V.Id_Cliente = C.Id_Cliente
@@ -96,4 +95,5 @@ namespace FlowerShop.Modelos
         }
     }
 }
+
 

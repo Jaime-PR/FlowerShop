@@ -20,8 +20,6 @@ namespace FlowerShop
             InitializeComponent();
             FlowerShop.Utilidades.UIHelper.ConfigurarAccesibilidad(this);
             this.Load += FrmPrincipal_Load;
-
-            // Aplicar bordes redondeados a los paneles del dashboard
             AplicarBordesRedondeados(panel1, 15);
             AplicarBordesRedondeados(panel2, 15);
             AplicarBordesRedondeados(panel3, 15);
@@ -50,7 +48,7 @@ namespace FlowerShop
             if (availableWidth > totalPanelsWidth)
             {
                 int leftoverSpace = availableWidth - totalPanelsWidth;
-                int gap = leftoverSpace / 5; // Distribuir el espacio en 5 huecos (orillas + entre paneles)
+                int gap = leftoverSpace / 5; 
 
                 panel1.Margin = new Padding(gap, 5, 0, 5);
                 panel2.Margin = new Padding(gap, 5, 0, 5);
@@ -61,7 +59,6 @@ namespace FlowerShop
             }
             else
             {
-                // Fallback si la ventana se hace muy pequeña
                 panel1.Margin = new Padding(10, 5, 25, 5);
                 panel2.Margin = new Padding(10, 5, 25, 5);
                 panel3.Margin = new Padding(10, 5, 25, 5);
@@ -75,41 +72,27 @@ namespace FlowerShop
             try
             {
                 DashboardDAO dao = new DashboardDAO();
-
-                // Ingresos Totales -> lblTotalIngresos
                 decimal ingresos = dao.ObtenerIngresosTotales();
-                lblTotalIngresos.Text = ingresos.ToString("C2"); // Format as currency
-
-                // Ventas Totales -> lblTotalVentas
+                lblTotalIngresos.Text = ingresos.ToString("C2"); 
                 int ventas = dao.ObtenerVentasTotales();
                 lblTotalVentas.Text = ventas.ToString();
-
-                // Productos Bajo Inventario (usando ProductoDAO)
                 FlowerShop.Datos.ProductoDAO prodDao = new FlowerShop.Datos.ProductoDAO();
                 int bajoStock = prodDao.ObtenerProductosBajoStock(10);
                 lblProximamente.Text = bajoStock.ToString(); 
-
-                // Clientes Totales -> lblTotalClientes
                 int clientes = dao.ObtenerClientesTotales();
                 lblTotalClientes.Text = clientes.ToString();
-
-                // Usuarios Vendedores (izquierda)
                 DataTable dtUsuarios = dao.ObtenerUsuariosVendedores();
                 dataGridViewUsuarios.DataSource = dtUsuarios;
                 FlowerShop.Utilidades.UIHelper.FormatoDataGrid(dataGridViewUsuarios);
                 dataGridViewUsuarios.AllowUserToAddRows = false;
                 dataGridViewUsuarios.AllowUserToDeleteRows = false;
                 dataGridViewUsuarios.ReadOnly = true;
-
-                // Últimas Ventas (derecha)
                 DataTable dtVentas = dao.ObtenerUltimasVentas();
                 dataGridViewVentas.DataSource = dtVentas;
                 FlowerShop.Utilidades.UIHelper.FormatoDataGrid(dataGridViewVentas);
                 dataGridViewVentas.AllowUserToAddRows = false;
                 dataGridViewVentas.AllowUserToDeleteRows = false;
                 dataGridViewVentas.ReadOnly = true;
-
-                // Mostrar la fecha actual en el label7
                 label7.Text = DateTime.Now.ToString("D");
             }
             catch (Exception ex)
@@ -133,8 +116,6 @@ namespace FlowerShop
                 path.CloseFigure();
                 panel.Region = new Region(path);
             }
-
-            // Re-aplicar cuando el panel cambie de tamaño
             panel.Resize += (s, e) =>
             {
                 if (panel.Width <= 0 || panel.Height <= 0) return;
@@ -156,5 +137,6 @@ namespace FlowerShop
         }
     }
 }
+
 
 
